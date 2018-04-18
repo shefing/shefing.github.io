@@ -1,1 +1,8 @@
 name: Shefing web site
+
+plugins: 
+  - jekyll-multiple-languages-plugin
+
+languages: ["en", "he"]
+
+baseurl: ""

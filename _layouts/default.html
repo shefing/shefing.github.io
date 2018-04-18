@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="he" class="no-js">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +9,18 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="public/css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="public/css/style.css"> <!-- Resource style -->
-	<script src="public/js/modernizr.js"></script> <!-- Modernizr -->
-  	
+	<link rel="stylesheet" href="public/css/reset.css">
+	<!-- CSS reset -->
+	<link rel="stylesheet" href="public/css/style.css">
+	<!-- Resource style -->
+	<script src="public/js/modernizr.js"></script>
+	<!-- Modernizr -->
+
 	<title>Shefing</title>
 </head>
+
 <body>
+
 	<nav id="cd-vertical-nav">
 		<ul>
 			<li>
@@ -46,13 +52,27 @@
 	<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
 	<section id="section1" class="cd-section">
+		<span class="we"> </span>
 		<img class="logo-header" src="public/img/logo.png" height="70" alt="">
-		<div class="container-page-1">
+		<div class="lang-container">
+			{% if site.lang == "he" %} {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
+			<a class="lang" href="{{ link1 }}">{% t global.english %}</a> {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root
+			}}he{{ page.url }}{% endcapture %}
+			<a class="lang" href="{{ link2 }}">{% t global.hebrew %}</a> {% endif %}
+		</div>
+		{% if site.lang == "he" %}
+		<center>
+
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/ZH5VWr0RRDY" frameborder="0" allow="autoplay; encrypted-media"
+				allowfullscreen></iframe>
+		</center>
+		{% endif %}
+		<div class="{% if site.lang == 'he'' %}container-page-1{% else %}container-page-1 container-page-1-en{% endif %}">
 			<div class="left-side">
 				<div class="content">
-					<h1><span class="we">WE</span> <span class="shape">SHAPE</span> <br> <span class="ideas">ideas</span> to <span class="life">life</span></h1>
-					<p>We are a boutique consulting agency, crafting software products for companies of all shapes and sizes. <br><br>
-					We love using our methodology and talents to transform ideas into reality. We use cutting edge cloud technologies and most performant front-end frameworks for web and mobile to ensure your satisfaction.</p>
+					<h1><span class="we">{% t section1.we %}</span> <br> <span class="ideas">{% t section1.ideas %}</span> {% t section1.to
+						%} <span class="life">{% t section1.life %}</span></h1>
+					<p>{% t section1.first %} <br><br> {% t section1.second %}</p>
 					<img class="logo" src="public/img/logo.png" height="40" alt="">
 				</div>
 			</div>
@@ -63,84 +83,88 @@
 			</div>
 		</div>
 		<a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
-	</section><!-- cd-section -->
+	</section>
+	<!-- cd-section -->
 
 	<section id="section2" class="cd-section">
 		<div class="container-page-2">
-			<h1><span class="we">WE</span> 
-			<br><span class="ideas">LISTEN,</span> 
-			<br><span class="ideas">DESIGN,</span> 
-			<br><span class="ideas">DEVELOP</span> 
-			<br>& <span class="ideas">LAUNCH</span></h1>
-			<p>We are a team composed of seasoned product executive, artisans crafting beautiful user interfaces and talented software developers passionated about creating disruptive products that engage users.</p>
+			<h1><span class="we">{% t section2.we %}</span>
+				<br><span class="ideas">{% t section2.listen %}</span>
+				<br><span class="ideas">{% t section2.design %}</span>
+				<br><span class="ideas">{% t section2.develop %}</span>
+				<br>& <span class="ideas">{% t section2.launch %}</span></h1>
+			<p>{% t section2.content %}</p>
 			<div class="img-footer">
 				<img src="public/img/audyx_web.png" height="350" alt="">
-			</div> 
+			</div>
 			<a href="#section3" class="cd-scroll-down cd-img-replace">scroll down</a>
 		</div>
-	</section><!-- cd-section -->
+	</section>
+	<!-- cd-section -->
 
 	<section id="section3" class="cd-section">
 		<div class="container-page-3">
-			<h1>What makes us <span class="special">Special</span></h1>
+			<h1>{% t section3.what %} <span class="special">{% t section3.special %}</span></h1>
 			<div class="section effective">
-				<h2>Effective</h2>
-				<p>We focus on business goals, target audience, budget and time constraint to define the most effective product objectives.</p>
+				<h2>{% t section3.effective %}</h2>
+				<p>{% t section3.effective-content %}</p>
 			</div>
 			<div class="section creative">
-				<h2>Creative</h2>
-				<p>We strive to create fluent user interfaces that will be intuitively understood by users, through multiple iterative prototypes before a single line of code is written.</p>
+				<h2>{% t section3.creative %}</h2>
+				<p>{% t section3.creative-content %}</p>
 			</div>
 			<div class="section cutting">
-				<h2>Cutting edge</h2>
-				<p>We develop modern Mobile and Web applications using the most advanced client technologies: Javascript, ReactJS, React-Native and Redux. 
-					On Mobile devices we produce truly native apps in a cost-effective way with a single code-base. 
-				</p>
+				<h2>{% t section3.cutting-edge %}</h2>
+				<p>{% t section3.cutting-edge-content %}</p>
 			</div>
 			<div class="section adaptive">
-				<h2>Adaptive</h2>
-				<p>We embrasse the Agile methodology and the 12 principles behind the Agile Manifesto, among them "Welcome changing requirements, even late in development".</p>
+				<h2>{% t section3.adaptive %}</h2>
+				<p>{% t section3.adaptive-content %}</p>
 			</div>
 			<div class="section performant">
-					<h2>Performant</h2>
-					<p>We deploy Node.js to cutting edge PaaS providers such as Heroku to ensure evolutive, reliable and scalable operations. We leverage Google Firebase to create server less mobile and Web applications at the speed of light</p>
-				</div>
-				<div class="section quality">
-				<h2>Quality</h2>
-				<p>We take responsibility on the quality of our deliveries by testing in-house. We never delegate this core responsibility to assess the quality.</p>
+				<h2>{% t section3.performant %}</h2>
+				<p>{% t section3.performant-content %}</p>
+			</div>
+			<div class="section quality">
+				<h2>{% t section3.quality %}</h2>
+				<p>{% t section3.quality-content %}</p>
 			</div>
 			<div class="section sustainable">
-				<h2>Sustainable</h2>
-				<p>We automate the DevOps to ensure long running applications in production, with high availability and minimal overhead.</p>
+				<h2>{% t section3.sustainable %}</h2>
+				<p>{% t section3.sustainable-content %}</p>
 			</div>
 		</div>
 		<a href="#section4" class="cd-scroll-down cd-img-replace">scroll down</a>
-	</section><!-- cd-section -->
+	</section>
+	<!-- cd-section -->
 
 	<section id="section4" class="cd-section">
 		<div class="container-page-4">
-			<h1>Meet our team</h1>
-			<p>We are a boutique consulting agency composed of product strategist, designer and developers with an extensive experience in building successful software products.</p>
+			<h1>{% t section4.meet %}</h1>
+			<p>{% t section4.content %}</p>
 			<div class="section">
 				<img src="public/img/phil.jpg" alt="">
 				<div>
-					<h1>PHILIPPE COHEN <span>Product Strategist</span></h1>
-					<p>Software engineering and ergonomics expert, he brings his experience to create the most efficient platform for companies of all shapes and sizes.</p>
+					<h1>{% t section4.phil %} <span>{% t section4.phil-des %}</span></h1>
+					<p>{% t section4.phil-content %}</p>
 				</div>
 			</div>
 			<div class="section">
 				<img src="public/img/seeong.jpg" alt="">
 				<div>
-					<h1>SEONG LEE <span>Designer</span></h1>
-					<p>User interface design expert, Seong truly understands that the design process must balance technical functionality and visual elements to create a harmonious system that maximizes the user experience.</p>
+					<h1>{% t section4.see %} <span>{% t section4.see-des %}</span></h1>
+					<p>{% t section4.see-content %}</p>
 				</div>
 			</div>
-			<p class="footer">Have an idea you’d like to ship? <a href="mailto:philc@shefing.com">philc@shefing.com</a></p>
-			
+			<p class="footer">{% t section4.footer %} <a href="mailto:philc@shefing.com">philc@shefing.com</a></p>
+
 		</div>
-	</section><!-- cd-section -->
-	
-<script src="public/js/jquery-2.1.1.js"></script>
-<script src="public/js/main.js"></script> <!-- Resource jQuery -->
+	</section>
+	<!-- cd-section -->
+
+	<script src="public/js/jquery-2.1.1.js"></script>
+	<script src="public/js/main.js"></script>
+	<!-- Resource jQuery -->
 </body>
+
 </html>

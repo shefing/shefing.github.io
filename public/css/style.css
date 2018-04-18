@@ -1,3 +1,9 @@
+
+@font-face{ 
+	font-family: 'opensans';
+	src: url('open-sans/OpenSansHebrew-Regular.ttf');
+}
+
 /* -------------------------------- 
 
 Primary style
@@ -5,7 +11,9 @@ Primary style
 -------------------------------- */
 html * {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale; 
+  
+  }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -15,7 +23,7 @@ html * {
 body {
   background-color: #f7f7f7;
   font-size: 100%;
-  font-family: "Arial", sans-serif; }
+  font-family:'opensans', "Arial", sans-serif; }
 
 body, html {
   height: 100%; }
@@ -47,7 +55,22 @@ Main components
 .cd-section {
   min-height: 100%;
   position: relative;
-  padding: 2em 0; }
+  padding: 2em 0;
+   }
+
+  .lang-container {
+      float: right;
+      margin-top: -60px;
+      margin-right: 100px;
+      font-size: 1.3em;
+      font-weight: 400; 
+  }
+    .lang {
+      text-decoration: underline;
+
+        color: black !important;
+    }
+  
   @media only screen and (min-width: 768px) {
     .cd-section {
       max-width: 1024px;
@@ -74,10 +97,13 @@ Main components
   @media only screen and (min-width: 768px) {
     .cd-section .logo {
       display: none; } }
+      .container-page-1-en{
+        top: 50% !important;
+      }
   .cd-section .container-page-1 {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 65%;
     bottom: auto;
     right: auto;
     -webkit-transform: translateX(-50%) translateY(-50%);
@@ -90,6 +116,7 @@ Main components
     .cd-section .container-page-1 .left-side {
       width: 50%;
       float: left; }
+      
       .cd-section .container-page-1 .left-side .content {
         position: absolute;
         top: 50%;
@@ -106,7 +133,7 @@ Main components
           @media only screen and (min-width: 768px) {
             .cd-section .container-page-1 .left-side .content h1 {
               width: 50%; } }
-          .cd-section .container-page-1 .left-side .content h1 span.we {
+          .cd-section .container-page-1 .left-side .content h1 span.we a.we {
             font-weight: 300; }
           .cd-section .container-page-1 .left-side .content h1 span.shape {
             font-weight: 500; }
@@ -191,7 +218,7 @@ Main components
       @media only screen and (min-width: 768px) {
         .cd-section .container-page-2 h1 {
           width: 50%; } }
-      .cd-section .container-page-2 h1 span.we {
+      .cd-section .container-page-2 h1 span.we a.we{
         font-weight: 300; }
       .cd-section .container-page-2 h1 span.ideas {
         font-size: 1.3em;
