@@ -7,12 +7,6 @@
   direction: rtl;
 }
 
-.video-container {
-  text-align: center;
-  margin: 2.6% 8%;
-  position:  absolute;
-  z-index: 1;
-}
 /* -------------------------------- 
 
 Primary style
@@ -43,6 +37,23 @@ a {
 
 img {
   max-width: 100%; }
+  .video-container {
+    height:500px; 
+    width:80%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  resize:both;
+    margin-top: 14%;
+        margin-left: auto;
+    margin-right: auto;
+  }
+  .video {
+    width:100%;
+  height:100%;
+  border:none;
+  }
+  
+  
 
 /* -------------------------------- 
 

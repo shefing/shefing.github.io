@@ -1,6 +1,5 @@
 <!doctype html> {% if site.lang == "he" %} {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
-<html class="language-he"> {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root }}he{{ page.url }}{% endcapture
-%}
+<html class="language-he"> {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root }}he{{ page.url }}{% endcapture %}
 <html class="language-en"> {% endif %}
 
 <head>
@@ -51,9 +50,8 @@
 			</li>
 		</ul>
 	</nav>
-	<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
-
-	<section id="section1" class="cd-section">
+	<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a> {% if site.lang == "he" %}
+	<section id="section0" class="cd-section">
 		<span class="we"> </span>
 		<img class="logo-header" src="public/img/logo.png" height="70" alt="">
 		<div class="lang-container">
@@ -62,14 +60,27 @@
 			}}he{{ page.url }}{% endcapture %}
 			<a class="lang" href="{{ link2 }}">{% t global.hebrew %}</a> {% endif %}
 		</div>
-		{% if site.lang == "he" %}
-		<div class="video-container">
 
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/ZH5VWr0RRDY" frameborder="0" allow="autoplay; encrypted-media"
+		<center class="video-container">
+
+			<iframe class="video" src="https://www.youtube.com/embed/ZH5VWr0RRDY" frameborder="0" allow="autoplay; encrypted-media"
 				allowfullscreen></iframe>
+		</center>
+		<a href="#section1" class="cd-scroll-down cd-img-replace">scroll down</a>
+	</section>
+	{% endif %}
+	<section id="section1" class="cd-section">
+		{% if site.lang != "he" %}
+		<span class="we"> </span>
+		<img class="logo-header" src="public/img/logo.png" height="70" alt="">
+		<div class="lang-container">
+			{% if site.lang == "he" %} {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
+			<a class="lang" href="{{ link1 }}">{% t global.english %}</a> {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root
+			}}he{{ page.url }}{% endcapture %}
+			<a class="lang" href="{{ link2 }}">{% t global.hebrew %}</a> {% endif %}
 		</div>
-		{% endif %}
-		<div class="{% if site.lang == 'he'' %}container-page-1{% else %}container-page-1 container-page-1-en{% endif %}">
+	 {% endif %}
+		<div class="container-page-1 container-page-1-en">
 			<div class="left-side">
 				<div class="content">
 					<h1><span class="we">{% t section1.we %}</span> <br> <span class="ideas">{% t section1.ideas %}</span> {% t section1.to
