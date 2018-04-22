@@ -3,7 +3,16 @@
 	font-family: 'opensans';
 	src: url('open-sans/OpenSansHebrew-Regular.ttf');
 }
+.language-he {
+  direction: rtl;
+}
 
+.video-container {
+  text-align: center;
+  margin: 2.6% 8%;
+  position:  absolute;
+  z-index: 1;
+}
 /* -------------------------------- 
 
 Primary style
@@ -57,11 +66,22 @@ Main components
   position: relative;
   padding: 2em 0;
    }
-
+   .language-en .lang-container {
+    direction: rtl; 
+   }
   .lang-container {
-      float: right;
-      margin-top: -60px;
-      margin-right: 100px;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 1024px;
       font-size: 1.3em;
       font-weight: 400; 
   }
@@ -87,6 +107,10 @@ Main components
       color: #4d4d4d; }
     .cd-section:nth-of-type(even) p {
       color: gray; }
+      .language-he  .cd-section .logo-header{
+        float: left;
+        left: 100%;
+      }
   .cd-section .logo-header {
     margin-left: 45px;
     margin-top: -10px;
@@ -113,6 +137,8 @@ Main components
     transform: translateX(-50%) translateY(-50%);
     width: 90%;
     max-width: 1024px; }
+    .language-he .cd-section .container-page-1 .left-side {
+      float: right !important; }
     .cd-section .container-page-1 .left-side {
       width: 50%;
       float: left; }
@@ -140,10 +166,19 @@ Main components
           .cd-section .container-page-1 .left-side .content h1 span.ideas {
             font-size: 1.3em;
             font-weight: 600; }
+            .language-he .cd-section .container-page-1 .left-side .content h1 span.life {
+              font-family: 'opensans', "Arial", sans-serif;
+            }
           .cd-section .container-page-1 .left-side .content h1 span.life {
             font-size: 1.4em;
             font-style: italic;
             font-family: "Times New Roman", Times, serif; }
+          .language-he  .cd-section .container-page-1 .left-side .content p { 
+            border-left: 0px solid #2c92e7;
+            border-right: 4px solid #2c92e7;
+            padding-left: 0px;
+            padding-right: 20px;
+          }
         .cd-section .container-page-1 .left-side .content p {
           font-size: 21px;
           font-size: 1.3125rem;
@@ -156,6 +191,9 @@ Main components
     .cd-section .container-page-1 .right-side {
       display: none; }
       @media only screen and (min-width: 768px) {
+        .language-he .cd-section .container-page-1 .right-side {
+          float: left !important;
+        }
         .cd-section .container-page-1 .right-side {
           margin: 0 auto;
           display: inherit;
@@ -223,6 +261,12 @@ Main components
       .cd-section .container-page-2 h1 span.ideas {
         font-size: 1.3em;
         font-weight: 500; }
+        .language-he .cd-section .container-page-2 p { 
+          border-left: 0px solid #6fb517;
+      padding-left: 0px;
+      border-right: 4px solid #6fb517;
+      padding-right: 20px;
+        }
     .cd-section .container-page-2 p {
       font-size: 18px;
       font-size: 1.125rem;
@@ -260,6 +304,9 @@ Main components
       font-size: 3.25rem;
       text-align: right;
       margin-bottom: 4%; }
+      .language-he .cd-section .container-page-3 h1 span.special{
+        font-family: 'opensans', "Arial", sans-serif;
+      }
       .cd-section .container-page-3 h1 span.special {
         font-size: 0.9em;
         font-style: italic;
@@ -271,6 +318,14 @@ Main components
       .cd-section .container-page-3 .section h2 {
         display: none; }
         @media only screen and (min-width: 768px) {
+          .language-he .cd-section .container-page-3 .section h2{
+            float: right;
+            text-align: left;
+          }
+          .language-he .cd-section .container-page-3 .section h2{
+            padding-left: 10px;
+            padding-right: 0px;
+          }
           .cd-section .container-page-3 .section h2 {
             display: block;
             float: left;
@@ -278,6 +333,10 @@ Main components
             font-size: 18px;
             font-size: 1.125rem;
             padding-right: 10px; } }
+            .language-he .cd-section .container-page-3 .section p{
+              padding-right: 20px;
+              padding-left: 0px;
+            }
       .cd-section .container-page-3 .section p {
         font-size: 18px;
         font-size: 1.125rem;
@@ -287,6 +346,10 @@ Main components
       @media only screen and (min-width: 768px) {
         .cd-section .container-page-3 .section.effective h2 {
           width: 30%; } }
+          .language-he .cd-section .container-page-3 .section.effective p {
+            border-left: 0px solid #357cd8;
+            border-right: 4px solid #357cd8;
+          }
       .cd-section .container-page-3 .section.effective p {
         border-left: 4px solid #357cd8; }
         @media only screen and (min-width: 768px) {
@@ -295,6 +358,10 @@ Main components
       @media only screen and (min-width: 768px) {
         .cd-section .container-page-3 .section.creative h2 {
           width: 35%; } }
+          .language-he .cd-section .container-page-3 .section.creative p {
+        border-left: 0px solid #ff4001;
+         border-right: 4px solid #ff4001;  
+        }
       .cd-section .container-page-3 .section.creative p {
         border-left: 4px solid #ff4001; }
         @media only screen and (min-width: 768px) {
@@ -303,6 +370,10 @@ Main components
       @media only screen and (min-width: 768px) {
         .cd-section .container-page-3 .section.cutting h2 {
           width: 20%; } }
+        .language-he .cd-section .container-page-3 .section.cutting p{
+          border-left: 0px solid #ffd61a; 
+          border-right: 4px solid #ffd61a; 
+        }
       .cd-section .container-page-3 .section.cutting p {
         border-left: 4px solid #ffd61a; }
         @media only screen and (min-width: 768px) {
@@ -311,6 +382,10 @@ Main components
       @media only screen and (min-width: 768px) {
         .cd-section .container-page-3 .section.adaptive h2 {
           width: 35%; } }
+         .language-he .cd-section .container-page-3 .section.adaptive p {
+        border-right: 4px solid #8dd14a;  
+        border-left: 0px solid #8dd14a;
+          }
       .cd-section .container-page-3 .section.adaptive p {
         border-left: 4px solid #8dd14a; }
         @media only screen and (min-width: 768px) {
@@ -319,6 +394,10 @@ Main components
       @media only screen and (min-width: 768px) {
         .cd-section .container-page-3 .section.quality h2 {
           width: 32%; } }
+          .language-he .cd-section .container-page-3 .section.quality p {
+        border-left: 0px solid #ff4001;
+          border-right: 4px solid #ff4001;
+         }
       .cd-section .container-page-3 .section.quality p {
         border-left: 4px solid #ff4001; }
         @media only screen and (min-width: 768px) {
@@ -327,6 +406,10 @@ Main components
       @media only screen and (min-width: 768px) {
         .cd-section .container-page-3 .section.performant h2 {
           width: 40%; } }
+         .language-he .cd-section .container-page-3 .section.performant p {
+        border-right: 4px solid #357cd8;
+        border-left: 0px solid #357cd8;
+         }
       .cd-section .container-page-3 .section.performant p {
         border-left: 4px solid #357cd8; }
         @media only screen and (min-width: 768px) {
@@ -335,6 +418,9 @@ Main components
       @media only screen and (min-width: 768px) {
         .cd-section .container-page-3 .section.sustainable h2 {
           width: 20%; } }
+         .language-he .cd-section .container-page-3 .section.sustainable p {
+        border-left: 0px solid #ffd61a;
+         border-right: 4px solid #ffd61a; }
       .cd-section .container-page-3 .section.sustainable p {
         border-left: 4px solid #ffd61a; }
         @media only screen and (min-width: 768px) {
@@ -374,6 +460,9 @@ Main components
       overflow: auto;
       zoom: 1;
       padding-top: 25px; }
+      .language-he .cd-section .container-page-4 .section img {
+        float: right;
+      }
       .cd-section .container-page-4 .section img {
         float: left;
         width: 15%; }

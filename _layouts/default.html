@@ -1,5 +1,7 @@
-<!doctype html>
-<html lang="he" class="no-js">
+<!doctype html> {% if site.lang == "he" %} {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
+<html class="language-he"> {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root }}he{{ page.url }}{% endcapture
+%}
+<html class="language-en"> {% endif %}
 
 <head>
 	<meta charset="UTF-8">
@@ -61,11 +63,11 @@
 			<a class="lang" href="{{ link2 }}">{% t global.hebrew %}</a> {% endif %}
 		</div>
 		{% if site.lang == "he" %}
-		<center>
+		<div class="video-container">
 
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/ZH5VWr0RRDY" frameborder="0" allow="autoplay; encrypted-media"
 				allowfullscreen></iframe>
-		</center>
+		</div>
 		{% endif %}
 		<div class="{% if site.lang == 'he'' %}container-page-1{% else %}container-page-1 container-page-1-en{% endif %}">
 			<div class="left-side">
@@ -151,10 +153,12 @@
 			</div>
 			<div class="section">
 				<img src="public/img/seeong.jpg" alt="">
+
 				<div>
 					<h1>{% t section4.see %} <span>{% t section4.see-des %}</span></h1>
 					<p>{% t section4.see-content %}</p>
 				</div>
+
 			</div>
 			<p class="footer">{% t section4.footer %} <a href="mailto:philc@shefing.com">philc@shefing.com</a></p>
 
