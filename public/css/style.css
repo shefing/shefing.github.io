@@ -119,7 +119,10 @@ Main components
     .lang {
         color: rgb(20, 97, 187) !important;
     }
-  
+  .language-en .blog-link {
+    direction: rtl;
+  }
+
   .blog-link {
     font-size: 17px;
     letter-spacing: 1.2px;
@@ -147,7 +150,7 @@ Main components
       color: #4d4d4d; }
     .cd-section:nth-of-type(even) p {
       color: gray; }
-      .language-he  .cd-section .logo-header{
+       .cd-section .logo-header{
         float: left;
         left: 100%;
       }

@@ -59,11 +59,7 @@
 		<img class="logo-header" src="public/img/logo.png" height="70" alt="">
 		<a class="blog-link" href="http://blog.shefing.com/" target="_blank">Shefing Blog |</a>
 		<div class="lang-container">
-
-			{% if site.lang == "he" %} {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
-			<a class="lang" href="{{ link1 }}"><i class="fa fa-globe fa-lg"></i>{% t global.english %}</a> {% elsif site.lang == "en"
-			%} {% capture link2 %}{{ site.baseurl_root }}he{{ page.url }}{% endcapture %}
-			<a class="lang" href="{{ link2 }}">{% t global.hebrew %}<i class="fa fa-globe fa-lg"></i></a> {% endif %}
+			<a class="lang" href="{{ link1 }}"><i class="fa fa-globe fa-lg"></i>{% t global.english %}</a>
 		</div>
 
 		<div class="video-container">
@@ -78,13 +74,10 @@
 		{% if site.lang != "he" %}
 		<span class="we"> </span>
 		<img class="logo-header" src="public/img/logo.png" height="70" alt="">
+		<a class="blog-link" href="http://blog.shefing.com/" target="_blank">Shefing Blog |</a>
 		<div class="lang-container">
-			{% if site.lang == "he" %} {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
-			<a class="lang" href="{{ link1 }}">{% t global.english %}</a> {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root
-			}}he{{ page.url }}{% endcapture %}
 			<a class="lang" href="{{ link2 }}"><i class="fa fa-globe fa-lg"></i>{% t global.hebrew %}</a> {% endif %}
 		</div>
-		{% endif %}
 		<div class="container-page-1 container-page-1-en">
 			<div class="left-side">
 				<div class="content">
