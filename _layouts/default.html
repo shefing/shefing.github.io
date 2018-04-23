@@ -3,6 +3,7 @@
 <html class="language-en"> {% endif %}
 
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,6 +14,8 @@
 	<link rel="stylesheet" href="public/css/reset.css">
 	<!-- CSS reset -->
 	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<!-- Resource style -->
 	<script src="public/js/modernizr.js"></script>
 	<!-- Modernizr -->
@@ -55,10 +58,11 @@
 		<span class="we"> </span>
 		<img class="logo-header" src="public/img/logo.png" height="70" alt="">
 		<div class="lang-container">
+
 			{% if site.lang == "he" %} {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
-			<a class="lang" href="{{ link1 }}">{% t global.english %}</a> {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root
-			}}he{{ page.url }}{% endcapture %}
-			<a class="lang" href="{{ link2 }}">{% t global.hebrew %}</a> {% endif %}
+			<a class="lang" href="{{ link1 }}"><i class="fa fa-globe fa-lg"></i>{% t global.english %}</a> {% elsif site.lang == "en"
+			%} {% capture link2 %}{{ site.baseurl_root }}he{{ page.url }}{% endcapture %}
+			<a class="lang" href="{{ link2 }}">{% t global.hebrew %}<i class="fa fa-globe fa-lg"></i></a> {% endif %}
 		</div>
 
 		<div class="video-container">
@@ -77,7 +81,7 @@
 			{% if site.lang == "he" %} {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
 			<a class="lang" href="{{ link1 }}">{% t global.english %}</a> {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root
 			}}he{{ page.url }}{% endcapture %}
-			<a class="lang" href="{{ link2 }}">{% t global.hebrew %}</a> {% endif %}
+			<a class="lang" href="{{ link2 }}"><i class="fa fa-globe fa-lg"></i>{% t global.hebrew %}</a> {% endif %}
 		</div>
 		{% endif %}
 		<div class="container-page-1 container-page-1-en">

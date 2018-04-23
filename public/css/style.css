@@ -3,10 +3,24 @@
 	font-family: 'opensans';
 	src: url('open-sans/OpenSansHebrew-Regular.ttf');
 }
+
+@font-face{ 
+	font-family: 'horev';
+	src: url('horev/horevclm-heavy-webfont.ttf');
+}
+
+
+
+
+
 .language-he {
   direction: rtl;
 }
 
+.fa {
+  margin-left: 7px;
+  margin-right: 7px
+}
 /* -------------------------------- 
 
 Primary style
@@ -103,9 +117,9 @@ Main components
       font-weight: 400; 
   }
     .lang {
-      text-decoration: underline;
+      
 
-        color: black !important;
+        color: #2c92e7 !important;
     }
   
   @media only screen and (min-width: 768px) {
@@ -180,12 +194,19 @@ Main components
             font-weight: 300; }
           .cd-section .container-page-1 .left-side .content h1 span.shape {
             font-weight: 500; }
+            .language-he .cd-section .container-page-1 .left-side .content h1 span.ideas { 
+                  font-family: 'horev', "Arial", sans-serif;
+                font-size: 2.4em;
+
+            }
+            
           .cd-section .container-page-1 .left-side .content h1 span.ideas {
             font-size: 1.3em;
             font-weight: 600; }
             .language-he .cd-section .container-page-1 .left-side .content h1 span.life {
               font-family: 'opensans', "Arial", sans-serif;
               font-style: initial;
+              font-weight: 600;
             }
           .cd-section .container-page-1 .left-side .content h1 span.life {
             font-size: 1.4em;
