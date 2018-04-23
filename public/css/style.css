@@ -117,11 +117,20 @@ Main components
       font-weight: 400; 
   }
     .lang {
-      
-
-        color: #2c92e7 !important;
+        color: rgb(20, 97, 187) !important;
     }
   
+  .blog-link {
+    font-size: 17px;
+    letter-spacing: 1.2px;
+    text-indent: 6px;
+    font-weight: 300;
+    padding-top: 1.8em;
+    text-align: center;
+    color: #585757 !important;
+    float: left;
+    margin-left: 22px;
+  }
   @media only screen and (min-width: 768px) {
     .cd-section {
       max-width: 1024px;
