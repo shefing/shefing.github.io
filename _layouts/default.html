@@ -81,8 +81,8 @@
 		<div class="container-page-1 container-page-1-en">
 			<div class="left-side">
 				<div class="content">
-					<h1><span class="we">{% t section1.we %}</span> <br> <span class="ideas">{% t section1.ideas %}</span> {% t section1.to
-						%} <span class="life">{% t section1.life %}</span></h1>
+					<h1><span class="we">{% t section1.we %}</span> <br> <span class="ideas">{% t section1.ideas %}</span> {% if site.lang != "he" %} <span class="to">{% t section1.to
+						%}</span >{% endif %} <span class="life">{% t section1.life %}</span></h1>
 					<p>{% t section1.first %} <br><br> {% t section1.second %}</p>
 					<img class="logo" src="public/img/logo.png" height="40" alt="">
 				</div>
