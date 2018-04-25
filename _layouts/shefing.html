@@ -1,6 +1,6 @@
 <!doctype html> {% if site.lang == "he" %} {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
-<html class="language-he" > {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root }}he{{ page.url }}{% endcapture %}
-<html class="language-en" > {% endif %}
+<html class="language-he"> {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root }}he{{ page.url }}{% endcapture %}
+<html class="language-en"> {% endif %}
 
 <head>
 
@@ -24,6 +24,8 @@
 
 <body>
 	{{ content }}
+	<script src="public/js/jquery-2.1.1.js"></script>
+	<script src="public/js/main.js"></script>
 </body>
 
 </html>

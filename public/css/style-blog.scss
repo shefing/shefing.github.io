@@ -159,7 +159,7 @@ a {
 
     }
 
-    &.page-link{
+    &.page-link &.page-link-on{
       &:hover {
           color: $text-color;
 /*     border-bottom: 1px dotted black ;
@@ -426,11 +426,14 @@ pre {
   text-align: center;
   text-transform: lowercase;
 }
-.page-link {
+.page-link  {
   color: rgb(170, 170, 170);
 }
+.page-link-on {
+  color: black !important;
+}
 .site-nav {
-  .page-link {
+  .page-link .page-link-on {
     color: $text-color;
     line-height: $base-line-height;
     // Gaps between nav items, but not on the last one
@@ -470,7 +473,7 @@ pre {
       display: block;
       padding-bottom: 5px;
     }
-    .page-link {
+    .page-link .page-link-on {
       display: block;
       padding: 5px 10px;
       &:not(:last-child) {

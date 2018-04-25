@@ -9,11 +9,12 @@
 <div class="wrapper">
   <div class="trigger site-navigation">
 
+
     <a class="page-link" href="/">WWW</a>
     <span class="exclamationMark">/</span>
-    <a class="page-link" href="/blog">Blog</a>
-     {% for sitePage in site.pages %} {% if sitePage.title %}
+    <a class="{% if page.url == "/blog/" %}page-link-on{% else %}page-link{% endif %}" href="/blog">Blog</a> {% for sitePage in
+    site.pages %} {% if sitePage.title %}
     <span class="exclamationMark">/</span>
-    <a class="page-link" href="{{sitePage.url | prepend: site.baseurl }}">{{sitePage.title}}</a> {% endif %} {% endfor %}
+    <a class="{% if page.url == {{sitePage.permalink}} %}page-link-on{% else %}page-link{% endif %}" href="{{sitePage.url | prepend: site.baseurl }}">{{sitePage.title}}</a> {% endif %} {% endfor %}
   </div>
 </div>
