@@ -1,8 +1,7 @@
-
 <div class="wrapper">
-  <center> 
-    <a href="/index.html">
-      <img class="site-logo" src="{{ "/assets/logo.png" | prepend: site.baseurl | prepend: site.url }}">
+  <center>
+    <a href="/blog">		
+    <img class="site-logo" src="../public/img/logo.png" >
     </a>
   </center>
 </div>
@@ -11,12 +10,10 @@
   <div class="trigger site-navigation">
 
     <a class="page-link" href="/">WWW</a>
-
-    {% for sitePage in site.pages %}
-      {% if sitePage.title %}
-        <span class="exclamationMark">/</span>
-        <a class="page-link" href="{{sitePage.url | prepend: site.baseurl }}">{{sitePage.title}}</a>
-      {% endif %}
-    {% endfor %}
+    <span class="exclamationMark">/</span>
+    <a class="page-link" href="/blog">Blog</a>
+     {% for sitePage in site.pages %} {% if sitePage.title %}
+    <span class="exclamationMark">/</span>
+    <a class="page-link" href="{{sitePage.url | prepend: site.baseurl }}">{{sitePage.title}}</a> {% endif %} {% endfor %}
   </div>
 </div>
