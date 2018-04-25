@@ -6,7 +6,7 @@ categories: business, shefing
 author: "Philippe Cohen"
 ---
 
-First answer: because I have more time now, after wrapping up a 30 month intensive engagement in a startup I co-founded, [audyx](http://www.audyx.com/en "audyx - the first online audiology platform"){:target="_blank"}. Unfortunatly, I had to step out and I've decided together with some of the best individuals I've worked with the past years to focus on other people projects. So [Shefing](http://www.shefing.com "Innovation as a service") is back, offering our experience and talent to others. 
+First answer: because I have more time now, after wrapping up a 30 month intensive engagement in a startup I co-founded, [audyx](http://www.audyx.com/en "audyx - the first online audiology platform"){:target="_blank"}. Unfortunatly, I had to step out and I've decided together with some of the best individuals I've worked with the past years to focus on other people projects. So [Shefing](/) is back, offering our experience and talent to others. 
 
 
 <div style="text-align:center" markdown="1">

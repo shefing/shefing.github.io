@@ -1,26 +1,157 @@
 ---
-layout: default
+layout: defaultdd
 ---
 
-<div class="home">
+	<nav id="cd-vertical-nav">
+		<ul>
+			<li>
+				<a href="#section1" data-number="1">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Intro</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section2" data-number="2">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Activity</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section3" data-number="3">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Special</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section4" data-number="4">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Team</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a> {% if site.lang == "he" %}
+	<section id="section0" class="cd-section">
+		<span class="we"> </span>
+		<img class="logo-header" src="public/img/logo.png" height="70" alt="">
+		<a class="blog-link" href="/blog" target="_blank">Shefing Blog |</a>
+		<div class="lang-container">
+			<a class="lang" href="/"><i class="fa fa-globe fa-lg"></i>{% t global.english %}</a>
+		</div>
 
+		<div class="video-container">
+			<div class="video-two">
+				<iframe class="video" src="https://www.youtube.com/embed/ZH5VWr0RRDY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<a href="#section1" class="cd-scroll-down cd-img-replace">scroll down</a>
+	</section>
+	{% endif %}
+	<section id="section1" class="cd-section">
+		{% if site.lang != "he" %}
+		<span class="we"> </span>
+		<img class="logo-header" src="public/img/logo.png" height="70" alt="">
+		<a class="blog-link" href="/blog" target="_blank">Shefing Blog |</a>
+		<div class="lang-container">
+			<a class="lang" href="/he"><i class="fa fa-globe fa-lg"></i>{% t global.hebrew %}</a> {% endif %}
+		</div>
+		<div class="container-page-1 container-page-1-en">
+			<div class="left-side">
+				<div class="content">
+					<h1><span class="we">{% t section1.we %}</span> <br> <span class="ideas">{% t section1.ideas %}</span> {% if site.lang !=
+						"he" %} <span class="to">{% t section1.to
+						%}</span >{% endif %} <span class="life">{% t section1.life %}</span></h1>
+					<p>{% t section1.first %} <br><br> {% t section1.second %}</p>
+					<img class="logo" src="public/img/logo.png" height="40" alt="">
+				</div>
+			</div>
+			<div class="right-side">
+				<div class="content">
+					<img src="public/img/mobile_app.png" height="570" alt="">
+				</div>
+			</div>
+		</div>
+		<a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+	</section>
+	<!-- cd-section -->
 
-  {% for post in site.posts%}
-  <div class="post postContent">
-    <div  class="postDate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
-    </div>
-    <div class="postDay">
-      {{post.tag}}
-    </div>
-    <br>
-    <div class="postTitle">
-    <a class='postLink' href="{{post.url}}">{{post.title}}</a>
-    </div>
-    <div class="postExt">
-   {{ post.content | strip_html | truncatewords:20}}
-    </div>
-  </div>
-  {% endfor %}
+	<section id="section2" class="cd-section">
+		<div class="container-page-2">
+			<h1><span class="we">{% t section2.we %}</span>
+				<br><span class="ideas">{% t section2.listen %}</span>
+				<br><span class="ideas">{% t section2.design %}</span>
+				<br><span class="ideas">{% t section2.develop %}</span>
+				<br>& <span class="ideas">{% t section2.launch %}</span></h1>
+			<p>{% t section2.content %}</p>
+			<div class="img-footer">
+				<img src="public/img/audyx_web.png" height="350" alt="">
+			</div>
+			<a href="#section3" class="cd-scroll-down cd-img-replace">scroll down</a>
+		</div>
+	</section>
+	<!-- cd-section -->
 
+	<section id="section3" class="cd-section">
+		<div class="container-page-3">
+			<h1>{% t section3.what %} <span class="special">{% t section3.special %}</span></h1>
+			<div class="section effective">
+				<h2>{% t section3.effective %}</h2>
+				<p>{% t section3.effective-content %}</p>
+			</div>
+			<div class="section creative">
+				<h2>{% t section3.creative %}</h2>
+				<p>{% t section3.creative-content %}</p>
+			</div>
+			<div class="section cutting">
+				<h2>{% t section3.cutting-edge %}</h2>
+				<p>{% t section3.cutting-edge-content %}</p>
+			</div>
+			<div class="section adaptive">
+				<h2>{% t section3.adaptive %}</h2>
+				<p>{% t section3.adaptive-content %}</p>
+			</div>
+			<div class="section performant">
+				<h2>{% t section3.performant %}</h2>
+				<p>{% t section3.performant-content %}</p>
+			</div>
+			<div class="section quality">
+				<h2>{% t section3.quality %}</h2>
+				<p>{% t section3.quality-content %}</p>
+			</div>
+			<div class="section sustainable">
+				<h2>{% t section3.sustainable %}</h2>
+				<p>{% t section3.sustainable-content %}</p>
+			</div>
+		</div>
+		<a href="#section4" class="cd-scroll-down cd-img-replace">scroll down</a>
+	</section>
+	<!-- cd-section -->
 
-</div>
+	<section id="section4" class="cd-section">
+		<div class="container-page-4">
+			<h1>{% t section4.meet %}</h1>
+			<p>{% t section4.content %}</p>
+			<div class="section">
+				<img src="public/img/phil.jpg" alt="">
+				<div>
+					<h1>{% t section4.phil %} <span>{% t section4.phil-des %}</span></h1>
+					<p>{% t section4.phil-content %}</p>
+				</div>
+			</div>
+			<div class="section">
+				<img src="public/img/seeong.jpg" alt="">
+
+				<div>
+					<h1>{% t section4.see %} <span>{% t section4.see-des %}</span></h1>
+					<p>{% t section4.see-content %}</p>
+				</div>
+
+			</div>
+			<p class="footer">{% t section4.footer %} <a href="mailto:philc@shefing.com">philc@shefing.com</a></p>
+
+		</div>
+	</section>
+	<!-- cd-section -->
+
+	<script src="public/js/jquery-2.1.1.js"></script>
+	<script src="public/js/main.js"></script>
