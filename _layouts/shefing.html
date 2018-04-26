@@ -1,0 +1,31 @@
+<!doctype html> {% if site.lang == "he" %} {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
+<html class="language-he"> {% elsif site.lang == "en" %} {% capture link2 %}{{ site.baseurl_root }}he{{ page.url }}{% endcapture %}
+<html class="language-en"> {% endif %}
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="public/img/favicon.png" />
+
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="../public/css/reset.css">
+	<!-- CSS reset -->
+	<link rel="stylesheet" href="../public/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Resource style -->
+	<script src="../public/js/modernizr.js"></script>
+	<!-- Modernizr -->
+
+</head>
+
+<body>
+	{{ content }}
+	<script src="public/js/jquery-2.1.1.js"></script>
+	<script src="public/js/main.js"></script>
+</body>
+
+</html>
