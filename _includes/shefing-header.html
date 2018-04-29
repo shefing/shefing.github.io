@@ -1,0 +1,11 @@
+<img class="logo-header" src="public/img/logo.png" height="70" alt="">
+<div class="right-side-drop-down">
+    <div class="dropdown">
+        <button class="dropbtn">{% if site.lang == "he" %}He{% else %}Eng{% endif %}<i class="fa fa-angle-down fa-lg icon-drop-down"></i></button>
+        <div class="dropdown-content">
+            <a href="/">{% t global.english %}</a>
+            <a href="/he">{% t global.hebrew %}</a>
+        </div>
+    </div>
+    <a class="blog-link" href="/blog" target="_blank">Blog</a>
+</div>
