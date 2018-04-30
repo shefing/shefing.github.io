@@ -127,7 +127,7 @@ Main components
     border: none;
     outline: none;
     cursor: pointer;
-    width: 80px;
+    width: 105px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -149,10 +149,11 @@ Main components
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
+    color: #515151;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    text-align: center;
 }
 
 /* Change color of dropdown links on hover */
