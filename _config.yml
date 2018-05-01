@@ -5,12 +5,11 @@ plugins:
 
 languages: ["en", "he"]
 
-baseurl: ""
 title: Shefing Blog
 email: contact@shefing.com
 description: Innovation as a Service
 baseurl: ""
-url: "http://blog.shefing.com/"
+url: ""
 github_username: philjoseph
 email: "contact@shefing.com"
 twitter_username: "philjosephcohen"
