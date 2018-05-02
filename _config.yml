@@ -13,3 +13,4 @@ url: "http://shefing.github.io"
 github_username: philjoseph
 email: "contact@shefing.com"
 twitter_username: "philjosephcohen"
+exclude_from_localizations: ['_posts']
