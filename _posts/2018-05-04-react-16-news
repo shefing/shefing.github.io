@@ -6,5 +6,104 @@ categories: reat, shefing
 author: "Miriam I"
 ---
 
+# React 16 + news
+
 There is a few beautiful news in React 16+.
 In this blog we will learn about 11 news.
+
+## 1. Error handling using componentDidCatch Lifecycle Method
+
+> "Error boundaries are React components that catch JavaScript errors
+> anywhere in their child component tree, log those errors, and display
+> a fallback UI instead of the component tree that crashed. Error
+> boundaries catch errors during rendering, in lifecycle methods, and in
+> constructors of the whole tree below them"
+> 
+> 
+> [Dan Abramov]
+
+You can create en error boundary class component by defining a new lifecycle method
+
+     componentDidCatch(error, errorInfo)
+
+The first method parameter is the actual error thrown. The second parameter is an object with a `componentStack` property containing the component stack trace information.
+
+You can learn more about this function in: https://medium.com/@sgroff04/2-minutes-to-learn-react-16s-componentdidcatch-lifecycle-method-d1a69a1f753
+
+
+##  2. Render multiple elements without a wrapping element in a component
+
+In React 16 you can render multiple elements without using root.  
+For example:
+
+In React 15 you must write:
+
+```jsx
+const App = () => <div>  
+ <p key="1">React 15 can't return multiple elements ❤️p>  
+ <p key="2">React 15 can't return multiple elements ❤️p>   
+ <p key="3">React 15 can't return multiple elements ❤️p>  
+</div>
+```
+
+But in React 16 you can write:  
+  
+
+```jsx
+const App = () => [
+  <p key="1">React 16 can return multiple elements ❤️p>,
+  <p key="2">React 16 can return multiple elements ❤️p>,
+  <p key="3">React 16 can return multiple elements ❤️p>,
+];
+```
+
+To avoid array notation and manually added keys to each of the element, you can
+
+use an `Aux` helper function that simply returns all its children. Like so…
+
+```jsx
+const Aux = props => props.children;
+
+const App = () =>
+  <Aux>
+    <p>React 16 can return multiple elements ❤️p>
+    <p>React 16 can return multiple elements ❤️p>
+    <p>React 16 can return multiple elements ❤️p>
+  Aux>;
+```
+
+React 16.2 introduced another way of returning multiple
+
+elements. `React.Fragment`abstracted in JSX way via just an empty tag. No extra components needed, no array notation, no keys. Nice!
+
+```jsx
+const App = () => (
+  <React.Fragment>
+    <p>React 16 can return multiple elements ❤️p>
+    <p>React 16 can return multiple elements ❤️p>
+    <p>React 16 can return multiple elements ❤️p>
+  </React.Fragment>
+);
+```
+
+And you can use empty tags like:
+
+```jsx
+const App = () => (
+  <>
+    <p>React 16 can return multiple elements ❤️p>
+    <p>React 16 can return multiple elements ❤️p>
+    <p>React 16 can return multiple elements ❤️p>
+  </>
+);
+```
+
+## 3. Render text only component
+
+You can create class that retrun only string without tags.
+
+for example:
+
+```jsx
+const App = () =>  return 'Just string!!';
+```
