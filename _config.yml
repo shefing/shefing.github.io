@@ -21,11 +21,11 @@ t:
           life: life
           first: We are a boutique consulting agency, crafting software products for companies of all shapes and sizes.
           second: We love using our methodology and talents to transform ideas into reality. We use cutting edge cloud technologies and most performant front-end frameworks for web and mobile to ensure your satisfaction.
-    section2: 
+    section2:
           we: WE
-          listen: LISTEN, 
+          listen: LISTEN,
           design: DESIGN,
-          develop: DEVELOP 
+          develop: DEVELOP
           launch: LAUNCH
           content: We are a team composed of seasoned product executive, artisans crafting beautiful user interfaces and talented software developers passionated about creating disruptive products that engage users.
     section3:
@@ -45,15 +45,12 @@ t:
           quality-content: We take responsibility on the quality of our deliveries by testing in-house. We never delegate this core responsibility to assess the quality.
           sustainable: Sustainable
           sustainable-content: We automate the DevOps to ensure long running applications in production, with high availability and minimal overhead.
-    section4: 
+    section4:
           meet: Meet our team
           content: We are a boutique consulting agency composed of product strategist, designer and developers with an extensive experience in building successful software products.
           phil: PHILIPPE COHEN
           phil-des: Product Strategist
           phil-content: Software engineering and ergonomics expert, he brings his experience to create the most efficient platform for companies of all shapes and sizes.
-          see: SEONG LEE 
-          see-des: Designer
-          see-content: User interface design expert, Seong truly understands that the design process must balance technical functionality and visual elements to create a harmonious system that maximizes the user experience.
           footer: Have an idea you’d like to ship?
     global:
           english: English
@@ -65,11 +62,11 @@ t:
         life: למציאות
         first: אנחנו חברת בוטיק לייעוץ ושירותים בונים מוצרי תוכנה ללקוחות שונים וגוונים.
         second: אנחנו אוהבים להשתמש במקצועיות ובכישרונות שלנו כדי להפוך רעיונות למציאות. אנחנו משתמשים בטכנולוגיות חדישות בתחום הענן והממשק משתמש כדי להבטיח את שביעות רצונך.
-    section2: 
+    section2:
         we: ' '
-        listen: מקשיבים, 
+        listen: מקשיבים,
         design: מעצבים,
-        develop: מתכנתים 
+        develop: מתכנתים
         launch: מעלים
         content: אנחנו צוות המורכב בבכירי תעשית התוכנה ,מומחי עיצוב ומפתחי תוכנה מוכשרים הנלהבים ליצור מוצרים שימשכו לקוחות
     section3:
@@ -78,7 +75,7 @@ t:
         effective: יעילות
         effective-content: אנחנו מתמקדים במטרות העסקיות, קהל יעד, בתקציב ובלוחות הזמנים כדי להגדיר את מפת הדרכים שלכם.
         creative: יצירתיות
-        creative-content: אנחנו שואפים ליצור זרימת מסכים נוחה אשר תובן באופן אינטואיטיבי על ידי המשתמשים, 
+        creative-content: אנחנו שואפים ליצור זרימת מסכים נוחה אשר תובן באופן אינטואיטיבי על ידי המשתמשים,
         cutting-edge: חזית הטכנולוגיה
         cutting-edge-content: 'אנחנו מפתחים  ואפליקציות מודרניים Web ו-Mobile באמצעות טכנולוגיות client המתקדמות ביותר: Javascript, ReactJS, React-Native & Redux.  עבור מכשירים ניידים אנחנו מייצרים ישומים  native אמיתיים ובצורה חסכונית עם קוד משותף לכל הפלטפורמות.'
         adaptive: גמישות
@@ -87,7 +84,7 @@ t:
         performant-content: אנחנו מעלים את Node.js לספקי PaaS מתקדמים כגון Heroku כדי להבטיח תפעול גמיש, אמין ומוכן לעומסים. אנחנו משתמשים ב-Google Firebase כדי ליצור שרת במהירות הבזק
         quality: איכות
         quality-content: אנחנו לוקחים אחריות על איכות המוצרים שלנו על ידי בדיקות פנימיות ולא נוציא החוצה את בדיקות האיכות.
-        sustainable: פיתוח בר קיימא   
+        sustainable: פיתוח בר קיימא
         sustainable-content: אנחנו הופכים את DevOps לאוטומטי כדי להבטיח שהאפליקציות ירוצו לטווח ארוך אצל הלקוח, עם זמינות גבוהה ומינימום תקורות.
     section4:
         meet: הצוות שלנו
@@ -95,9 +92,6 @@ t:
         phil: פיליפ כהן
         phil-des: אסטרטג מוצרים
         phil-content:  מהנדס תוכנה ומומחה לארגונומיה, פיליפ מביא את ניסיונו ליצור את הפלטפורמה היעילה ביותר עבור חברות מכל הסוגים.
-        see: סיונג לי
-        see-des: מעצב
-        see-content: מעצב ממשק משתמש מומחה, סיונג מבין כי תהליך העיצוב חייב לאזן פונקציונליות טכנית ואלמנטים חזותיים כדי ליצור מערכת הרמונית הממקסמת את חוויית המשתמש.
         footer: יש לך רעיון לשלוח?
     global:
         english: English
