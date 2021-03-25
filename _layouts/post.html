@@ -1,27 +1,31 @@
 ---
-layout: default
+layout: blog
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline"><a class="post-title-link"  href="{{page.url}}">{{ page.title }}</a></h1>
-    <center>  <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
-      {% if page.author %}
-       <div class="">
-         <center><p ><strong><span class="small-site-title"> <h2 style="letter-spacing: 3px !important;
-         text-transform: uppercase !important;">{{page.author}}</h2></span></strong></p></center>
+<div class='mod modBlogPost big no_bg'>
+  {% if page.images and page.images[0] %}
+    <div class='images'>
+      {% for image in page.images  %}
+        <div class='image'><img width="800" height="533" alt="" src="{{ image | relative_url }}" /></div>
+      {% endfor %}
+    </div>
+  {% endif %}
 
-       </div>
-       {% endif %}
-     </center>
-     {% include shares.html %}
-  </header>
+  <div class='content'>
+    {% include post-meta.html post=page %}
+    
+    <h3 class="deco">{{ page.title }}</h3>
 
-  <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+</div>
 
-</article>
-{% include shares.html %}
+<a id='comments'></a>
 
-{% include comments.html %}
+<div class='comments-wrapper'>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+
+</div>

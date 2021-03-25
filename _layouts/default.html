@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-{% include head.html %}
+  {% include head.html %}
 
-<body>
+  <body class="{{ page.collection }}">
 
-	{% include header.html %}
+    <a id='top'></a>
 
-	<div class="page-content">
-		<div class="wrapper">
-			{{ content }}
-		</div>
-	</div>
+    {% include header.html %}
 
-	{% include footer.html %}
+    {% if page.onepage %}
+      {% assign classname = 'top-shift' %}
+    {% else %}
+      {% assign classname = '' %}
+    {% endif %}
 
-</body>
-{% include google_analytics.html %}
+    <div id="main" class="{{ classname }}">
+      {{ content }}
+    </div>
 
+    {% include footer.html %}
+
+  </body>
 </html>

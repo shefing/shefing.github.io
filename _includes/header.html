@@ -1,20 +1,55 @@
-<div class="wrapper">
-  <center>
-    <a href="/blog">		
-    <img class="site-logo" src="{{ "/public/img/logo.png"| prepend: site.baseurl | prepend: site.url }}"" >
-    </a>
-  </center>
-</div>
+{% if page.onepage %}
+  {% assign classname= '' %}
+{% else %}
+  {% assign classname='bg-black' %}
+{% endif %}
 
-<div class="wrapper">
-  <div class="trigger site-navigation">
+<div class='transparent fullwidth white fixed contain-to-grid {{ classname }}'>
+  <nav class='top-bar onepage' data-options='' data-topbar='' >
+    <ul class='title-area'>
+      <li class='name'>
+        <h1>
+          <a href='{{ 'index.html' | relative_url }}'>
+            <img class="logo" alt="" src="{{ "/assets/images/logo.svg" | relative_url }}" />
+             <span>INNOVATION AS A SERVICE</span>
+          </a>
+        </h1>
+      </li>
+    </ul>
+      <!-- <p top= "129px"
+      color="FFFFFF"
+      left= "80px"
+      width= "308px"
+      height= "37px"
+      opacity="1">INNOVATION AS A SERVICE</p>
+    </h1>
+    </ul> -->
 
+    <div id="menu-toggler" class="right">
+      <a href='#'>
+        <i class="fa fa-bars"></i>
+        Menu
+      </a>
+    </div>
+    <section class='top-bar-section closed'>
+      <ul class='right'>
 
-    <a class="page-link" href="/">WWW</a>
-    <span class="exclamationMark">/</span>
-    <a class="{% if page.url == "/blog/" %}page-link-on{% else %}page-link{% endif %}" href="/blog">Blog</a> {% for sitePage in
-    site.pages %} {% if sitePage.title %}
-    <span class="exclamationMark">/</span>
-    <a class="{% if page.url == {{sitePage.permalink}} %}page-link-on{% else %}page-link{% endif %}" href="{{sitePage.url | prepend: site.baseurl }}">{{sitePage.title}}</a> {% endif %} {% endfor %}
-  </div>
+        {% for item in site.data.nav %}
+          <li>
+            {% assign first = item.path | truncate:1,'' %}
+
+            {% if first != '#' %}
+              {% assign href = item.path | relative_url %}
+            {% elsif page.onepage %}          
+              {% assign href = item.path %}
+            {% else %}              
+              {% assign href = 'index.html' | append:item.path | relative_url %}              
+            {% endif %}
+            
+            <a href="{{ href }}">{{ item.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </nav>
 </div>
