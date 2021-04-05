@@ -64,6 +64,26 @@ h1 {
 .fullscreen .layer h2 span.strong {
   color: #feac29;
 }
+.meatbtn {
+  height: 78px;
+  width: 366px;
+  border: 3px solid #feac29;
+  border-radius: 53px;
+}
+/* li {
+  color: #feac29;
+} */
+ul.list {
+  color: #feac29;
+  font-size: 25px;
+}
+/* li {
+  -bottom: 25px;
+} */
+.we-do {
+  line-height: 1em;
+  /* padding-top: 300px; */
+}
 
 /* Border animation */
 /*some basic settings */
@@ -131,8 +151,10 @@ p {
   font-size: 16px;
 }
 
-p.light {
+span.light {
   color: #ccc;
+  font-size: 24px;
+  font-family: "Poppins";
 }
 .centered-text {
   text-align: center;
@@ -183,6 +205,9 @@ hr {
 .spacing {
   height: 20px;
 }
+.littlespacing {
+  height: 15px;
+}
 .spacing.two {
   height: 40px;
 }
@@ -202,8 +227,9 @@ hr {
   font-size: 24px;
   font-family: poppins;
   font-weight: bold;
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 0px;
 }
 
 .container {
@@ -998,7 +1024,7 @@ ul.shortcode-list span {
 }
 
 .section-title h2 {
-  font-size: 45px;
+  font-size: 39px;
   text-transform: none;
   margin-bottom: 20px;
   line-height: 1.2em;
@@ -1007,7 +1033,7 @@ ul.shortcode-list span {
 }
 
 .section-title p.big-size {
-  font-size: 24px;
+  font-size: 21px;
   line-height: 1.5em;
   margin-top: 60px;
   margin-bottom: 70px;
@@ -4694,7 +4720,9 @@ body {
   text-transform: uppercase;
   display: inline-block;
   /*letter-spacing: 2px;*/
-  font-weight: normal;
+  font-weight: 300;
+  font-size: 37px;
+  letter-spacing: 0px;
 }
 .section-header h2::after,
 .section-header h3::after {
@@ -4704,19 +4732,22 @@ body {
   height: 1px;
   background: #feac29;
   display: block;
+  margin-top: 20px;
+  padding-top: 4px;
   /* visibility: hidden; */
 }
 .section-header h2 div div span {
   color: #feac29;
-  font-weight: 300;
+  /* font-weight: 300; */
+  text-transform: uppercase;
 }
 .section-header h2 div {
   display: inline;
+  text-transform: lowercase;
 }
 .section-header div div div {
   font-family: "Times New Roman";
   font-style: italic;
-  text-transform: lowercase;
   font-size: 48px;
 }
 
@@ -4725,7 +4756,7 @@ body {
 }
 .section-header.alt h2::after,
 .section-header.alt h3::after {
-  margin: 20px 0;
+  margin: 40px 0 25px 0;
 }
 
 .section-header.white h2,
@@ -5967,6 +5998,10 @@ body {
   }
 }
 @media only screen and (max-width: 50em) {
+  .section-header h2 {
+    display: inherit;
+    font-size: 30px;
+  }
   .section-title p.small-title {
     font-size: 30px;
   }
@@ -5978,10 +6013,16 @@ body {
     width: 220px;
     height: 46px;
   }
+  .meatbtn {
+    width: 220px;
+    height: 46px;
+  }
   .innertext {
     font-size: 14px;
     margin-top: 13px;
-    margin-bottom: 13px;
+  }
+  span.light {
+    font-size: 15px;
   }
   .modTeamMember .overlay {
     opacity: 1;
