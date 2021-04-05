@@ -272,7 +272,7 @@ hr {
 
 .left-half {
   width: 50%;
-  padding: 60px 60px 60px 200px;
+  padding: 60px 76px 60px 200px;
   height: 100%;
   position: relative;
   z-index: 200;
@@ -281,7 +281,7 @@ hr {
 
 .right-half {
   width: 50%;
-  padding: 60px 200px 60px 60px;
+  padding: 60px 60px 60px 60px;
   height: 100%;
   position: relative;
   left: 50%;
@@ -1010,6 +1010,8 @@ ul.shortcode-list span {
 .section-title p.big-size {
   font-size: 24px;
   line-height: 1.5em;
+  margin-top: 60px;
+  margin-bottom: 70px;
 }
 
 .section-title p.small-title {
@@ -4698,12 +4700,25 @@ body {
 .section-header h2::after,
 .section-header h3::after {
   content: "";
-  width: 40px;
+  width: 147px;
   margin: 15px auto;
   height: 1px;
   background: #feac29;
   display: block;
-  visibility: hidden;
+  /* visibility: hidden; */
+}
+.section-header h2 div div span {
+  color: #feac29;
+  font-weight: 300;
+}
+.section-header h2 div {
+  display: inline;
+}
+.section-header div div div {
+  font-family: "Times New Roman";
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 48px;
 }
 
 .section-header.alt {
