@@ -5469,6 +5469,9 @@ body {
   }
 }
 @media only screen and (max-width: 60em) {
+  ul.list {
+    line-height: inherit;
+  }
   .f-topbar-fixed {
     padding-top: 0 !important;
   }
