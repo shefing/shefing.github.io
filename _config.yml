@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
+title: www.shefing.com
 
 # This is the place to set up the contact form recipient
 # email: your-email@example.com
@@ -25,7 +25,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username: jekyll
 
 # Build settings
 markdown: kramdown
@@ -40,7 +40,7 @@ sass:
 
 incremental: true
 
-exclude: ['gulpfile.js', 'Gemfile', 'Gemfile.lock']
+exclude: ["gulpfile.js", "Gemfile", "Gemfile.lock"]
 
 collections:
   works:
@@ -56,7 +56,6 @@ defaults:
 
 paginate: 4
 paginate_path: "/blog/page/:num"
-
 # This is the place to set up the commenting system
 # disqus:
 #   shortname: your-disqus-shortname

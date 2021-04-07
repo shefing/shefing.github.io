@@ -61,7 +61,13 @@
 h1 {
   display: block;
 }
+.contactTitle {
+  font-size: 14px;
+}
 .fullscreen .layer h2 span.strong {
+  color: #feac29;
+}
+.color {
   color: #feac29;
 }
 .meatbtn {
@@ -84,7 +90,7 @@ ul.list {
   line-height: 1em;
   /* padding-top: 300px; */
 }
-a img {
+.toplogo {
   margin-top: 10px;
 }
 
@@ -217,7 +223,7 @@ hr {
 .spacing.three {
   height: 60px;
 }
-.spacing.four {
+.projectBtn {
   background-color: #feac29;
   width: 366px;
   height: 78px;
@@ -1033,6 +1039,7 @@ ul.shortcode-list span {
   line-height: 1.2em;
   letter-spacing: 0px;
   color: #000;
+  font-weight: 300;
 }
 
 .section-title p.big-size {
@@ -5472,6 +5479,10 @@ body {
   }
 }
 @media only screen and (max-width: 60em) {
+  .full {
+    /* padding: 50px 0 102px; */
+    /* padding-top: 50px; */
+  }
   ul.list {
     line-height: inherit;
   }
@@ -6004,13 +6015,17 @@ body {
   }
 }
 @media only screen and (max-width: 50em) {
+  .section-header div div div {
+    font-size: 30px;
+  }
+
   .top-bar .name h1 a {
     width: 180px;
     /* padding-top: 30px; */
   }
   .section-header h2 {
     display: inherit;
-    font-size: 30px;
+    font-size: 20px;
     line-height: initial;
   }
   .section-title p.small-title {
@@ -6019,18 +6034,24 @@ body {
   .section-title h2 {
     font-size: 25px;
   }
-  .spacing.four {
-    background-color: #feac29;
+  .projectBtn {
     width: 220px;
     height: 46px;
   }
+  .spacing.four {
+    height: 80px;
+  }
   .meatbtn {
-    width: 220px;
-    height: 46px;
+    width: 180px;
+    height: 35px;
   }
   .innertext {
     font-size: 14px;
     margin-top: 13px;
+  }
+  .meatbtn .innertext {
+    font-size: 14px;
+    margin-top: 5px;
   }
   span.light {
     font-size: 15px;
@@ -6134,7 +6155,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .section-title h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .modMasonryGallery.alt ul.gallery li {
@@ -6214,7 +6235,7 @@ body {
   }
 
   p.big-size {
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
   }
 
   #section1 .timeline {
