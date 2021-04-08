@@ -1796,7 +1796,7 @@ form textarea.error {
 }
 
 .fullscreen {
-  min-height: 800px;
+  /* min-height: 800px; */
   height: 100vh;
   position: relative;
   max-height: 1500px;
@@ -5508,7 +5508,7 @@ body {
 }
 @media only screen and (max-width: 60em) {
   .full {
-    /* padding: 50px 0 102px; */
+    /* padding: 50px 0 50px; */
     /* padding-top: 50px; */
   }
   .read-more {
@@ -5549,6 +5549,7 @@ body {
   }
   .fullscreen .layer h1 {
     font-size: 70px;
+    margin-bottom: 10px;
   }
   .fullscreen .layer h1 span.thir {
     font-size: 113px;
@@ -6157,6 +6158,7 @@ body {
 
   .fullscreen .layer h1 {
     font-size: 50px;
+    margin-bottom: 20px;
     /* margin-bottom: 60px; */
   }
   .fullscreen .layer h1 span.thir {
@@ -6213,11 +6215,12 @@ body {
   }
 
   .fullscreen .layer {
-    top: 25%;
+    top: 20%;
     padding: 20px;
   }
   .fullscreen .layer h1 {
     font-size: 40px;
+    margin-bottom: 20px;
   }
   .fullscreen .layer h1 span.thir {
     font-size: 64px;
