@@ -62,7 +62,19 @@ h1 {
   display: block;
 }
 .contactTitle {
-  font-size: 14px;
+  font-size: 24px;
+  color: #feac29;
+  text-align: center;
+  font-family: poppins;
+  font-weight: bold;
+}
+.contactSubTitle {
+  font-size: 56px;
+  color: #fff;
+  text-align: center;
+  font-family: poppins;
+  font-weight: bold;
+  line-height: 1.5em;
 }
 .fullscreen .layer h2 span.strong {
   color: #feac29;
@@ -70,6 +82,15 @@ h1 {
 .color {
   color: #feac29;
 }
+.read-more {
+  color: #feac29;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0 0 80px -100px;
+}
+
 .meatbtn {
   height: 78px;
   width: 366px;
@@ -222,6 +243,9 @@ hr {
 }
 .spacing.three {
   height: 60px;
+}
+.spacing.four {
+  height: 80px;
 }
 .projectBtn {
   background-color: #feac29;
@@ -1924,8 +1948,12 @@ p.small-title {
   border-left: 1px solid #eaeaea;
 }
 .main-services .modIconText {
+  height: 100%;
   border-right: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
+}
+.main-services .icon-text-advanced {
+  height: 100%;
 }
 .main-services .columns {
   padding: 0;
@@ -5483,6 +5511,16 @@ body {
     /* padding: 50px 0 102px; */
     /* padding-top: 50px; */
   }
+  .read-more {
+    margin: 0 0 40px -100px;
+  }
+  .contactTitle {
+    font-size: 15px;
+  }
+  .contactSubTitle {
+    font-size: 32px;
+  }
+
   ul.list {
     line-height: inherit;
   }
@@ -6039,7 +6077,13 @@ body {
     height: 46px;
   }
   .spacing.four {
-    height: 80px;
+    height: 0px;
+  }
+  .spacing.three {
+    height: 0px;
+  }
+  .spacing.two {
+    height: 0px;
   }
   .meatbtn {
     width: 180px;
