@@ -830,7 +830,8 @@ ul.shortcode-list span {
 }
 
 .f-topbar-fixed.shrink .contain-to-grid {
-  height: 60px;
+  height: 75px;
+  opacity: 0.65;
 }
 .f-topbar-fixed.shrink .top-bar {
   height: 75px;
