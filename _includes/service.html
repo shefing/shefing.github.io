@@ -2,12 +2,14 @@
   <div class='icon-text-advanced' data-bg="{{ include.service.bg | relative_url }}">
     <div class='wrapper'>
       <div class='content'>
-        <i class='{{ include.service.icon }}'></i>
-      </div>
-    </div>
+        <img class="service-icon" src='{{ include.service.icon }}'></img>
+     
     <h3>{{ include.service.title | escape }}</h3>
-    <p>{{ include.service.desc | escape }}</p>
-    <div class="spacing"></div>
-    <div class="read-more"><a>READ MORE</a></div>
+    <p >{{ include.service.desc | escape }}</p></br>
+    <!-- <div class="spacing"></div> -->
+    <p class="read-more"><a href="#">READ MORE</a></p>
   </div>
+</div> 
+
 </div>
+    </div>
