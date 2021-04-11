@@ -5562,6 +5562,7 @@ body {
 
   .fullscreen .layer {
     top: 30%;
+    left: 10px;
   }
   .fullscreen .layer h1 {
     font-size: 70px;
@@ -6087,11 +6088,11 @@ body {
     font-size: 30px;
   }
   .section-title h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .projectBtn {
-    width: 220px;
-    height: 46px;
+    width: 200px;
+    height: 35px;
   }
   .spacing.four {
     height: 0px;
@@ -6108,7 +6109,7 @@ body {
   }
   .innertext {
     font-size: 14px;
-    margin-top: 13px;
+    margin-top: 8px;
   }
   .meatbtn .innertext {
     font-size: 14px;
@@ -6218,7 +6219,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .section-title h2 {
-    font-size: 25px;
+    font-size: 23px;
   }
 
   .modMasonryGallery.alt ul.gallery li {
