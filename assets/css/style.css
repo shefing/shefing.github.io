@@ -275,6 +275,12 @@ hr {
   background-position: 50% 50%;
   clear: both;
 }
+.second-page {
+  padding: 102px 0 102px;
+  background-size: cover;
+  background-position: 50% 50%;
+  clear: both;
+}
 
 .full.dark {
   background: #222;
@@ -4794,7 +4800,7 @@ body {
 }
 .section-header.alt h2::after,
 .section-header.alt h3::after {
-  margin: 40px 0 25px 0;
+  margin: 30px 0 25px 0;
 }
 
 .section-header.white h2,
@@ -5507,13 +5513,19 @@ body {
   }
 }
 @media only screen and (max-width: 60em) {
+  .littlespacing {
+    height: 5px;
+  }
+  .spacing {
+    height: 0px;
+  }
   .section-title p.big-size {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
-  .full {
-    /* padding-top: 50px; */
+  .second-page {
+    padding: 20px;
   }
   .read-more {
     margin: 0 0 40px -100px;
@@ -5871,7 +5883,7 @@ body {
   .right-half {
     width: 100%;
     left: 0;
-    padding: 60px;
+    padding: 30px;
   }
 
   .modMasonryGallery.alt ul.gallery li {
@@ -6103,7 +6115,8 @@ body {
     margin-top: 5px;
   }
   span.light {
-    font-size: 15px;
+    font-size: 12px;
+    line-height: 0.5px;
   }
   .modTeamMember .overlay {
     opacity: 1;
