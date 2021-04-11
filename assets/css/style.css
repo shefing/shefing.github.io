@@ -5507,8 +5507,12 @@ body {
   }
 }
 @media only screen and (max-width: 60em) {
+  .section-title p.big-size {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
   .full {
-    /* padding: 50px 0 50px; */
     /* padding-top: 50px; */
   }
   .read-more {
