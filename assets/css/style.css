@@ -830,7 +830,8 @@ ul.shortcode-list span {
 }
 
 .f-topbar-fixed.shrink .contain-to-grid {
-  height: 60px;
+  height: 75px;
+  opacity: 0.6;
 }
 .f-topbar-fixed.shrink .top-bar {
   height: 75px;
@@ -949,7 +950,7 @@ ul.shortcode-list span {
   .top-bar-section
   li:not(.has-form)
   a:not(.button) {
-  color: #fff;
+  /* color: #fff; */
 }
 .contain-to-grid.transparent.white .top-bar-section .has-dropdown > a:after {
   border-top-color: #fff;
