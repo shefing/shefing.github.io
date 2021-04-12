@@ -3,13 +3,36 @@
     <div class='wrapper'>
       <div class='content'>
         <img class="service-icon" src='{{ include.service.icon }}'></img>
-     
-    <h3>{{ include.service.title | escape }}</h3>
-    <p >{{ include.service.desc | escape }}</p></br>
-    <!-- <div class="spacing"></div> -->
-    <p class="read-more"><a href="#">READ MORE</a></p>
-  </div>
-</div> 
-
-</div>
+      </div>
     </div>
+        <h3>{{ include.service.title | escape }}</h3>
+        <p id="base">{{ include.service.desc | escape }}</p>
+
+        <p id="more" style="display: none;"> {{ include.service.more | escape }}</p></br>
+        <div class="spacing"></div>
+        <!-- <p class="read-more"><a style="display: none;" onclick="myFunction()" >READ LESS</a></p> -->
+        <p class="read-more"><a onclick="readMore()" id="btn">READ MORE</a>
+       </p>
+<script>
+       function readMore() {
+        // var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("btn");
+      
+        if (moreText.style.display === "none") {
+          moreText.style.display = "inline";
+          btnText.innerHTML = "READ LESS"; 
+          // moreText.style.display = "none";
+        } else {
+          moreText.style.display = "none";
+          btnText.innerHTML = "RAED MORE"; 
+          // moreText.style.display = "inline";
+        }
+      }
+       </script>
+
+  </div>
+</div>
+
+ 
+
