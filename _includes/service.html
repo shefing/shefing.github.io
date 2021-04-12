@@ -6,18 +6,18 @@
       </div>
     </div>
         <h3>{{ include.service.title | escape }}</h3>
-        <p id="base">{{ include.service.desc | escape }}</p>
+        <p id='base{{include.service.id}}'  >{{ include.service.desc | escape }}</p>
 
-        <p id="more" style="display: none;"> {{ include.service.more | escape }}</p></br>
+        <p id='more{{include.service.id}}' style="display: none;"> {{ include.service.more | escape }}</p></br>
         <div class="spacing"></div>
         <!-- <p class="read-more"><a style="display: none;" onclick="myFunction()" >READ LESS</a></p> -->
-        <p class="read-more"><a onclick="readMore()" id="btn">READ MORE</a>
+        <p class="read-more"><a onclick="readMore({{include.service.id}})" id='btn{{include.service.id}}'>READ MORE</a>
        </p>
 <script>
-       function readMore() {
+       function readMore(id) {
         // var dots = document.getElementById("dots");
-        var moreText = document.getElementById("more");
-        var btnText = document.getElementById("btn");
+        var moreText = document.getElementById("more"+id);
+        var btnText = document.getElementById("btn"+id);
       
         if (moreText.style.display === "none") {
           moreText.style.display = "inline";
