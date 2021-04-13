@@ -923,7 +923,7 @@ ul.shortcode-list span {
   background: transparent;
 }
 .contain-to-grid.transparent .top-bar-section li:not(.has-form) a:not(.button) {
-  color: #333;
+  color: #fff;
   background: transparent;
 }
 .contain-to-grid.transparent
