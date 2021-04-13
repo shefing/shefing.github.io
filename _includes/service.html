@@ -3,46 +3,44 @@
     <div class='wrapper'>
       <div class='content'>
         <img class="service-icon" src='{{ include.service.icon }}'></img>
-     
+
         <h3>{{ include.service.title | escape }}</h3>
-        <p style="margin-bottom: 0px;" id='base{{include.service.id}}'  >{{ include.service.desc | escape }}</p>
-        <p id='more{{include.service.id}}' style="display: none;" > {{ include.service.more | escape }}</p></br>
+        <p style="margin-bottom: 0px;" id='base{{include.service.id}}'>{{ include.service.desc | escape }}</p>
+        <p id='more{{include.service.id}}' style="display: none;"> {{ include.service.more | escape }}</p></br>
         <div class="spacing"></div>
         <!-- <p class="read-more"><a style="display: none;" onclick="myFunction()" >READ LESS</a></p> -->
-        <p class="read-more"><a onload="test({{include.service.id}})"  onclick="readMore({{include.service.id}})" id='btn{{include.service.id}}'>READ MORE</a>
-       </p>
+        <p class="read-more"><a onload="test({{include.service.id}})" onclick="readMore({{include.service.id}})"
+            id='btn{{include.service.id}}'>READ MORE</a>
+        </p>
       </div>
     </div>
   </div>
 </div>
 <script>
-    window.onload = test;
-       function readMore(id) {
-        // var dots = document.getElementById("dots");
-        var moreText = document.getElementById("more"+id);
-        var btnText = document.getElementById("btn"+id);
-      
-        if (moreText.style.display === "none") {
-          moreText.style.display = "inline";
-          btnText.innerHTML = "READ LESS"; 
-        } else {
-          moreText.style.display = "none";
-          btnText.innerHTML = "RAED MORE"; 
+  window.onload = test;
+  function test() {
+    var btnText = document.getElementById("btn5");
+    btnText.style.display = "none";
 
-        }
-      }
+  }
+  function readMore(id) {
+    // var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more" + id);
+    var btnText = document.getElementById("btn" + id);
 
-    
-       </script>
-       <script>
-          function test(id) {
-            var id={{include.service.id}}
-        var btnText = document.getElementById("btn" +id);
-        btnText.style.display = "none";
-      }
-       </script>
+    if (moreText.style.display === "none") {
+      moreText.style.display = "inline";
+      btnText.innerHTML = "READ LESS";
+      window.resetMainServicesHeight();
+    window.calcMainServicesHeight();
+    } else {
+      moreText.style.display = "none";
+      btnText.innerHTML = "RAED MORE";
+      window.resetMainServicesHeight();
+    window.calcMainServicesHeight();
 
+    }
+  }
 
 
- 
-
+</script>

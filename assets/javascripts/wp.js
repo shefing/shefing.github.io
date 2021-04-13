@@ -45,6 +45,9 @@
       });
     }
 
+    window.resetMainServicesHeight = resetMainServicesHeight;
+    window.calcMainServicesHeight = calcMainServicesHeight;
+
     calcMainServicesHeight();
 
     $(window).on('resize', function() {
