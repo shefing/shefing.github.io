@@ -169,7 +169,7 @@ jQuery(document).foundation();
       submitHandler: function(form) {
         $.ajax({
           type: 'POST',
-          url: "https://formspree.io/" + $('input[name="recipient"]', form)[0].value,
+          url: "https://getform.io/f/79abd0a8-902d-444a-9ae8-ae7cd769afb2",
           data: $(form).serialize(),
           dataType: "json",
           success: function(data) {
