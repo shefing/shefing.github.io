@@ -114,6 +114,9 @@ h1 {
   border: 3px solid #feac29;
   border-radius: 53px;
 }
+.max-width {
+  max-width: 1000px;
+}
 /* li {
   color: #feac29;
 } */
