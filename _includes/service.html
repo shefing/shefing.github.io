@@ -8,7 +8,7 @@
         <p style="margin-bottom: 0px;" id='base{{include.service.id}}'>{{ include.service.desc | escape }}</p>
         <p id='more{{include.service.id}}' style="display: none;"> {{ include.service.more | escape }}</p></br>
         <div class="spacing"></div>
-        <!-- <p class="read-more"><a style="display: none;" onclick="myFunction()" >READ LESS</a></p> -->
+      <!-- <p class="read-more"><a style="display: none;" onclick="myFunction()" >READ LESS</a></p> -->
         <p class="read-more"><a onload="test({{include.service.id}})" onclick="readMore({{include.service.id}})"
             id='btn{{include.service.id}}'>READ MORE</a>
         </p>
