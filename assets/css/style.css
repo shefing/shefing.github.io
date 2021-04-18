@@ -58,6 +58,19 @@
 
 
  ------------------------------------*/
+/* #logoImg {
+  content: url("/assets/images/logo.png");
+} */
+.fa-bars:before {
+  color: #fff;
+}
+
+.right a {
+  color: #fff;
+}
+.top-bar .title-area a img {
+  content: url("/assets/images/logo.png");
+}
 h1 {
   display: block;
 }
@@ -150,9 +163,9 @@ a {
   -moz-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-a:hover {
+/* a:hover {
   color: #999;
-}
+} */
 
 h1,
 h2,
@@ -835,15 +848,22 @@ ul.shortcode-list span {
   -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
+/* #logoImg.shrink {
+  content: url("/assets/images/blackLogo.png");
+} */
+.f-topbar-fixed.shrink .top-bar .title-area a img {
+  content: url("/assets/images/blackLogo.png");
+}
 
 .f-topbar-fixed.shrink .contain-to-grid {
-  height: 75px;
-  opacity: 0.65;
+  height: 50px;
 }
 .f-topbar-fixed.shrink .top-bar {
-  height: 75px;
+  /* height: 50px; */
   line-height: 60px;
-  background: #000 !important;
+  /* background: #fff !important; */
+  /* border-bottom: yellow; */
+  /* border-width: 6em; */
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -868,11 +888,19 @@ ul.shortcode-list span {
 .f-topbar-fixed.shrink
   .top-bar
   .top-bar-section
+  li:not(.has-form)
+  a:not(.button) {
+  color: #000;
+}
+.f-topbar-fixed.shrink
+  .top-bar
+  .top-bar-section
   .dropdown
   li:not(.has-form)
   a:not(.button) {
   height: 60px;
   line-height: 60px;
+  color: #000;
 }
 .f-topbar-fixed.shrink .top-bar .title-area,
 .f-topbar-fixed.shrink .top-bar .title-area li,
@@ -885,7 +913,14 @@ ul.shortcode-list span {
 .f-topbar-fixed.shrink .top-bar .title-area a img {
   width: 70%;
 }
+.f-topbar-fixed.shrink .top-bar .right a {
+  /* !!!!!!!!!!!! */
+  color: #000;
+}
 
+.f-topbar-fixed.shrink .top-bar .fa-bars:before {
+  color: #000;
+}
 .contain-to-grid.fullwidth .top-bar {
   max-width: 100%;
 }
@@ -922,6 +957,8 @@ ul.shortcode-list span {
 }
 .contain-to-grid.transparent .top-bar {
   background: transparent;
+  /* position: fixed;
+  width: 100%; */
 }
 .contain-to-grid.transparent .top-bar-section ul li {
   background: transparent;
@@ -953,11 +990,14 @@ ul.shortcode-list span {
   background: #000;
 }
 
-.contain-to-grid.transparent.white
+/* .contain-to-grid.transparent.white
   .top-bar-section
   li:not(.has-form)
   a:not(.button) {
-  /* color: #fff; */
+  color: #fff;
+} */
+.top-bar .top-bar-section li:not(.has-form) a:not(.button) {
+  color: #fff;
 }
 .contain-to-grid.transparent.white .top-bar-section .has-dropdown > a:after {
   border-top-color: #fff;
@@ -967,7 +1007,8 @@ ul.shortcode-list span {
   background-color: rgba(255, 255, 255, 0.9);
 }
 .f-topbar-fixed.shrink .contain-to-grid.transparent.white {
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  background-color: #fff;
 }
 
 .contain-to-grid.collapse .top-bar {
@@ -1022,12 +1063,12 @@ ul.shortcode-list span {
   margin-right: 30px;
   font-family: poppins;
 }
-#menu-toggler a {
+/* #menu-toggler a {
+  color: #000;
+} */
+/* #menu-toggler a:hover {
   color: #fff;
-}
-#menu-toggler a:hover {
-  color: #eee;
-}
+} */
 #menu-toggler a i {
   color: #fff;
 }
@@ -1035,14 +1076,14 @@ ul.shortcode-list span {
 #menu-toggler.white a {
   color: #fff;
 }
-#menu-toggler.white a:hover {
+/* #menu-toggler.white a:hover {
   color: #eee;
-}
+} */
 #menu-toggler.white a i {
   color: #fff;
 }
 
-#menu-toggler.dark a {
+/* #menu-toggler.dark a {
   color: #333;
 }
 #menu-toggler.dark a:hover {
@@ -1050,7 +1091,7 @@ ul.shortcode-list span {
 }
 #menu-toggler.dark a i {
   color: #333;
-}
+} */
 
 .closed {
   display: none;
@@ -1713,9 +1754,9 @@ form textarea.error {
 .links a {
   color: #999;
 }
-.links a:hover {
+/* .links a:hover {
   color: #333;
-}
+} */
 
 .links.categories li a,
 .links.tags li a {
@@ -5815,7 +5856,7 @@ body {
   .contain-to-grid.transparent {
     height: 100px;
     overflow: visible;
-    position: relative;
+    position: fixed;
   }
   .contain-to-grid.transparent .top-bar-section ul li {
     background-color: rgba(0, 0, 0, 0.8);
@@ -5885,7 +5926,7 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
   }
   .contain-to-grid.transparent.white .top-bar .toggle-topbar.menu-icon a {
-    color: #fff;
+    color: #000;
   }
 
   .contain-to-grid.transparent .top-bar.expanded .title-area {
@@ -5901,7 +5942,7 @@ body {
 
   /*The logo will not change to small size when in tablets, because the shrink effect will not work */
   .f-topbar-fixed.shrink .top-bar .title-area a {
-    width: auto;
+    width: 180px;
   }
   .f-topbar-fixed.shrink .top-bar .title-area a img {
     /* width: auto; */
