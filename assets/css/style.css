@@ -859,7 +859,7 @@ ul.shortcode-list span {
   height: 50px;
 }
 .f-topbar-fixed.shrink .top-bar {
-  /* height: 50px; */
+  height: auto;
   line-height: 60px;
   /* background: #fff !important; */
   /* border-bottom: yellow; */
