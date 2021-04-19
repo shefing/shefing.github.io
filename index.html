@@ -38,6 +38,43 @@ services:
     bg: assets/images/services/team.jpg
     more: Leading specific part of the product (front-end Web or Mobile)
     id: 6
+expertises:
+  - title: ReactJS & React-Native
+    icon: /assets/images/icons/icon_1.png
+    desc: React, the most popular front-end framework enables us to share the same skills for both Web and Mobile development
+    bg: assets/images/services/strategic.jpg
+    more: No compromise on UX, No hybrid on Mobile, Most active community 
+    id: 1  
+  - title: WebRTC
+    icon:  /assets/images/icons/icon_2.png
+    desc: The right way to share video, audio and data in real time over the Web.    
+    bg: assets/images/services/mvp.jpg
+    more: No matter if 1/1 or many-to-many, Fits in peer-to-peer or server centric architectures,No more plugins on the browsers
+    id: 2
+  - title: Server architecture, NodeJS
+    icon:  /assets/images/icons/icon_3.png
+    desc: One of the most performant services development frameworks, is best suited for full stack development.
+    bg: assets/images/services/agile.jpg
+    more: To be used with Postgres for structured data model or with Mango for dynamic data
+    id: 3 
+  - title: CI/CD and DevOps
+    icon:  /assets/images/icons/icon_4.png
+    desc: Github actions or Jenkins Fastlane for Mobile projects Dockers for deployment Kubernetes for containers orchestration architecture, technology stack, CI/CD pipeline, methodology, individual roles,...    
+    bg: assets/images/services/project2.jpg
+    more: 
+    id: 4
+  - title: Adobe Animate & CreateJS
+    icon:  /assets/images/icons/icon_5.png
+    desc: Create creative and interactive user animations all running on html5 Canvas user CreateJS
+    bg: assets/images/services/technology.jpg
+    more: No proprietary runtime dependency, Performance optimized, All logic in JS 
+    id: 5
+  - title: Serverless
+    icon:  /assets/images/icons/icon_6.png
+    desc: Why development a full server when not needed. Use Google Firebase or AWS Lambda to create a backend in no time
+    bg: assets/images/services/team.jpg
+    more: Shorten dev time and development cost while building a sustainable and cost-effective architecture
+    id: 6
 works:
   - path: _works/diff-foods.md
   - path: _works/sketch-book.md 
@@ -233,6 +270,25 @@ clients:
     {% for item in page.services %}
       <div class='medium-6 large-4 columns'>
         {% include service.html service=item %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<a id='services'></a>
+<div class='services'>
+  <div class='row'>
+    <div class='large-8 columns large-centered'>
+      <div class="section-title">
+        <h2><span class="color">Our </span>expertises</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='full no-overflow no-padding'>
+  <div class='main-services'>
+    {% for item in page.expertises %}
+      <div class='medium-6 large-4 columns'>
+        {% include expertise.html expertise=item %}
       </div>
     {% endfor %}
   </div>

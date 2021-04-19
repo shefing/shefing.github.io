@@ -1,16 +1,16 @@
 <div class='mod modIconText moveup' data-delay='0' data-equalizer-watch="service">
-  <div class='icon-text-advanced' data-bg="{{ include.service.bg | relative_url }}">
+  <div class='icon-text-advanced' data-bg="{{ include.expertise.bg | relative_url }}">
     <div class='wrapper'>
       <div class='content'>
-        <img class="service-icon" src='{{ include.service.icon }}'></img>
+        <img class="service-icon" src='{{ include.expertise.icon }}'></img>
 
-        <h3>{{ include.service.title | escape }}</h3>
-        <p style="margin-bottom: 0px;" id='base{{include.service.id}}'>{{ include.service.desc | escape }}</p>
-        <p id='more{{include.service.id}}' style="display: none;"> {{ include.service.more | escape }}</p></br>
+        <h3>{{ include.expertise.title | escape }}</h3>
+        <p style="margin-bottom: 0px;" id='base{{include.expertise.id}}'>{{ include.expertise.desc | escape }}</p>
+        <p id='readMore{{include.expertise.id}}' style="display: none;"> {{ include.expertise.more | escape }}</p></br>
         <div class="spacing"></div>
       <!-- <p class="read-more"><a style="display: none;" onclick="myFunction()" >READ LESS</a></p> -->
-        <p class="read-more"><a onload="test({{include.service.id}})" onclick="readMore({{include.service.id}})"
-            id='btn{{include.service.id}}'>READ MORE</a>
+        <p class="read-more"><a onload="test({{include.expertise.id}})" onclick="readMore({{include.expertise.id}})"
+            id='readBtn{{include.expertise.id}}'>READ MORE</a>
         </p>
       </div>
     </div>
@@ -19,14 +19,14 @@
 <script>
   window.onload = removeReadMore;
   function removeReadMore() {
-    var btnText = document.getElementById("btn5");
+    var btnText = document.getElementById("readBtn4");
     btnText.style.display = "none";
 
   }
   function readMore(id) {
     // var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more" + id);
-    var btnText = document.getElementById("btn" + id);
+    var moreText = document.getElementById("readMore" + id);
+    var btnText = document.getElementById("readBtn" + id);
 
     if (moreText.style.display === "none") {
       moreText.style.display = "inline";
