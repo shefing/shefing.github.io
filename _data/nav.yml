@@ -13,9 +13,9 @@
 # - name: Team
 #   path: "#team"
 #   section_id: team
-- name: Expertises
-  path: "#expertises"
-  section_id: expertises
+- name: Expertise
+  path: "#expertise"
+  section_id: expertise
 - name: Contact
   path: "#contact"
   section_id: contact
