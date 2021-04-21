@@ -5858,7 +5858,7 @@ body {
   .contain-to-grid.transparent {
     height: 100px;
     overflow: visible;
-    position: fixed;
+    position: relative;
   }
   .contain-to-grid.transparent .top-bar-section ul li {
     background-color: rgba(0, 0, 0, 0.8);
