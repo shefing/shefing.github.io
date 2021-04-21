@@ -216,6 +216,7 @@ body {
 
 p {
   font-size: 16px;
+  font-weight: 400;
 }
 
 span.light {
@@ -1923,7 +1924,7 @@ p.small-title {
   letter-spacing: 0;
   line-height: 1.1em;
   text-transform: none;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .fullscreen .layer h1 span.fir {
@@ -4328,9 +4329,10 @@ body {
 }
 .modIconText .icon-text-advanced {
   padding: 30px 80px 30px 80px;
-  color: #999;
+  color: #777;
   text-align: center;
   background: none;
+  font-weight: 400;
 }
 .modIconText .icon-text-advanced h3 {
   margin-bottom: 20px;
