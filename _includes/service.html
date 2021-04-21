@@ -9,7 +9,7 @@
         <p id='more{{include.service.id}}' style="display: none;"> {{ include.service.more | escape }}</p></br>
         <div class="spacing"></div>
       <!-- <p class="read-more"><a style="display: none;" onclick="myFunction()" >READ LESS</a></p> -->
-        <p class="read-more"><a onload="test({{include.service.id}})" onclick="readMore({{include.service.id}})"
+        <p class="read-more"><a onclick="readMoreServices({{include.service.id}})"
             id='btn{{include.service.id}}'>READ MORE</a>
         </p>
       </div>
@@ -17,13 +17,15 @@
   </div>
 </div>
 <script>
-  window.onload = removeReadMore;
-  function removeReadMore() {
-    var btnText = document.getElementById("btn5");
-    btnText.style.display = "none";
+    window.onload = removeReadMore;
+    function removeReadMore() {
+    var btnTextA = document.getElementById("readBtn4");
+    var btnTextB = document.getElementById("btn5");
+    btnTextA.style.display = "none";
+    btnTextB.style.display = "none";
 
   }
-  function readMore(id) {
+  function readMoreServices(id) {
     // var dots = document.getElementById("dots");
     var moreText = document.getElementById("more" + id);
     var btnText = document.getElementById("btn" + id);
