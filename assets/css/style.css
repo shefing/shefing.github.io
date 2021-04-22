@@ -2052,8 +2052,8 @@ p.small-title {
 }
 /* Services */
 .main-expertise {
-  border-top: 1px solid #eaeaea;
-  border-left: 1px solid #eaeaea;
+  /* border-top: 1px solid #eaeaea;
+  border-left: 1px solid #eaeaea; */
 }
 .main-expertise .modIconText {
   height: 100%;
