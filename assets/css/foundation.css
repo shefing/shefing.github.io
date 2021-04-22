@@ -5623,7 +5623,7 @@ table thead {
 }
 table thead tr th,
 table thead tr td {
-  padding: 0.57143rem 0.71429rem 0.71429rem;
+  /* padding: 0.57143rem 0.71429rem 0.71429rem; */
   font-size: 1rem;
   font-weight: bold;
   color: #999;
@@ -5633,14 +5633,14 @@ table tfoot {
 }
 table tfoot tr th,
 table tfoot tr td {
-  padding: 0.57143rem 0.71429rem 0.71429rem;
+  /* padding: 0.57143rem 0.71429rem 0.71429rem; */
   font-size: 1rem;
   font-weight: bold;
   color: #999;
 }
 table tr th,
 table tr td {
-  padding: 0.64286rem 0.71429rem;
+  /* padding: 0.64286rem 0.71429rem; */
   font-size: 1rem;
   color: #999;
   text-align: left;
@@ -5648,7 +5648,7 @@ table tr td {
 table tr.even,
 table tr.alt,
 table tr:nth-of-type(even) {
-  background: #f9f9f9;
+  /* background: #f9f9f9; */
 }
 table thead tr th,
 table tfoot tr th,

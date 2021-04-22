@@ -113,7 +113,7 @@ h1 {
 .color {
   color: #feac29;
 }
-.read-more {
+.read-more-services {
   color: #feac29;
   font-weight: bold;
   /* position: absolute; */
@@ -123,6 +123,17 @@ h1 {
 
   text-align: center;
   padding-bottom: 30px;
+}
+.read-more-expertise {
+  color: #feac29;
+  font-weight: bold;
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  /* margin: 0 0 80px -100px; */
+
+  text-align: center;
+  /* padding-bottom: 30px; */
 }
 
 .meatbtn {
@@ -2032,6 +2043,30 @@ p.small-title {
   padding: 0;
 }
 .main-services .icon-text-advanced {
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+/* Services */
+.main-expertise {
+  /* border-top: 1px solid #eaeaea;
+  border-left: 1px solid #eaeaea; */
+}
+.main-expertise .modIconText {
+  height: 100%;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+.main-expertise .icon-text-advanced {
+  height: 100%;
+}
+.main-expertise .columns {
+  padding: 0;
+}
+.main-expertise .icon-text-advanced {
   -webkit-transition-property: background;
   -moz-transition-property: background;
   transition-property: background;
@@ -4328,7 +4363,7 @@ body {
   margin-left: 73px;
 }
 .modIconText .icon-text-advanced {
-  padding: 30px 80px 30px 80px;
+  padding: 20px;
   color: #777;
   text-align: center;
   background: none;
@@ -5601,10 +5636,14 @@ body {
   .second-page {
     padding: 20px;
   }
-  .read-more {
+  .read-more-servises {
     margin: 0 0 40px;
     /* margin-bottom: 15px; */
   }
+  /* .read-more-expertise {
+    margin: 0 0 40px;
+    /* margin-bottom: 15px; 
+  } */
   .contactTitle {
     font-size: 15px;
   }
