@@ -2050,6 +2050,30 @@ p.small-title {
   -moz-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
+/* Services */
+.main-expertise {
+  border-top: 1px solid #eaeaea;
+  border-left: 1px solid #eaeaea;
+}
+.main-expertise .modIconText {
+  height: 100%;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+.main-expertise .icon-text-advanced {
+  height: 100%;
+}
+.main-expertise .columns {
+  padding: 0;
+}
+.main-expertise .icon-text-advanced {
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
 
 /* fullpage related */
 .personal .contain-to-grid.white #menu-toggler a {
