@@ -61,6 +61,14 @@
 /* #logoImg {
   content: url("/assets/images/logo.png");
 } */
+.expertise-bg {
+  background:
+    /* top, transparent black, faked with gradient */ linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("/assets/images/expertise/expertise.png");
+}
 .fa-bars:before {
   color: #fff;
 }
