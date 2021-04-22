@@ -1,16 +1,34 @@
 <div class='mod modIconText moveup' data-delay='0' data-equalizer-watch="service">
-  <div class='icon-text-advanced' data-bg="{{ include.expertise.bg | relative_url }}">
+  <div class='icon-text-advanced'>
     <div class='wrapper'>
       <div class='content'>
-        <img class="service-icon" src='{{ include.expertise.icon }}' alt=""></img>
-
-        <h3>{{ include.expertise.title | escape }}</h3>
-        <p style="margin-bottom: 0px;">{{ include.expertise.desc | escape }}</p>
-        <p id='readMore{{include.expertise.id}}' style="display: none;"> {{ include.expertise.more | escape }}</p></br>
-        <div class="spacing"></div>
-        <p class="read-more"><a onclick="readMore({{include.expertise.id}})"
-            id='readBtn{{include.expertise.id}}'>READ MORE</a>
-        </p>
+ <table style="background-color: transparent;border-width: 0ch;">
+          <tr>
+            <td style="height: 100px;width: 85px" rowspan="5"> <img class="service-icon"
+                src='{{ include.expertise.icon }}' alt=""></img>
+            </td>
+            <td>
+              <h3 style="color: #fff;">{{ include.expertise.title | escape }}</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="margin-bottom: 0px;color: #fff;">{{ include.expertise.desc | escape }}</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p id='readMore{{include.expertise.id}}' style="display: none;color: #fff;"> {{ include.expertise.more | escape }}</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="read-more-expertise"><a onclick="readMore({{include.expertise.id}})"
+                  id='readBtn{{include.expertise.id}}'>READ MORE</a>
+              </p>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
@@ -25,7 +43,6 @@
 
   }
   function readMore(id) {
-    // var dots = document.getElementById("dots");
     var moreText = document.getElementById("readMore" + id);
     var btnText = document.getElementById("readBtn" + id);
 
@@ -33,12 +50,12 @@
       moreText.style.display = "inline";
       btnText.innerHTML = "READ LESS";
       window.resetMainServicesHeight();
-    window.calcMainServicesHeight();
+      window.calcMainServicesHeight();
     } else {
       moreText.style.display = "none";
       btnText.innerHTML = "RAED MORE";
       window.resetMainServicesHeight();
-    window.calcMainServicesHeight();
+      window.calcMainServicesHeight();
 
     }
   }
