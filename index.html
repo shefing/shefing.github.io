@@ -189,7 +189,6 @@ clients:
 <!-- </div> -->
     <div class='overlay'></div>
     <div class='layer'>
-      <!-- <p class="small-title">INNOVATION AS A SERVICE</p> -->
       <h1 class='thin' id="to-be-update">
          <span class="fir">we shape</span><br/>
          <span class="sec">ideas</span>
@@ -197,9 +196,6 @@ clients:
          <span class="thir">life</span>
       </h1>
       <h2 class='thin'>
-        <!-- Shefing has the soul of an israeli startup and the professionalism of an european enterprise vendor, with a strong cultural diversity.
-       {% assign nav_obj = site.data.nav | where:'section_id','works' | first %}
-       <a href='{{ "index.html" | append:nav_obj.path | relative_url }}'>View our works</a> -->
        <div class="max-width">
        <span>Shefing, our <span class="strong">innovative agency for the digital transformation</span>, has the soul of
        an israeli startup and the professionalism of an european enterprise vendor </span></div>
@@ -217,7 +213,7 @@ clients:
         <p class="small-title">Entrepreneur, ISV&nbspexecutive, Industry&nbspleader</p><br>
         <h2>Accelerate the digital transformation launching Mobile app and Web platform.</h2>
         <p class="big-size">Shefing team loves creating disruptive and engaging products. Combining conceptual talent and development methodology, We will exceed your users expectations.</p>
-        <!-- <div class="projectBtn"><p class="innertext">Project Calculator</p> </div> -->
+        <div class="projectBtn" onclick="openCalc()"><p class="innertext">Project Calculator</p> </div>
         <!-- <img src="{{ "/assets/images/logo-black.png" | relative_url }}" alt=""> -->
    
       </div>
@@ -507,4 +503,10 @@ clients:
 
 
 {% include calculator.html%}
-
+<!-- </div>
+<script>
+  function openCalc() {
+    var page = document.getElementById("main");
+    page.style.display = "none"
+  }
+</script> -->

@@ -1,16 +1,19 @@
 
-<div style="height:400px;overflow: hidden;">
-<img  src="/assets/images/calculator.png" />
-  <div><span class="color">Estimate your</span>app cost</div>
-  </div> 
-  <div class="calc-header" >Quick estimation of <span class="color" style="font-family:Times New Roman;font-style: italic;font-size: 60px;">your application</span></div>
-  <hr>
-  <div class="question"><span class="color">1.</span> Which platforms you’re targeting?</div>
-  <div class="choose">
- </div>
- <div >
- <table >
-  <tr>
+<div class="calc-header"><span class="color">Project short<br> </span>calculator</div>
+
+<div class="calc-img">
+  <img src="/assets/images/calculator.png" />
+
+</div>
+<div class="calc-second-header">Quick estimation of <span class="color sec"
+  >your&nbspapplication</span></div>
+<hr>
+<div class="question"><span class="color">1.</span> Which platforms you’re targeting?</div>
+<div class="choose">
+</div>
+<div>
+  <table>
+    <tr>
       <td>
         <img class="service-icon" src='{{ "/assets/images/calculator/ios.png" | relative_url }}'></img>
       </td>
@@ -20,115 +23,107 @@
       <td>
         <img class="service-icon" src='{{ "/assets/images/calculator/android.png" | relative_url }}'></img>
       </td>
-  </tr>
-  <tr>
-      <td style="text-align:center">
-        <input type = "radio" name = "radio">Ios </input></span>
-      </td>
-      <td style="text-align:center">
-        <input type = "radio" value="Ios" name = "radio"  type="checkbox">Web </input>
-      </td>
-      <td style="text-align:center">
-        <span> <input type = "radio" name = "radio" >Android </input></span>
-      </td>
-  </tr>
-</table>
- </div>
- <hr>
-  <div class="question"><span class="color">2.</span> Would you like to be accompanied for your app design?</div>
-  <div >
-    <table >
-     <tr>
-         <td>
-           <img class="service-icon" src='{{ "/assets/images/logo-black.png" | relative_url }}'></img>
-         </td>
-         <td>
-           <img class="service-icon" src='{{ "/assets/images/logo-black.png" | relative_url }}'></img>
-         </td>
-    
-     </tr>
-     <tr>
-         <td style="text-align:center">
-           <input type = "radio" name = "radio">No, I’ll take care of the UI and UX myself </input></span>
-         </td>
-         <td style="text-align:center">
-           <input type = "radio" value="Ios" name = "radio"  type="checkbox">Yes, you take care of the UI and UX </input>
-         </td>
-     </tr>
-   </table>
-    </div>
-    <hr>
-  <div class="question"><span class="color">3.</span> Do you want to interface your app with a server via an API</div>
-  <div >
-    <table >
-     <tr>
+    </tr>
+    <tr>
       <td>
-        <img class="service-icon" src='{{ "/assets/images/logo-black.png" | relative_url }}'></img>
+        <input type="radio" name="a">Ios </input></span>
       </td>
-         <td>
-           <img class="service-icon" src='{{ "/assets/images/logo-black.png" | relative_url }}'></img>
-         </td>
-         <td>
-           <img class="service-icon" src='{{ "/assets/images/logo-black.png" | relative_url }}'></img>
-         </td>
-     </tr>
-     <tr>
-         <td style="text-align:center">
-           <input type = "radio" name = "radio">Ios </input></span>
-         </td>
-         <td style="text-align:center">
-           <input type = "radio" value="Ios" name = "radio"  type="checkbox">Web </input>
-         </td>
-         <td style="text-align:center">
-           <span> <input type = "radio" name = "radio" >Android </input></span>
-         </td>
-     </tr>
-   </table>
+      <td>
+        <input type="radio" value="Ios" name="a" type="checkbox">Web </input>
+      </td>
+      <td>
+        <span> <input type="radio" name="a">Android </input></span>
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div class="question"><span class="color">2.</span> Would you like to be accompanied for your app design?</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        <img class="service-icon" src='{{ "/assets/images/calculator/brush.png" | relative_url }}'></img>
+      </td>
+      <td>
+        <img class="service-icon" src='{{ "/assets/images/calculator/color.png" | relative_url }}'></img>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <input type="radio" name="b">No, I’ll take care of the UI and UX myself </input></span>
+      </td>
+      <td>
+        <input type="radio" value="Ios" name="b" type="checkbox">Yes, you take care of the UI and UX </input>
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div class="question"><span class="color">3.</span> Do you want to interface your app with a server via an API?</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        <img class="service-icon" src='{{ "/assets/images/calculator/noA.png" | relative_url }}'></img>
+      </td>
+      <td>
+        <img class="service-icon" src='{{ "/assets/images/calculator/yesA.png" | relative_url }}'></img>
+      </td>
+      <td>
+        <img class="service-icon" src='{{ "/assets/images/calculator/develop.png" | relative_url }}'></img>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="radio" name="c">no </input></span>
+      </td>
+      <td>
+        <input type="radio" value="Ios" name="c" type="checkbox">yes, the server exists
+        already </input>
+      </td>
+      <td>
+        <span> <input type="radio" name="c">Yes, you need to develop the server as well</input></span>
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div class="question"><span class="color">4.</span> Would you like to have a back-office to manage your app?</div>
+<div>
+  <div>
+    <table>
+      <tr>
+        <td>
+          <img class="service-icon" src='{{ "/assets/images/calculator/no.png" | relative_url }}'></img>
+        </td>
+        <td>
+          <img class="service-icon" src='{{ "/assets/images/calculator/yes.png" | relative_url }}'></img>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" name="d">no </input></span>
+        </td>
+        <td>
+          <input type="radio" value="Ios" name="d" type="checkbox">yes</input>
+        </td>
+      </tr>
+    </table>
+    <div class="email">
+      <input placeholder="EMAIL ADRESS" class="required" type="text">
+      <div class="calc">
+        <p class="innertext">j’éstime le coût de mon application</p>
+      </div>
     </div>
-
-  <style>
-    .choose{
-      text-align: center;
-      font-size: 30px;
-      /* margin-top: 40px; */
-      margin: auto;
-    }
-    table{
-      margin: auto;
-      border: none;
-    }
-    td{
-      background: #fff;
-      padding-right: 100px;
-      padding-left: 100px;
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-    tr{
-      padding: 100px;
-    }
-    .question {
-  color: #000;
-  font-size: 24px;
-  text-align: center;
-  font-family: "poppins";
-  letter-spacing: 0px;
-  text-align: center;
-  margin-top: 25px;
-  margin-bottom: 25px
+  </div>
+</div>
+<style>
+.try{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.calc-header{
-  font-size: 45px;
-  color: black;
-  font-weight: 600;
-  letter-spacing: 0px;
-  text-align: center;
-  font-family: poppins;
-  margin-top: 90px;
-  margin-bottom: 90px;
-}
-hr{
-  border-top: dashed;
-}
-
-  </style>
+</style>
