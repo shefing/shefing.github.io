@@ -172,7 +172,7 @@ clients:
   - /assets/images/@stock/client-6.png   
  
 ---
-
+<div id="hide">
 <div class='full no-padding parallax home-video-wrapper'>
   <div class='fullscreen video-style'>
     <!-- <div class="video-position"> -->
@@ -185,7 +185,7 @@ clients:
 
 <source src='{{ "/assets/images/@stock/bgVideo.m4v" | relative_url }}'
        type='video/mp4'>
-</video>
+ </video>
 <!-- </div> -->
     <div class='overlay'></div>
     <div class='layer'>
@@ -288,7 +288,7 @@ clients:
     {% endfor %}
   </div>
 </div>
-
+</div>
 <!-- 
 <a id='works'></a>
 <div class='full'>
@@ -492,9 +492,11 @@ clients:
   </div>
   <div class="four spacing"></div>
 </div> -->
-
-<div class="four spacing"></div>
+</div>
 <a id='contact'></a>
+<div class="full no-padding parallax home-video-wrapper"  id="calculator" style="display: none;">
+{% include calculator.html%}
+</div>
 {% include contact-form.html %}
 
 {% include social-networks.html %}
@@ -502,11 +504,14 @@ clients:
 
 
 
-{% include calculator.html%}
-<!-- </div>
+
+
 <script>
   function openCalc() {
-    var page = document.getElementById("main");
+    var page = document.getElementById("hide");
     page.style.display = "none"
+    var page = document.getElementById("calculator");
+    page.style.display = "block"
+    window.scrollTo(0, 0);
   }
-</script> -->
+</script>

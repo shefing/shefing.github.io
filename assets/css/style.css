@@ -5628,7 +5628,7 @@ input[type='radio']:checked:before {
   letter-spacing: 0px;
 }
 
-span sec{
+span .sec{
   font-family:"Times New Roman";
   font-style: italic;
   font-size: 60px;
@@ -6084,12 +6084,18 @@ span sec{
     /* width: auto; */
   }
   /* calculator */
+  .calc {
+    height: 45px;
+    margin-bottom: 20px;
+  } 
+
   .calc-second-header {
-    margin-top: 20px;
-    font-size: 30px;
+    margin-top: 40px;
+    font-size: 24px;
+    margin-bottom: 40px;
   }
-  .sec{
-    font-size: 40px;
+  span.sec{
+    font-size: 30px;
   }
   td {
     width: 120px;
@@ -6103,10 +6109,10 @@ span sec{
   }
   .calc p{
     font-size: 14px;
-    margin-top: 18px;
+    margin-top: 12px;
   }
   .calc-header{
-    font-size: 50px;
+    font-size: 70px;
     right: 12%;
     margin-top: 50px;
     }

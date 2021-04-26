@@ -46,10 +46,18 @@
               {% assign href = 'index.html' | append:item.path | relative_url %}              
             {% endif %}
             
-            <a href="{{ href }}">{{ item.name }}</a>
+            <a href="{{ href }}" onclick="visible()">{{ item.name }}</a>
           </li>
         {% endfor %}
       </ul>
     </section>
   </nav>
 </div>
+<script>
+  function visible() {
+    var page = document.getElementById("calculator");
+    page.style.display = "none";
+    var page = document.getElementById("hide");
+    page.style.display = "block";
+  }
+</script>
