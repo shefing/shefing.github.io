@@ -169,9 +169,10 @@ clients:
   - /assets/images/@stock/client-3.png
   - /assets/images/@stock/client-4.png  
   - /assets/images/@stock/client-1.png   
-  - /assets/images/@stock/client-6.png    
+  - /assets/images/@stock/client-6.png   
+ 
 ---
-
+<div id="hide">
 <div class='full no-padding parallax home-video-wrapper'>
   <div class='fullscreen video-style'>
     <!-- <div class="video-position"> -->
@@ -184,11 +185,10 @@ clients:
 
 <source src='{{ "/assets/images/@stock/bgVideo.m4v" | relative_url }}'
        type='video/mp4'>
-</video>
+ </video>
 <!-- </div> -->
     <div class='overlay'></div>
     <div class='layer'>
-      <!-- <p class="small-title">INNOVATION AS A SERVICE</p> -->
       <h1 class='thin' id="to-be-update">
          <span class="fir">we shape</span><br/>
          <span class="sec">ideas</span>
@@ -196,9 +196,6 @@ clients:
          <span class="thir">life</span>
       </h1>
       <h2 class='thin'>
-        <!-- Shefing has the soul of an israeli startup and the professionalism of an european enterprise vendor, with a strong cultural diversity.
-       {% assign nav_obj = site.data.nav | where:'section_id','works' | first %}
-       <a href='{{ "index.html" | append:nav_obj.path | relative_url }}'>View our works</a> -->
        <div class="max-width">
        <span>Shefing, our <span class="strong">innovative agency for the digital transformation</span>, has the soul of
        an israeli startup and the professionalism of an european enterprise vendor </span></div>
@@ -216,7 +213,7 @@ clients:
         <p class="small-title">Entrepreneur, ISV&nbspexecutive, Industry&nbspleader</p><br>
         <h2>Accelerate the digital transformation launching Mobile app and Web platform.</h2>
         <p class="big-size">Shefing team loves creating disruptive and engaging products. Combining conceptual talent and development methodology, We will exceed your users expectations.</p>
-        <!-- <div class="projectBtn"><p class="innertext">Project Calculator</p> </div> -->
+        <div class="projectBtn" onclick="openCalc()"><p class="innertext">Project Calculator</p> </div>
         <!-- <img src="{{ "/assets/images/logo-black.png" | relative_url }}" alt=""> -->
    
       </div>
@@ -508,7 +505,21 @@ clients:
 </div> -->
 
 <!-- <div class="four spacing"></div> -->
+</div>
 <a id='contact'></a>
+<div class="full no-padding parallax home-video-wrapper"  id="calculator" style="display: none;">
+{% include calculator.html%}
+</div>
 {% include contact-form.html %}
 
 {% include social-networks.html %}
+
+<script>
+  function openCalc() {
+    var page = document.getElementById("hide");
+    page.style.display = "none"
+    var page = document.getElementById("calculator");
+    page.style.display = "block"
+    window.scrollTo(0, 0);
+  }
+</script>

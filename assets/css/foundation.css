@@ -3818,7 +3818,7 @@ input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
 select {
-  margin: 0 0 1.14286rem 0;
+  /* margin: 0 0 1.14286rem 0; */
 }
 
 input[type="checkbox"] + label,
@@ -5607,10 +5607,10 @@ dialog[open] {
 }
 
 table {
-  background: #ffffff;
-  margin-bottom: 1.42857rem;
-  border: solid 1px #dddddd;
-  table-layout: auto;
+  /* background: #ffffff;
+  margin-bottom: 1.42857rem; */
+  /* border: solid 1px #dddddd; */
+  /* table-layout: auto; */
 }
 table caption {
   background: transparent;
@@ -5643,7 +5643,7 @@ table tr td {
   /* padding: 0.64286rem 0.71429rem; */
   font-size: 1rem;
   color: #999;
-  text-align: left;
+  /* text-align: left; */
 }
 table tr.even,
 table tr.alt,
