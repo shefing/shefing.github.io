@@ -5569,15 +5569,13 @@ body {
   margin: auto;
 }
 
-table {
+calc-table {
   margin: auto;
   border: none;
 }
 
-.calc-table td {
+.calc-td{
   background: #fff;
-  /* padding-right: 50px;
-  padding-left: 50px; */
   padding-top: 30px;
   text-align: center;
   max-width: 250px;
@@ -5587,7 +5585,7 @@ table {
   /* padding-bottom: 30px; */
 }
 
-.calc-table tr {
+.calc-tr {
   text-align: center;
   max-width: 250px;
   /* padding: 20px; */
@@ -6138,12 +6136,12 @@ span .sec{
   span.sec{
     font-size: 30px;
   }
- .calc-table td {
+ .calc-td {
     width: 120px;
     height: 80px;
   }
   .service-icon {
-    width: 50px;
+    width: 70px;
   }
   .email{
     width: 90%;

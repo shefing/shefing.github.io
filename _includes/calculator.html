@@ -1,4 +1,6 @@
-
+---
+layout: default
+---
 <div class="calc-header"><span class="color">Project short<br> </span>calculator</div>
 
 <div class="calc-img">
@@ -13,27 +15,27 @@
 </div>
 <div>
   <table class="calc-table">
-    <tr>
-      <td>
+    <td class="calc-tr">
+      <td class="calc-td">
         <img class="service-icon" src='{{ "/assets/images/calculator/ios.png" | relative_url }}'></img>
       </td>
-      <td>
+      <td class="calc-td">
         <img class="service-icon" src='{{ "/assets/images/calculator/web.png" | relative_url }}'></img>
       </td>
-      <td>
+      <td class="calc-td">
         <img class="service-icon" src='{{ "/assets/images/calculator/android.png" | relative_url }}'></img>
       </td>
     </tr>
-    <tr>
-      <td>
-        <input type="radio" name="a">Ios </input></span>
+    <td class="calc-tr">
+      <td class="calc-td">
+        <input type="checkbox" name="a">Ios </input></span>
       </td>
-      <td>
-        <input type="radio" value="Ios" name="a" type="checkbox">Web </input>
+      <td class="calc-td">
+        <input type="checkbox" value="Ios" name="a" type="checkbox">Android</input>
       </td>
-      <td>
-        <span> <input type="radio" name="a">Android </input></span>
-      </td>
+      <td class="calc-td">
+        <span> <input type="checkbox" name="a" id="aa">Web</input></span> 
+           </td>
     </tr>
   </table>
 </div>
@@ -41,20 +43,20 @@
 <div class="question"><span class="color">2.</span> Would you like to be accompanied for your app design?</div>
 <div>
   <table>
-    <tr>
-      <td>
+    <td class="calc-tr">
+      <td class="calc-td">
         <img class="service-icon" src='{{ "/assets/images/calculator/brush.png" | relative_url }}'></img>
       </td>
-      <td>
+      <td class="calc-td">
         <img class="service-icon" src='{{ "/assets/images/calculator/color.png" | relative_url }}'></img>
       </td>
 
     </tr>
-    <tr>
-      <td>
+    <td class="calc-tr">
+      <td class="calc-td">
         <input type="radio" name="b">No, I’ll take care of the UI and UX myself </input></span>
       </td>
-      <td>
+      <td class="calc-td">
         <input type="radio" value="Ios" name="b" type="checkbox">Yes, you take care of the UI and UX </input>
       </td>
     </tr>
@@ -64,26 +66,26 @@
 <div class="question"><span class="color">3.</span> Do you want to interface your app with a server via an API?</div>
 <div>
   <table>
-    <tr>
-      <td>
+    <td class="calc-tr">
+      <td class="calc-td">
         <img class="service-icon" src='{{ "/assets/images/calculator/noA.png" | relative_url }}'></img>
       </td>
-      <td>
+      <td class="calc-td">
         <img class="service-icon" src='{{ "/assets/images/calculator/yesA.png" | relative_url }}'></img>
       </td>
-      <td>
+      <td class="calc-td">
         <img class="service-icon" src='{{ "/assets/images/calculator/develop.png" | relative_url }}'></img>
       </td>
     </tr>
-    <tr>
-      <td>
+    <td class="calc-tr">
+      <td class="calc-td">
         <input type="radio" name="c">no </input></span>
       </td>
-      <td>
+      <td class="calc-td">
         <input type="radio" value="Ios" name="c" type="checkbox">yes, the server exists
         already </input>
       </td>
-      <td>
+      <td class="calc-td">
         <span> <input type="radio" name="c">Yes, you need to develop the server as well</input></span>
       </td>
     </tr>
@@ -94,20 +96,20 @@
 <div>
   <div>
     <table>
-      <tr>
-        <td>
+      <td class="calc-tr">
+        <td class="calc-td">
           <img class="service-icon" src='{{ "/assets/images/calculator/no.png" | relative_url }}'></img>
         </td>
-        <td>
+        <td class="calc-td">
           <img class="service-icon" src='{{ "/assets/images/calculator/yes.png" | relative_url }}'></img>
         </td>
 
       </tr>
-      <tr>
-        <td>
+      <td class="calc-tr">
+        <td class="calc-td">
           <input type="radio" name="d">no </input></span>
         </td>
-        <td>
+        <td class="calc-td">
           <input type="radio" value="Ios" name="d" type="checkbox">yes</input>
         </td>
       </tr>
