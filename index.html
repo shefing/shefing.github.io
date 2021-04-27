@@ -215,9 +215,9 @@ clients:
         <p class="big-size">Shefing team loves creating disruptive and engaging products. Combining conceptual talent and development methodology, We will exceed your users expectations.</p>
         <div  class="projectBtn" onclick="openCalc()" ><p class="innertext" >Project Calculator</p> </div>
         <!-- <img src="{{ "/assets/images/logo-black.png" | relative_url }}" alt=""> -->
-        <!-- <a href='{{ '_includes/calculator.html' | relative_url }}'>try!!!!!!!!!!</a>
-    -->
-      </div>
+        <!-- <a href="{{ post.url | relative_url }}">ry!!!!!!!!!!</a> -->
+        <a href='{{ 'calculator' | relative_url }}'>calculator</a></div>
+
     </div>
     <!-- <div class="four spacing"></div> -->
   </div>
@@ -301,49 +301,10 @@ clients:
   }
 </style>
 
-<!-- 
-<a id='works'></a>
+<!-- <a id='works'></a>
 <div class='full'>
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      {% include section-title.html small_title="take a look" title="What we recently do." %}
-    </div>
-  </div>
-</div>
-<div class='full no-padding' id="demo-1-works">
-  <div class='mod modMasonryGallery'>
-    <ul class='gallery'>
 
-      {% for item in page.works %}
-
-        {% assign work = site.works | where:"path",item.path | first %}
-
-        {% if item.style == 'wide' %}
-          {% assign class = 'wide' %}
-          {% assign width = 1000 %}
-          {% assign height = 350 %}
-        {% else %}
-          {% assign class = '' %}
-          {% assign width = 500 %}
-          {% assign height = 350 %}
-        {% endif %}
-
-        <li class="{{class}}">
-          <a href='{{ work.url | relative_url }}'>
-            <img width="{{width}}" height="{{height}}" alt="" src="{{ work.thumbnail | relative_url }}" />
-            <div class='overlay'>
-              <div class='thumb-info'>
-                <h3>{{ work.title | downcase | capitalize }}</h3>
-                <p>{{ work.categories | join:" & " | escape }}</p>
-              </div>
-            </div>
-          </a>
-        </li>
-
-      {% endfor %}
-
-    </ul>
-  </div>
+          <a href='{{ "calculator.html" | relative_url }}'><div style="height: 500px;width: 800px;background-color: brown;"></div></a>
 </div> -->
 <!-- <div class='full dark no-padding '>
   <div class="four spacing"></div>
@@ -419,8 +380,8 @@ clients:
     </div>
   </div>
 </div> -->
-
 <!-- 
+
 <a id='blog'></a>
 <div class='full grey'>
   <div class='row'>
@@ -445,8 +406,8 @@ clients:
       <div class="four spacing"></div>
     </div>
   {% endfor %}
-</div> -->
-<!-- 
+</div>
+
 
 <div class='full no-overflow no-padding parallax' style="background-image: url({{ "/assets/images/@stock/customers-bg.jpg" | relative_url }})">
   <div class="left-half">
@@ -511,9 +472,6 @@ clients:
 <div class="full no-padding parallax home-video-wrapper"  id="calculator" style="display: none;">
 {% include calculator.html%}
 </div>
-{% include contact-form.html %}
-
-{% include social-networks.html %}
 
 <script>
   function openCalc() {

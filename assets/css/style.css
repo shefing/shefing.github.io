@@ -223,7 +223,7 @@ body {
 }
 
 .bg-black {
-  background: #000 !important;
+  background: #000 ;
 }
 
 p {
@@ -5569,7 +5569,7 @@ body {
   margin: auto;
 }
 
-calc-table {
+.calc-table {
   margin: auto;
   border: none;
 }
