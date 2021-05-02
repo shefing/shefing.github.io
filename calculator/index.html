@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="no-padding parallax home-video-wrapper" >
   <div style="position: relative;">
-<div class="calc-header"><span class="color" id="header">Project short<br> </span>calculator</div>
+<div class="calc-header"><span class="color" id="header">Project</span><br> calculator</div>
 </div>
 <div class="calc-img">
   <img src="/assets/images/calculator-min.png" />
@@ -114,7 +114,7 @@ layout: default
     </table>
   </div>
   
-  <div id="sophisticatedSimulator" style="display: none;">
+  <div id="detailedSimulator" style="display: none;">
     <hr>
   <div class="question"><span class="color">5.</span> Does your app require a geo-tracking system?</div>
 <div>
@@ -332,28 +332,43 @@ layout: default
 </div>
 <div id="alert" class="alert">
   <img class="alert-icon" src='{{ "/assets/images/calculator/sum.png" | relative_url }}'></img>
+  <div id="dinamic-alert">
    <div style="margin: 20px;">
   your mobile project costs between  
-  <span id="min">0</span>&nbspand&nbsp
-  <span id=max>0</span>
+  €<span id="min">0</span>K&nbspand&nbsp
+  €<span id=max>0</span>K
 </div>
-<div id="dinamic-alert">
-<div style="font-size: 18px;">maybe you find it a bit large?</div>
-<div onclick="sophisticatedSimulator()" class="btn sophisticated-btn"><p class="innertext">sophisticated calculator</p></div>
+<div style="font-size: 18px;">Need a narrower range?</div>
+<div onclick="detailedSimulator()" class="btn detailed-btn"><p class="innertext">Detailed calculator</p></div>
 <hr class="alert-hr">
+</div>
+<div class="email" id="contact">
+<input placeholder="EMAIL ADRESS" class="required no-margin" type="text">
+</div>
 <div class="btn contact-btn" ><p>CONTACT US</p></div>
 </div>
+
+<div id="second-alert" class="alert" style="display: none;">
+<div class="email" id="contact">
+  <div style="font-size: 18px;">Thanks for this information, we will send you a project quotation</div>
+<input placeholder="EMAIL ADRESS" class="required no-margin" type="text">
 </div>
+<div class="btn contact-btn" ><p>SEND ME</p></div>
+</div>
+
+
+
+
 
 <div class="email">
     <div id="cost" onclick="calcSimulator()" class="btn calc">
-      <p  class="innertext">Estimate the cost of of my application development</p>
+      <p  class="innertext">Project cost range</p>
     </div>
-    <div id="error" class="error" style="display: none;">Please fill in all the fields</div>
+    <div id="error" class="error" style="display: none;">please answers all the questions</div>
   <!-- <div class="four spacing"></div> -->
 </div>
 <div class="email" style="display: none;" id="contact">
-  <input placeholder="EMAIL ADRESS" class="required" type="text">
+  <input placeholder="EMAIL ADRESS" class="required no-margin" type="text">
     <div onclick="calcSimulator()" class="btn calc">
       <p class="innertext">I want to receive a quotation for my project</p>
     </div>
@@ -366,8 +381,16 @@ layout: default
     var min=0;
     var max=0;
     var requierd=true;
-    var isSophisticatedSimulator=false;
+    var isDetailedSimulator=false;
   function calcSimulator(){
+    if (isDetailedSimulator){
+      if(!requierd){
+      document.getElementById("error").style.display="block"; 
+      return;
+      }
+      document.getElementById("second-alert").style.display="block"; 
+      return;
+  }
     document.getElementById("error").style.display="none";
     min=0;
     max=0;
@@ -406,9 +429,7 @@ layout: default
     add(2,10)
     }
   }
-  if (isSophisticatedSimulator){
-     calcSophisticatedSimulator();
-  }
+
     if(!requierd){
       document.getElementById("error").style.display="block"; 
       }else{
@@ -425,19 +446,19 @@ max+=b;
 document.getElementById("min").innerHTML = min;
 document.getElementById("max").innerHTML = max;
   }
-  function sophisticatedSimulator(){
+  function detailedSimulator(){
    
-    isSophisticatedSimulator=true;
-    document.getElementById("sophisticatedSimulator").style.display="block";
+    isDetailedSimulator=true;
+    document.getElementById("detailedSimulator").style.display="block";
     document.getElementById("alert").style.display="none";
     document.getElementById("dinamic-alert").style.display="none";
       document.getElementById("cost").style.display="block";
-    document.getElementById("header").textContent="Project detailed ";
+    document.getElementById("header").textContent="Project detailed";
     document.getElementById("contact").style.display="block";
     window.scrollTo(0, 0);
   }
-  function calcSophisticatedSimulator(){
-    console.log("in calcSophisticatedSimulator");
+  function calcDetailedSimulator(){
+    console.log("in calcetailedSimulator");
     var tracking=document.querySelector('input[name="geo-tracking"]:checked');
       if(!tracking)requierd=false;
       else{
