@@ -377,7 +377,7 @@ layout: default
    platforms.forEach(p=>{
      if(p.checked){
        if(p.value==3){
-         add(5,15)
+         add(7,15)
        }
        else{
        add(6,24)  
@@ -388,15 +388,15 @@ layout: default
     if(!design)requierd=false;
     else{
        if(design.value==2)
-      add(4,20)
+      add(4,10)
     }
   var server=document.querySelector('input[name="server"]:checked');
   if(!server)requierd=false
   else{
     if(server.value==2){
-      add(4,10)
+      add(5,10)
     }else if(server.value==3){
-      add(6,24);
+      add(6,15);
     }
   }
   var manage=document.querySelector('input[name="manage"]:checked');
