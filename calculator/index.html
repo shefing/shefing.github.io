@@ -2,8 +2,9 @@
 layout: default
 ---
 <div class="no-padding parallax home-video-wrapper" >
-<div class="calc-header"><span class="color">Project short<br> </span>calculator</div>
-
+  <div style="position: relative;">
+<div class="calc-header"><span class="color" id="header">Project short<br> </span>calculator</div>
+</div>
 <div class="calc-img">
   <img src="/assets/images/calculator.png" />
 </div>
@@ -113,7 +114,7 @@ layout: default
     </table>
   </div>
   
-  <div style="display: none;">
+  <div id="sophisticatedSimulator" style="display: none;">
     <hr>
   <div class="question"><span class="color">5.</span> Does your app require a geo-tracking system?</div>
 <div>
@@ -131,14 +132,14 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="server">no </input></span>
+        <input type="radio" value="1" name="geo-tracking">no </input></span>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="server" type="checkbox">Yes, when the app is running
+        <input type="radio" value="2" name="geo-tracking" type="checkbox">Yes, when the app is running
         already </input>
       </td>
       <td class="calc-td">
-        <span> <input type="radio" value="3" name="server">Yes, also in background</input></span>
+        <span> <input type="radio" value="3" name="geo-tracking">Yes, also in background</input></span>
       </td>
     </tr>
   </table>
@@ -160,14 +161,14 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="server">no </input></span>
+        <input type="radio" value="1" name="chat">no </input></span>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="server" type="checkbox">Yes, Text only
+        <input type="radio" value="2" name="chat" type="checkbox">Yes, Text only
         already </input>
       </td>
       <td class="calc-td">
-        <span> <input type="radio" value="3" name="server">Yes, you need to develop the server as well</input></span>
+        <span> <input type="radio" value="3" name="chat">Yes, you need to develop the server as well</input></span>
       </td>
     </tr>
   </table>
@@ -186,14 +187,15 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="server">no </input></span>
+        <input type="radio" value="1" name="upload">no </input></span>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="server" type="checkbox">yes</input>
+        <input type="radio" value="2" name="upload" type="checkbox">yes</input>
       </td>
     </tr>
   </table>
 </div>
+<hr>
 <div class="question"><span class="color">8.</span> Will your app include a payment system ?</div>
 <div>
   <table class="calc-table">
@@ -207,170 +209,318 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="server">no </input></span>
+        <input type="radio" value="1" name="payment">no </input></span>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="server" type="checkbox">yes</input>
+        <input type="radio" value="2" name="payment" type="checkbox">yes</input>
       </td>
     </tr>
   </table>
 </div>
+<hr>
 <div class="question"><span class="color">9.</span> Will your app connect to wearable devices/IoTs</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_1.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/9_1.png" | relative_url }}'></img>
       </td>
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_2.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/9_2.png" | relative_url }}'></img>
       </td>
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_2.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/9_3.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="server">no </input></span>
+        <input type="radio" value="1" name="wearable-devices">no </input></span>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="server" type="checkbox">Yes, Smartwatches</input>
+        <input type="radio" value="2" name="wearable-devices" type="checkbox">Yes, Smartwatches</input>
       </td>
       <td class="calc-td">
-        <input type="radio" value="3" name="server" type="checkbox">Yes, many types</input>
+        <input type="radio" value="3" name="wearable-devices" type="checkbox">Yes, many types</input>
       </td>
     </tr>
   </table>
 </div>
+<hr>
 <div class="question"><span class="color">10.</span> Will your app receive notifications?</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_1.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/10_1.png" | relative_url }}'></img>
       </td>
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_2.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/10_2.png" | relative_url }}'></img>
+      </td>
+      <td class="calc-td">
+        <img class="service-icon" src='{{ "/assets/images/calculator/10_3.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="server">no </input></span>
+        <input type="radio" value="1" name="notifications">no </input></span>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="server" type="checkbox">Yes, only visible notifications</input>
+        <input type="radio" value="2" name="notifications" type="checkbox">Yes, only visible notifications</input>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="server" type="checkbox">Yes, both visible and silent notifications (data push)</input>
+        <input type="radio" value="3" name="notifications" type="checkbox">Yes, both visible and silent notifications (data push)</input>
       </td>
     </tr>
   </table>
 </div>
+<hr>
 <div class="question"><span class="color">11.</span> Shall your app works also offline?</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_1.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/11_1.png" | relative_url }}'></img>
       </td>
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_2.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/11_2.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="server">no </input></span>
+        <input type="radio" value="1" name="offline">no </input></span>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="server" type="checkbox">yes</input>
+        <input type="radio" value="2" name="offline" type="checkbox">yes</input>
       </td>
     </tr>
   </table>
 </div>
+<hr>
 <div class="question"><span class="color">12.</span> Is your app required to convey real time information?</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_1.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/12_1.png" | relative_url }}'></img>
       </td>
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_2.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/12_2.png" | relative_url }}'></img>
       </td>
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_1.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/12_3.png" | relative_url }}'></img>
       </td>
       <td class="calc-td">
-        <img class="service-icon" src='{{ "/assets/images/calculator/7_2.png" | relative_url }}'></img>
+        <img class="service-icon" src='{{ "/assets/images/calculator/12_4.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="server">no </input></span>
+        <input type="radio" value="1" name="real-time">no </input></span>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="server" type="checkbox">Yes, but only audio</input>
+        <input type="radio" value="2" name="real-time" type="checkbox">Yes, but only audio</input>
       </td>
       <td class="calc-td">
-        <input type="radio" value="3" name="server">Yes, but only simple data </input></span>
+        <input type="radio" value="3" name="real-time">Yes, but only simple data </input></span>
       </td>
       <td class="calc-td">
-        <input type="radio" value="4" name="server" type="checkbox">Yes, video</input>
+        <input type="radio" value="4" name="real-time" type="checkbox">Yes, video</input>
       </td>
     </tr>
   </table>
 </div>
 </div>
+<div id="alert" class="alert">
+  <img class="alert-icon" src='{{ "/assets/images/calculator/sum.png" | relative_url }}'></img>
+   <div style="margin: 20px;">
+  your mobile project costs between  
+  <span id="min">0</span>&nbspand&nbsp
+  <span id=max>0</span>
+</div>
+<div id="dinamic-alert">
+<div style="font-size: 18px;">maybe you find it a bit large?</div>
+<div onclick="sophisticatedSimulator()" class="btn sophisticated-btn"><p class="innertext">sophisticated calculator</p></div>
+<hr class="alert-hr">
+<div class="btn contact-btn" ><p>CONTACT US</p></div>
+</div>
+</div>
+
 <div class="email">
+    <div id="cost" onclick="calcSimulator()" class="btn calc">
+      <p  class="innertext">Estimate the cost of of my application development</p>
+    </div>
+    <div id="error" class="error" style="display: none;">Please fill in all the fields</div>
+  <!-- <div class="four spacing"></div> -->
+</div>
+<div class="email" style="display: none;" id="contact">
   <input placeholder="EMAIL ADRESS" class="required" type="text">
-    <div onclick="calc()" class="calc">
-      <p class="innertext">j’éstime le coût de mon application</p>
+    <div onclick="calcSimulator()" class="btn calc">
+      <p class="innertext">I want to receive a quotation for my project</p>
     </div>
   <div class="four spacing"></div>
 </div>
+
 </div>
+
 <script>
     var min=0;
     var max=0;
-  function calc(){
-  
+    var requierd=true;
+    var isSophisticatedSimulator=false;
+  function calcSimulator(){
+    document.getElementById("error").style.display="none";
+    min=0;
+    max=0;
+    requierd=true;
+    console.log("min=",min, "max=",max)
    var platforms= document.getElementsByName("platforms");
-  if(platforms[0].checked){
-add(5,25)
-  }
-  if(platforms[1].checked){
-    add(5,25)
-  }
-  if(platforms[2].checked){
-    add(4,20)
-  }
-    var design=document.querySelector('input[name="design"]:checked');
-    if(design){
+   platforms.forEach(p=>{
+     if(p.checked){
+       if(p.value==3){
+         add(4,20)
+       }
+       else{
+       add(5,25)  
+       } 
+     }
+   })
+ var design=document.querySelector('input[name="design"]:checked');
+    if(!design)requierd=false;
+    else{
+       if(design.value==2)
       add(5,25)
     }
   var server=document.querySelector('input[name="server"]:checked');
-  if(server){
-    if(server.value==1){
-      add(0,0)
-    }else if(server.value==1){
-      add(2,10);
-    }else{
-        add(5,25);
+  if(!server)requierd=false
+  else{
+    if(server.value==2){
+      add(2,10)
+    }else if(server.value==3){
+      add(5,25);
     }
-}
+  }
   var manage=document.querySelector('input[name="manage"]:checked');
-  if(manage){
-  if(manage.value==2){
+  if(!manage)requierd=false;
+  else{
+    if(manage.value==2){
     add(2,10)
     }
-}
-    alert("min"+min+"    max"+max)
-    min=0;
-    max=0;
+  }
+  if (isSophisticatedSimulator){
+     calcSophisticatedSimulator();
+  }
+    if(!requierd){
+      document.getElementById("error").style.display="block"; 
+      }else{
+           document.getElementById("alert").style.display="block"; 
+           document.getElementById("cost").style.display="none";
+      }
+  
+
+    document.getElementById("alert").scrollIntoView();
   }
   function add(a,b){
 min+=a;
 max+=b;
+document.getElementById("min").innerHTML = min;
+document.getElementById("max").innerHTML = max;
+  }
+  function sophisticatedSimulator(){
+   
+    isSophisticatedSimulator=true;
+    document.getElementById("sophisticatedSimulator").style.display="block";
+    document.getElementById("alert").style.display="none";
+    document.getElementById("dinamic-alert").style.display="none";
+      document.getElementById("cost").style.display="block";
+    document.getElementById("header").textContent="Project detailed ";
+    document.getElementById("contact").style.display="block";
+    window.scrollTo(0, 0);
+  }
+  function calcSophisticatedSimulator(){
+    console.log("in calcSophisticatedSimulator");
+    var tracking=document.querySelector('input[name="geo-tracking"]:checked');
+      if(!tracking)requierd=false;
+      else{
+       if(tracking.value==2){
+        add(2,5);
+         }else if(tracking.value==3){
+        add(3,10)
+        } 
+      }
+    var chat=document.querySelector('input[name="chat"]:checked');
+    if(!chat)requierd=false;
+    else{
+      if(chat.value==2){
+        add(3,3);
+      }
+      else if(chat.value==3){
+        add(3,12)
+      } 
+    }
+    var upload=document.querySelector('input[name="upload"]:checked');
+    if(!upload)requierd=false
+    else{
+      if(upload.value==2)
+      add(2,2)
+    }  
+    var payment=document.querySelector('input[name="payment"]:checked');
+    if(!payment)requierd=false
+    else{
+      if(payment.value==2)
+      add(5,5)
+    }
+    var wearable=document.querySelector('input[name="wearable-devices"]:checked');
+    if(!wearable)requierd=false
+    else{
+      if(wearable.value==2){
+        add(3,10);
+      }else if(wearable.value==3){
+        add(5,20)
+      }
+    }
+    var notifications=document.querySelector('input[name="notifications"]:checked');
+    if(!notifications)requierd=false
+    else{
+      if(notifications.value==2){
+        add(3,3);
+      }else if(notifications.value==3){
+        add(5,5)
+      }
+    }
+    var offline=document.querySelector('input[name="offline"]:checked');
+    if(!offline)requierd=false
+    else{
+      if(offline.value==2){
+      add(3,15)
+      }
+    }
+    var real_time=document.querySelector('input[name="real-time"]:checked');
+    if(!real_time)requierd=false
+    else{
+      if(real_time.value==2||real_time.value==3){
+        add(5,5);
+      }
+      else if(real_time.value==4){
+        add(10,25);
+      }
+    }
   }
  
 </script>
+<style>
+.top-bar .title-area a img {
+  content: url("/assets/images/blackLogo.png");
+}
+.fa-bars:before {
+  color: #000;
+}
+.contain-to-grid.transparent .top-bar-section li:not(.has-form) a:not(.button) {
+  color: #000;
+}
+.error{
+  color: red;
+  text-align: center;
+  display: none;
+}
+</style>
+
