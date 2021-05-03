@@ -24,3 +24,4 @@ js:
   - /assets/javascripts/app.js
   - /assets/javascripts/boot.js
   - /assets/javascripts/wp.js
+  - /assets/javascripts/calculator.js
