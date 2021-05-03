@@ -346,9 +346,10 @@ layout: default
 <div onclick="detailedSimulator()" class="btn detailed-btn"><p class="innertext">Detailed calculator</p></div>
 <!-- <hr class="alert-hr"> -->
 </div>
+<hr class="alert-hr">
 <form id='contact_form' class='email-form' method='POST'>
   <input class='required email' name='email' placeholder='EMAIL' type='text'>
-  <input type="hidden" class='required' name='try' placeholder='SUBJECT' type='text' value="????????????????">
+  <input type="hidden" class='required' name='data' type='text' id="data">
   <input name="recipient" type="hidden" value="{{ site.email }}" />
   <div class='spacing'></div>
   <input class='button white' value="contact us" type='submit'>
@@ -397,24 +398,28 @@ layout: default
     var max=0;
     var requierd=true;
     var isDetailedSimulator=false;
+    var list = new Object();
   function calcSimulator(){
+    requierd=true;
+    document.getElementById("error").style.display="none";
     if (isDetailedSimulator){
-      // if(!requierd){
-      // document.getElementById("error").style.display="block"; 
-      // return;
-      // }
+      calcDetailedSimulator();
+      if(!requierd){
+      document.getElementById("error").style.display="block"; 
+      return;
+      }
+  
       document.getElementById("second-alert").style.display="block"; 
       document.getElementById("cost").style.display="none"; 
       return;
   }
-    document.getElementById("error").style.display="none";
     min=0;
     max=0;
-    requierd=true;
-    console.log("min=",min, "max=",max)
    var platforms= document.getElementsByName("platforms");
+   list["question 1"]="";
    platforms.forEach(p=>{
      if(p.checked){
+      list["question 1"]+=p.value+",";
        if(p.value==3){
          add(7,15)
        }
@@ -428,7 +433,9 @@ layout: default
     else{
        if(design.value==2)
       add(4,10)
+      list["question 2"]=design.value;
     }
+   
   var server=document.querySelector('input[name="server"]:checked');
   if(!server)requierd=false
   else{
@@ -437,6 +444,7 @@ layout: default
     }else if(server.value==3){
       add(6,15);
     }
+    list["question 3"]=server.value;
   }
   var manage=document.querySelector('input[name="manage"]:checked');
   if(!manage)requierd=false;
@@ -444,15 +452,18 @@ layout: default
     if(manage.value==2){
     add(3,9)
     }
+    list["question 4"]=manage.value;
   }
+  console.log(JSON.stringify(list));
+  document.getElementById("data").value = JSON.stringify(list);
 
-    // if(!requierd){
-    //   document.getElementById("error").style.display="block"; 
-    //   }
-    //   else{
+    if(!requierd){
+      document.getElementById("error").style.display="block"; 
+      }
+      else{
            document.getElementById("alert").style.display="block"; 
            document.getElementById("cost").style.display="none";
-      // }
+      }
   
 
     document.getElementById("alert").scrollIntoView();
@@ -475,73 +486,48 @@ document.getElementById("max").innerHTML = max;
     window.scrollTo(0, 0);
   }
   function calcDetailedSimulator(){
-    console.log("in calcetailedSimulator");
     var tracking=document.querySelector('input[name="geo-tracking"]:checked');
       if(!tracking)requierd=false;
       else{
-       if(tracking.value==2){
-        add(2,5);
-         }else if(tracking.value==3){
-        add(3,10)
-        } 
+        list["question 5"]=tracking.value;
       }
     var chat=document.querySelector('input[name="chat"]:checked');
     if(!chat)requierd=false;
     else{
-      if(chat.value==2){
-        add(3,3);
-      }
-      else if(chat.value==3){
-        add(3,12)
-      } 
+      list["question 6"]=chat.value;
     }
     var upload=document.querySelector('input[name="upload"]:checked');
     if(!upload)requierd=false
     else{
-      if(upload.value==2)
-      add(2,2)
+      list["question 7"]=upload.value;
     }  
     var payment=document.querySelector('input[name="payment"]:checked');
     if(!payment)requierd=false
     else{
-      if(payment.value==2)
-      add(5,5)
+      list["question 8"]=payment.value;
     }
     var wearable=document.querySelector('input[name="wearable-devices"]:checked');
     if(!wearable)requierd=false
     else{
-      if(wearable.value==2){
-        add(3,10);
-      }else if(wearable.value==3){
-        add(5,20)
-      }
+      list["question 9"]=wearable.value;
     }
     var notifications=document.querySelector('input[name="notifications"]:checked');
     if(!notifications)requierd=false
     else{
-      if(notifications.value==2){
-        add(3,3);
-      }else if(notifications.value==3){
-        add(5,5)
-      }
+      list["question 10"]=notifications.value;
     }
     var offline=document.querySelector('input[name="offline"]:checked');
     if(!offline)requierd=false
     else{
-      if(offline.value==2){
-      add(3,15)
-      }
+      list["question 11"]=offline.value;
     }
     var real_time=document.querySelector('input[name="real-time"]:checked');
     if(!real_time)requierd=false
     else{
-      if(real_time.value==2||real_time.value==3){
-        add(5,5);
-      }
-      else if(real_time.value==4){
-        add(10,25);
-      }
+      list["question 12"]=real_time.value;
     }
+    console.log(list);
+    document.getElementById("data").value = JSON.stringify(list);
   }
  
 </script>
