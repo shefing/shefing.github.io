@@ -2591,7 +2591,7 @@ p.small-title {
   margin-top: 100px;
 }
 .detailed-btn{
- height: 60px;
+ height: 50px;
  width:auto;
  background-color: #feac29;
  margin: 40px;
@@ -2600,6 +2600,8 @@ p.small-title {
  font-size: 18px;
  padding-right: 20px;
  padding-left: 20px;
+ margin-top: 0px;
+ padding-top: 10px;
 }
 .alert-hr{
 font-weight: 200;
@@ -2613,7 +2615,7 @@ width: 70%;
 }
 .contact-btn{
  height: 50px;
- margin: 40px;
+ margin-bottom: 40px;
  width:240px;
  border: 1px solid;
  margin-left: auto;
@@ -5721,7 +5723,7 @@ input[type='checkbox']:checked:before {
 .email {
   margin-right: auto;
   margin-left: auto;
-  margin-top: 70px;
+  /* margin-top: 70px; */
   width: 65%;
   /* text-transform: uppercase; */
 }
@@ -5757,10 +5759,13 @@ span .sec{
   letter-spacing: 0px;
   font-family: 'poppins';
   margin-top: 100px;
-  right: 30%;
-  
+  /* right: 30%; */
+  left: 50%;
 }
-
+.center{
+  position: relative;
+   left: -50%;
+}
 .calc-header span{
   font-size: 97px;
   font-family: 'Times New Roman';
@@ -6230,7 +6235,7 @@ span .sec{
     margin-top: 0px;
   }
   .calc-header{
-    font-size: 50px;
+    font-size: 30px;
     right: 12%;
     margin-top: 50px;
     }
@@ -6254,7 +6259,7 @@ span .sec{
  }
  .detailed-btn p{
    font-size: 14px;
-   margin-top: 10px;
+   margin-top: 3px;
  }
  .alert-hr{
   margin: auto;
@@ -6266,7 +6271,7 @@ span .sec{
  .contact-btn{
    height: 35px;
    width:180px;
-   margin: 20px auto 40px auto;
+   margin: 0px auto 30px auto;
  }
  .contact-btn p{
    font-size: 16px;
