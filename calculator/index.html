@@ -354,7 +354,7 @@ layout: default
 
 <div id="second-alert" class="alert" style="display: none;">
 <div class="email" id="contact">
-  <div style="font-size: 18px;">Thanks for this information, we will send you a project quotation</div>
+  <div class="message">Thanks for this information, we will send you a project quotation</div>
 <input placeholder="EMAIL ADRESS" class="required no-margin" type="text">
 </div>
 <div class="btn contact-btn" ><p>SEND ME</p></div>
@@ -393,6 +393,7 @@ layout: default
       return;
       }
       document.getElementById("second-alert").style.display="block"; 
+      document.getElementById("cost").style.display="none"; 
       return;
   }
     document.getElementById("error").style.display="none";
@@ -541,11 +542,6 @@ document.getElementById("max").innerHTML = max;
 }
 .contain-to-grid.transparent .top-bar-section li:not(.has-form) a:not(.button) {
   color: #000;
-}
-.error{
-  color: red;
-  text-align: center;
-  display: none;
 }
 </style>
 

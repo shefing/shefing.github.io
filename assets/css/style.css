@@ -96,6 +96,11 @@ h1 {
 .service-icon {
   width: 80px;
 }
+.message{
+  font-size: 18px;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
 .contactTitle {
   font-size: 24px;
   color: #feac29;
@@ -113,6 +118,11 @@ h1 {
 }
 .fullscreen .layer h2 span.strong {
   color: #feac29;
+}
+.error{
+  color: red;
+  text-align: center;
+  display: none;
 }
 .color {
   color: #feac29;
@@ -5733,6 +5743,8 @@ input[type='checkbox']:checked:before {
   width: 100%;
   height: 55px;
   display: inline-block;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 
 .calc p {
@@ -6209,6 +6221,7 @@ span .sec{
   /* calculator */
   .calc {
     height: 45px;
+    margin-top: 10px;
     margin-bottom: 20px;
   } 
 
@@ -6249,8 +6262,8 @@ span .sec{
   /* alert */
   .alert{
     width: 95%;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-top: 20px;
  }
  .detailed-btn{
    height: 45px;
