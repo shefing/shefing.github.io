@@ -61,7 +61,11 @@
 /* #logoImg {
   content: url("/assets/images/logo.png");
 } */
-
+.email-form{
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
 .fa-bars:before {
   color: #fff;
 }

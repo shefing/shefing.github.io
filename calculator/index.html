@@ -346,18 +346,29 @@ layout: default
 <div onclick="detailedSimulator()" class="btn detailed-btn"><p class="innertext">Detailed calculator</p></div>
 <!-- <hr class="alert-hr"> -->
 </div>
-<div class="email" id="contact">
-<input placeholder="EMAIL ADRESS" class="required no-margin" type="text">
-</div>
-<div class="btn contact-btn" ><p>CONTACT US</p></div>
+<form id='contact_form' class='email-form' method='POST'>
+  <input class='required email' name='email' placeholder='EMAIL' type='text'>
+  <input type="hidden" class='required' name='try' placeholder='SUBJECT' type='text' value="????????????????">
+  <input name="recipient" type="hidden" value="{{ site.email }}" />
+  <div class='spacing'></div>
+  <input class='button white' value="contact us" type='submit'>
+<!-- </div> -->
+</form>
 </div>
 
 <div id="second-alert" class="alert" style="display: none;">
 <div class="email" id="contact">
   <div class="message">Thanks for this information, we will send you a project quotation</div>
-<input placeholder="EMAIL ADRESS" class="required no-margin" type="text">
+
+  <form id='contact_form' class='email-form' method='POST'>
+      <input class='required email' name='email' placeholder='EMAIL' type='text'>
+      <input name="recipient" type="hidden" value="{{ site.email }}" />
+      <div class='spacing'></div>
+      <input class='button white' type='submit' value="SEND ME">
+    <!-- </div> -->
+  </form>
 </div>
-<div class="btn contact-btn" ><p>SEND ME</p></div>
+</div>
 </div>
 
 
@@ -388,10 +399,10 @@ layout: default
     var isDetailedSimulator=false;
   function calcSimulator(){
     if (isDetailedSimulator){
-      if(!requierd){
-      document.getElementById("error").style.display="block"; 
-      return;
-      }
+      // if(!requierd){
+      // document.getElementById("error").style.display="block"; 
+      // return;
+      // }
       document.getElementById("second-alert").style.display="block"; 
       document.getElementById("cost").style.display="none"; 
       return;
@@ -435,12 +446,13 @@ layout: default
     }
   }
 
-    if(!requierd){
-      document.getElementById("error").style.display="block"; 
-      }else{
+    // if(!requierd){
+    //   document.getElementById("error").style.display="block"; 
+    //   }
+    //   else{
            document.getElementById("alert").style.display="block"; 
            document.getElementById("cost").style.display="none";
-      }
+      // }
   
 
     document.getElementById("alert").scrollIntoView();
@@ -543,5 +555,6 @@ document.getElementById("max").innerHTML = max;
 .contain-to-grid.transparent .top-bar-section li:not(.has-form) a:not(.button) {
   color: #000;
 }
+
 </style>
 
