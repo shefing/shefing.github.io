@@ -71,7 +71,9 @@
 .fa-bars:before {
   color: #fff;
 }
-
+td label{
+  -webkit-tap-highlight-color: transparent
+}
 .right a {
   color: #fff;
 }

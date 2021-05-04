@@ -30,14 +30,20 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="checkbox" value="1" class="platforms" name="platforms">Ios </input></span>
+        <label for="platforms_1" style="-webkit-tap-highlight-color: transparent">
+        <input type="checkbox" value="1" class="platforms"  id="platforms_1" name="platforms">Ios </input></span>
+      </label>
       </td>
       <td class="calc-td">
-        <input type="checkbox" value="2" class="platforms"  name="platforms" type="checkbox">Android</input>
+        <label for="platforms_2">
+        <input type="checkbox" value="2" class="platforms" id="platforms_2" name="platforms" type="checkbox">Android</input>
+      </label>
       </td>
       <td class="calc-td">
         <span>
-          <input type="checkbox" value="3" class="platforms"  name="platforms" >Web</input>
+          <label for="platforms_3">
+          <input type="checkbox" value="3" class="platforms"  id="platforms_3"  name="platforms" >Web</input>
+          </label>
         </span>
       </td>
     </tr>
@@ -58,11 +64,15 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="design">No, I’ll take care of the UI and UX myself </input></span>
+        <label for="design_1">
+        <input type="radio" value="1" name="design" id="design_1">No, I’ll take care of the UI and UX myself </input></span>
+      </label>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="design" type="checkbox">Yes, you take care of the UI and UX </input>
-      </td>
+        <label for="design_2">
+        <input type="radio" value="2" name="design" type="checkbox" id="design_2">Yes, you take care of the UI and UX </input>
+      </label>
+    </td>
     </tr>
   </table>
 </div>
@@ -83,15 +93,21 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="server">no </input></span>
-      </td>
+        <label for="server_1">
+        <input type="radio" value="1" name="server" id="server_1">no </input></span>
+      </label>
+    </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="server" type="checkbox">yes, the server exists
+        <label for="server_2">
+        <input type="radio" value="2" name="server" type="checkbox" id="server_2">yes, the server exists
         already </input>
+        </label>
       </td>
       <td class="calc-td">
-        <span> <input type="radio" value="3" name="server">Yes, you need to develop the server as well</input></span>
-      </td>
+        <label for="server_3">
+        <span> <input type="radio" value="3" name="server"id="server_3">Yes, you need to develop the server as well</input></span>
+      </label>
+    </td>
     </tr>
   </table>
 </div>
@@ -109,10 +125,14 @@ layout: default
       </tr>
       <tr class="calc-tr">
         <td class="calc-td">
-          <input type="radio" value="1" name="manage">no </input></span>
-        </td>
+          <label for="manage_1">
+          <input type="radio" value="1" name="manage" id="manage_1">no </input></span>
+        </label>
+      </td>
         <td class="calc-td">
-          <input type="radio" value="2" name="manage" type="checkbox">yes</input>
+          <label for="manage_2">
+          <input type="radio" value="2" name="manage"  id="manage_2">yes</input>
+         </label>
         </td>
       </tr>
     </table>
@@ -136,15 +156,22 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="geo-tracking">no </input></span>
+        <label for="geo-tracking_1">
+        <input type="radio" value="1" name="geo-tracking" id="geo-tracking_1">no </input></span>
+      </label>
+    </td>
+      <td class="calc-td">
+        <label for="geo-tracking_2">
+        <input type="radio" value="2" name="geo-tracking" id="geo-tracking_2">Yes, when the app is running
+        already 
+      </input>
+      </label>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="geo-tracking" type="checkbox">Yes, when the app is running
-        already </input>
-      </td>
-      <td class="calc-td">
-        <span> <input type="radio" value="3" name="geo-tracking">Yes, also in background</input></span>
-      </td>
+        <label for="geo-tracking_3">
+        <span> <input type="radio" value="3" name="geo-tracking" id="geo-tracking_3">Yes, also in background</input></span>
+      </label>
+    </td>
     </tr>
   </table>
 </div>
@@ -165,14 +192,20 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="chat">no </input></span>
-      </td>
+        <label for="chat_1">
+        <input type="radio" value="1" name="chat" id="chat_1">no </input></span>
+      </label>
+    </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="chat" type="checkbox">Yes, Text only
+        <label for="chat_2">
+        <input type="radio" value="2" name="chat" type="checkbox" id="chat_2">Yes, Text only
         already </input>
+        </label>
       </td>
       <td class="calc-td">
-        <span> <input type="radio" value="3" name="chat">Yes, you need to develop the server as well</input></span>
+        <label for="chat_3">
+        <span> <input type="radio" value="3" name="chat" id="chat_3">Yes, you need to develop the server as well</input></span>
+        </label>
       </td>
     </tr>
   </table>
@@ -191,11 +224,15 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="upload">no </input></span>
+        <label for="upload_1">
+        <input type="radio" value="1" name="upload" id="upload_1">no </input></span>
+      </label>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="upload" type="checkbox">yes</input>
-      </td>
+        <label for="upload_2">
+        <input type="radio" value="2" name="upload" id="upload_2">yes</input>
+      </label>
+    </td>
     </tr>
   </table>
 </div>
@@ -213,11 +250,15 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="payment">no </input></span>
+        <label for="payment_1">
+        <input type="radio" value="1" name="payment" id="payment_1">no </input></span>
+      </label>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="payment" type="checkbox">yes</input>
-      </td>
+        <label for="payment_2">
+        <input type="radio" value="2" name="payment" id="payment_2">yes</input>
+      </label>
+    </td>
     </tr>
   </table>
 </div>
@@ -238,14 +279,20 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="wearable-devices">no </input></span>
-      </td>
+        <label for="wearable-devices_1">
+        <input type="radio" value="1" name="wearable-devices" id="wearable-devices_1">no </input></span>
+      </label>
+    </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="wearable-devices" type="checkbox">Yes, Smartwatches</input>
-      </td>
+        <label for="wearable-devices_2">
+        <input type="radio" value="2" name="wearable-devices" type="checkbox" id="wearable-devices_2">Yes, Smartwatches</input>
+      </label>
+    </td>
       <td class="calc-td">
-        <input type="radio" value="3" name="wearable-devices" type="checkbox">Yes, many types</input>
-      </td>
+        <label for="wearable-devices_3">
+        <input type="radio" value="3" name="wearable-devices" type="checkbox" id="wearable-devices_3">Yes, many types</input>
+      </label>
+    </td>
     </tr>
   </table>
 </div>
@@ -266,14 +313,19 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="notifications">no </input></span>
+        <label for="notifications_1">
+        <input type="radio" value="1" name="notifications" id="notifications_1">no </input></span>
+      </label>
+    </td>
+      <td class="calc-td">
+        <label for="notifications_2">
+        <input type="radio" value="2" name="notifications" type="checkbox" id="notifications_2">Yes, only visible notifications</input>
+        </label>
       </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="notifications" type="checkbox">Yes, only visible notifications</input>
-      </td>
-      <td class="calc-td">
-        <input type="radio" value="3" name="notifications" type="checkbox">Yes, both visible and silent notifications (data push)</input>
-      </td>
+        <label for="notifications_3">
+        <input type="radio" value="3" name="notifications" type="checkbox" id="notifications_3">Yes, both visible and silent notifications (data push)</input>
+     </label> </td>
     </tr>
   </table>
 </div>
@@ -291,11 +343,15 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="offline">no </input></span>
-      </td>
+        <label for="offline_1">
+        <input type="radio" value="1" name="offline" id="offline_1">no </input></span>
+      </label>
+    </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="offline" type="checkbox">yes</input>
-      </td>
+        <label for="offline_2">
+        <input type="radio" value="2" name="offline" type="checkbox" id="offline_2">yes</input>
+      </label>
+    </td>
     </tr>
   </table>
 </div>
@@ -319,16 +375,24 @@ layout: default
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <input type="radio" value="1" name="real-time">no </input></span>
-      </td>
+       <label for="real-time_1">
+        <input type="radio" value="1" name="real-time" id="real-time_1">no </input></span>
+      </label>
+    </td>
       <td class="calc-td">
-        <input type="radio" value="2" name="real-time" type="checkbox">Yes, but only audio</input>
-      </td>
+        <label for="real-time_2">
+        <input type="radio" value="2" name="real-time" type="checkbox" id="real-time_2">Yes, but only audio</input>
+      </label>
+    </td>
       <td class="calc-td">
-        <input type="radio" value="3" name="real-time">Yes, but only simple data </input></span>
-      </td>
+        <label for="real-time_3">
+        <input type="radio" value="3" name="real-time" id="real-time_3">Yes, but only simple data </input></span>
+      </label>
+    </td>
       <td class="calc-td">
-        <input type="radio" value="4" name="real-time" type="checkbox">Yes, video</input>
+        <label for="real-time_4">
+        <input type="radio" value="4" name="real-time" type="checkbox" id="real-time_4">Yes, video</input>
+      </label>
       </td>
     </tr>
   </table>
