@@ -5750,7 +5750,7 @@ input[type='checkbox']:checked:before {
   margin-right: auto;
   margin-left: auto;
   /* margin-top: 70px; */
-  width: 65%;
+  width: 400px;
   /* text-transform: uppercase; */
 }
 
