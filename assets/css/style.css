@@ -6241,8 +6241,8 @@ span .sec{
   /* calculator */
   .calc {
     height: 45px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    width: fit-content;
+    margin: 30px auto 20px auto;
   } 
 
   .calc-second-header {
@@ -6261,7 +6261,7 @@ span .sec{
     width: 70px;
   }
   .email{
-    width: 90%;
+    width: fit-content;
   }
   .calc p{
     font-size: 14px;
