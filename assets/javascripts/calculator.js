@@ -15,6 +15,7 @@ if (isDetailedSimulator){
 
   document.getElementById("second-alert").style.display="block"; 
   document.getElementById("cost").style.display="none"; 
+  document.getElementById("second-alert").scrollIntoView({ behavior: 'smooth', block: 'center' });
   return;
 }
 min=0;
@@ -68,9 +69,7 @@ if(!requierd){
        document.getElementById("alert").style.display="block"; 
        document.getElementById("cost").style.display="none";
   }
-
-
-document.getElementById("alert").scrollIntoView();
+document.getElementById("alert").scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 function add(a,b){
 min+=a;
