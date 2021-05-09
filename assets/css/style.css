@@ -95,6 +95,13 @@ h1 {
 .bold{
   font-weight: 600 !important;
 }
+.expertise-icon{
+  width: 120px;
+  height: 100px;
+}
+.expertise-wrap{
+  padding: 20px;
+}
 .no-margin{
   margin: 0px;
 }
@@ -150,22 +157,23 @@ h1 {
 }
 .read-more-services {
   color: #feac29;
-  font-weight: bold;
+  font-weight: 500;
   /* position: absolute; */
   bottom: 0;
   width: 100%;
   /* margin: 0 0 80px -100px; */
-
+  font-weight: 20px;
   text-align: center;
   padding-bottom: 30px;
 }
 .read-more-expertise {
   color: #feac29;
-  font-weight: bold;
+  font-weight: 500;
   bottom: 0;
   width: 100%;
   text-align: left;
   margin-top: 30px;
+  font-weight: 20px;
 }
 
 .meatbtn {
@@ -5885,6 +5893,17 @@ span .sec{
   }
 }
 @media only screen and (max-width: 60em) {
+  .expertise-icon{
+    width: 90px;
+    height: auto;
+  }
+  .expertise-title{
+    font-size: 30px !important;
+    padding: 20px;
+    }
+  .expertise-wrap{
+    padding: 0px;
+  }
   .video-style {
     width: 108%;
   }
@@ -6108,6 +6127,7 @@ span .sec{
   .contain-to-grid .title-area li img,
   .contain-to-grid .title-area a img {
     width: auto;
+    padding-left: 0px;
   }
   .contain-to-grid .top-bar-section li:not(.has-form) a:not(.button) {
     height: 60px;
@@ -6270,7 +6290,7 @@ span .sec{
     margin-bottom: 40px;
   }
   span.sec{
-    font-size: 30px;
+    font-size: 38px;
   }
  .calc-td {
     width: 120px;

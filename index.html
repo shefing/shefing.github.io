@@ -3,37 +3,37 @@ layout: default
 onepage: true
 services:
   - title: Strategic consulting
-    icon: /assets/images/icons/icon_1.png
+    icon: /assets/images/services/services_1.png
     desc: Definition of business goals, product conceptualization, product requirements document
     bg: assets/images/services/strategic.jpg
     more: Roadmap,  MVP specifications. Delivered within few weeks
     id: 1  
   - title: MVP delivery
-    icon:  /assets/images/icons/icon_2.png
+    icon:  /assets/images/services/services_2.png
     desc: Service engagement to deliver MVP version through a fixed commitment (fixed cost and fixed time)
     bg: assets/images/services/mvp.jpg
     more: Shall fit within a 3 to 6 months timeframe, shall not cross the $$ 5 digits boundary and will likely involves a team composed of product owner, a designer, architect, two or more developers
     id: 2
   - title: Agile development
-    icon:  /assets/images/icons/icon_3.png
+    icon:  /assets/images/services/services_3.png
     desc: Retainer agreement to produce additional versions based on users feedbacks and product backlog
     bg: assets/images/services/agile.jpg
     more: DevOp with automatic error reporting from cloud assets and user devices, production monitoring
     id: 3 
   - title: Project 360° audit
-    icon:  /assets/images/icons/icon_4.png
+    icon:  /assets/images/services/services_4.png
     desc: Reviewing all components of the project, user EPICs and stories, UX and UI,
     bg: assets/images/services/project2.jpg
     more: architecture, technology stack, CI/CD pipeline, methodology, individual roles,...
     id: 4
   - title: Technology coaching
-    icon:  /assets/images/icons/icon_5.png
+    icon:  /assets/images/services/services_5.png
     desc: Coaching your team on the react eco-system and on full stack development
     bg: assets/images/services/technology.jpg
     more: Reviewing code, removing technical obstables and debugging difficult bugs
     id: 5
   - title: Team membership
-    icon:  /assets/images/icons/icon_6.png
+    icon:  /assets/images/services/services_6.png
     desc: Joining your team to accelerate development, taking part in daily’s, grooming, planning, retro…
     bg: assets/images/services/team.jpg
     more: Leading specific part of the product (front-end Web or Mobile)
@@ -183,7 +183,7 @@ clients:
     loop='true'
     muted='true'>
 
-<source src='{{ "/assets/images/@stock/bgVideo.m4v" | relative_url }}'
+<source id="vid" src='{{ "/assets/images/@stock/bgVideo.m4v" | relative_url }}'
        type='video/mp4'>
  </video>
 <!-- </div> -->
@@ -269,7 +269,7 @@ clients:
     <div class='row'>
       <div class='large-8 columns large-centered'>
         <div class="section-title">
-          <h2 class="bold" style="color:#fff;"><span class="color">Our </span>expertise</h2>
+          <h2 class="expertise-title bold"  style="color:#fff;"><span class="color">Our </span>expertise</h2>
         </div>
       </div>
     </div>
@@ -455,6 +455,7 @@ clients:
 </div>
 <a id='contact'></a>
 {% include contact-form.html %}
+
 
 
 
