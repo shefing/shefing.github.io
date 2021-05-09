@@ -81,6 +81,7 @@ td label{
 }
 td span{
   margin-left: 20px;
+  padding-left: 10px;
  display: block;
  text-align: left;
 }
@@ -985,10 +986,7 @@ ul.shortcode-list span {
 .f-topbar-fixed.shrink .top-bar .title-area a img {
   width: 70%;
   padding-top: 0px;
-<<<<<<< Updated upstream
   padding-left: 10px;
-=======
->>>>>>> Stashed changes
 }
 .f-topbar-fixed.shrink .top-bar .right a {
   /* !!!!!!!!!!!! */
@@ -1359,6 +1357,7 @@ textarea {
   padding: 15px;
   height: 3rem;
   margin-bottom: 1.875rem;
+  text-align: left;
 }
 
 textarea {
@@ -1981,14 +1980,15 @@ form textarea.error {
   height: 100%;
 }
 .fullscreen .layer {
-  position: absolute;
+  position: relative;
   z-index: 4;
   width: 100%;
   /*max-width: 750px;*/
   left: 37px;
-  top: 20%;
+  top: 50%;
   /* bottom: 10%; */
-  padding: 50px 80px 50px 50px;
+  padding: 150px 80px 50px 50px;
+  transform: translateY(-50%);
   /*text-align: center; */
 }
 
@@ -5691,6 +5691,19 @@ body {
   /* margin-top: 40px; */
   margin: auto;
 }
+.submit-btn{
+  color: #fff;
+  font-family: poppins;
+  font-size: 24px;
+  background-color: #feac29;
+  border: none;
+  height: 50px;
+  padding: 20px;
+  padding-top: 7px;
+  margin-bottom: 50px;
+  letter-spacing: 0px;
+  font-weight: 500;
+}
 
 .calc-table {
   margin: auto;
@@ -5786,6 +5799,7 @@ input[type='checkbox'] {
   margin-bottom: 0px;
 }
 
+
 input[type='checkbox']:before {
   content: '';
   display: block;
@@ -5819,7 +5833,7 @@ input[type='checkbox']:checked:before {
 
 .calc p {
   margin-top: 0px;
-  padding-top: 10px;
+  padding-top: 15px;
   font-size: 21px;
   letter-spacing: 0px;
   padding-left: 20px;
@@ -5916,6 +5930,7 @@ span .sec{
   }
 }
 @media only screen and (max-width: 60em) {
+
   .expertise-icon{
     width: 90px;
     height: auto;
@@ -5941,7 +5956,7 @@ span .sec{
   }
   .section-title p.big-size {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
   .second-page {
@@ -5984,10 +5999,12 @@ span .sec{
   .top-bar .top-bar-section {
     margin-top: 100px;
   }
-
   .fullscreen .layer {
+    position: absolute;
+    padding: 50px 80px 50px 50px;
     top: 30%;
     left: 10px;
+    transform: none;
   }
   .fullscreen .layer h1 {
     font-size: 70px;
@@ -6306,11 +6323,26 @@ span .sec{
     width: fit-content;
     margin: 30px auto 20px auto;
   } 
+  .calc-td.icon{
+    background: #fff;
+    padding-top: 30px;
+    text-align: center;
+    max-width: 300px;
+    vertical-align: bottom;
+    width: auto;
+    height: 16px;
+    /* padding-bottom: 30px; */
+  }
+  .submit-btn{
+    font-size: 14px;
+    padding-top: 15px;
+    height: 45px;
+  }
 
   .calc-second-header {
-    margin-top: 40px;
     font-size: 24px;
-    margin-bottom: 40px;
+    line-height: 1;
+    margin: 40px 10px 40px 10px;
   }
   span.sec{
     font-size: 38px;
@@ -6330,8 +6362,8 @@ span .sec{
     margin-top: 0px;
   }
   .calc-header{
-    font-size: 30px;
-    right: 12%;
+    font-size: 54px;
+    /* right: 12%; */
     margin-top: 50px;
     }
     .calc-header span{
@@ -6619,7 +6651,7 @@ input[type='radio'] {
     height: 35px;
   }
   .innertext {
-    font-size: 14px;
+    font-size: 14px !important;
     margin-top: 8px;
   }
   .meatbtn .innertext {
