@@ -87,9 +87,13 @@ td label{
 h1 {
   display: block;
 }
+
 .video-style {
-  opacity: 0.7;
+  opacity: 0.85;
   width: 100%;
+}
+.bold{
+  font-weight: 600 !important;
 }
 .no-margin{
   margin: 0px;
@@ -101,6 +105,11 @@ h1 {
 .services {
   padding-top: 50px;
   padding-bottom: 30px;
+  background-size: cover;
+  background-position: 50% 50%;
+  clear: both;
+}
+.expertise {
   background-size: cover;
   background-position: 50% 50%;
   clear: both;
@@ -153,13 +162,10 @@ h1 {
 .read-more-expertise {
   color: #feac29;
   font-weight: bold;
-  /* position: absolute; */
   bottom: 0;
   width: 100%;
-  /* margin: 0 0 80px -100px; */
-
-  text-align: center;
-  /* padding-bottom: 30px; */
+  text-align: left;
+  margin-top: 30px;
 }
 
 .meatbtn {
@@ -236,6 +242,7 @@ h3 {
 }
 
 .testing {
+  padding:5% 5% 0 5%;
   background:
     /* top, transparent black, faked with gradient */
     linear-gradient(rgba(0, 0, 0, 0.7),
@@ -266,9 +273,10 @@ p {
 }
 
 span.light {
-  color: #ccc;
-  font-size: 24px;
+  color: #fff;
+  font-size: 21px;
   font-family: "Poppins";
+  font-weight: 300;
 }
 .centered-text {
   text-align: center;
@@ -346,8 +354,8 @@ hr {
   color: #fff;
   font-size: 24px;
   font-family: poppins;
-  font-weight: bold;
-  margin-top: 20px;
+  font-weight: 500;
+  margin-top: 25px;
   text-align: center;
   letter-spacing: 0px;
 }
@@ -890,7 +898,9 @@ ul.shortcode-list span {
 .contain-to-grid .title-area img,
 .contain-to-grid .title-area li img,
 .contain-to-grid .title-area a img {
-  width: 100%;
+  width: 80%;
+  padding-top: 20px;
+  padding-left: 30px;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   transition-property: all;
@@ -901,9 +911,7 @@ ul.shortcode-list span {
 /* #logoImg.shrink {
   content: url("/assets/images/blackLogo.png");
 } */
-.f-topbar-fixed.shrink .top-bar .title-area a img {
-  content: url("/assets/images/blackLogo.png");
-}
+
 
 .f-topbar-fixed.shrink .contain-to-grid {
   height: 50px;
@@ -962,6 +970,8 @@ ul.shortcode-list span {
 .f-topbar-fixed.shrink .top-bar .title-area li img,
 .f-topbar-fixed.shrink .top-bar .title-area a img {
   width: 70%;
+  padding-top: 0px;
+  padding-left: 10px;
 }
 .f-topbar-fixed.shrink .top-bar .right a {
   /* !!!!!!!!!!!! */
@@ -1016,6 +1026,8 @@ ul.shortcode-list span {
 .contain-to-grid.transparent .top-bar-section li:not(.has-form) a:not(.button) {
   color: #fff;
   background: transparent;
+  font-size: 16px;
+  padding:0 10px 0 10px;
 }
 .contain-to-grid.transparent
   .top-bar-section
@@ -1038,6 +1050,9 @@ ul.shortcode-list span {
   li:not(.has-form)
   a:not(.button):hover {
   background: #000;
+}
+.f-topbar-fixed.shrink .top-bar .title-area a img {
+  content: url("/assets/images/blackLogo.png");
 }
 
 /* .contain-to-grid.transparent.white
@@ -1112,6 +1127,9 @@ ul.shortcode-list span {
   margin-right: 30px;
   font-family: poppins;
 }
+#menu-toggler a {
+font-size: 24px;
+}
 /* #menu-toggler a {
   color: #000;
 } */
@@ -1156,7 +1174,7 @@ ul.shortcode-list span {
 .top-socials ul.socials i {
   width: 30px;
   height: 60px;
-  color: #ccc;
+  color: #fff;
   text-align: center;
   font-size: 1.25rem;
   line-height: 4.2rem;
@@ -1190,14 +1208,15 @@ ul.shortcode-list span {
 .section-title p.big-size {
   font-size: 21px;
   line-height: 1.5em;
-  margin-top: 60px;
-  margin-bottom: 70px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 .section-title p.small-title {
   font-weight: 600;
   font-family: Poppins;
   font-size: 45px;
+  margin-bottom: 8px;
 }
 
 /* .section-title p.small-title::after {
@@ -1291,7 +1310,7 @@ ul.info i:hover {
 }
 
 .clients-with-bg img {
-  background: #ccc;
+  background: #fff;
   padding: 10px 0;
   -webkit-transition: all, 0.3s, ease-in-out;
   -moz-transition: all, 0.3s, ease-in-out;
@@ -1407,7 +1426,7 @@ form textarea.error {
 #contact_form.white input[type="url"],
 #contact_form.white textarea {
   background: none;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   color: #fff;
 }
 #contact_form.white input[type="text"]:focus,
@@ -1550,7 +1569,7 @@ form textarea.error {
   color: #fff;
 }
 .contact-details.white p {
-  color: #ccc;
+  color: #fff;
 }
 
 .border-wrapper {
@@ -1660,7 +1679,7 @@ form textarea.error {
 .border-wrapper .borders .top {
   height: 1px;
   width: 100%;
-  background: #ccc;
+  background: #fff;
   position: absolute;
   top: 0;
   left: -100%;
@@ -1671,7 +1690,7 @@ form textarea.error {
 .border-wrapper .borders .right {
   width: 1px;
   height: 100%;
-  background: #ccc;
+  background: #fff;
   position: absolute;
   right: 0;
   top: -100%;
@@ -1682,7 +1701,7 @@ form textarea.error {
 .border-wrapper .borders .bottom {
   height: 1px;
   width: 100%;
-  background: #ccc;
+  background: #fff;
   position: absolute;
   bottom: 0;
   right: -100%;
@@ -1694,7 +1713,7 @@ form textarea.error {
   left: 0;
   width: 1px;
   height: 100%;
-  background: #ccc;
+  background: #fff;
   position: absolute;
   bottom: -100%;
   -webkit-transition: bottom, 0.3s, linear, 0.9s;
@@ -1950,7 +1969,7 @@ form textarea.error {
   width: 100%;
   /*max-width: 750px;*/
   left: 37px;
-  top: 138px;
+  top: 20%;
   /* bottom: 10%; */
   padding: 50px 80px 50px 50px;
   /*text-align: center; */
@@ -2013,7 +2032,7 @@ p.small-title {
 }
 .fullscreen .layer h2 {
   font-family: poppins;
-  color: #ccc;
+  color: #fff;
   font-size: 26px;
   letter-spacing: 0px;
   margin-bottom: 15px;
@@ -2035,7 +2054,7 @@ p.small-title {
   display: inline;
   padding: 0 10px 0 20px;
   text-transform: uppercase;
-  color: #ccc;
+  color: #fff;
   letter-spacing: 2px;
   background: url(../images/@stock/li-item.png) left center no-repeat;
 }
@@ -2458,7 +2477,7 @@ p.small-title {
 .section .contact-details {
   width: 260px;
   text-align: center;
-  color: #ccc;
+  color: #fff;
 }
 .section .contact-details h4 {
   font-size: 0.9rem;
@@ -3064,7 +3083,7 @@ body {
   font-size: 0.7857142857rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #ccc;
+  color: #fff;
 }
 .modBlogPost.big h3 {
   font-size: 2.5rem;
@@ -3088,7 +3107,7 @@ body {
   opacity: 1;
 }
 .modBlogPost.big blockquote {
-  color: #ccc;
+  color: #fff;
   font-style: italic;
   letter-spacing: 1px;
   font-size: 1.7rem;
@@ -3244,13 +3263,13 @@ body {
   margin-bottom: 10px;
 }
 .modClients .clients {
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 .modClients a img {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   transition-property: all;
@@ -5295,7 +5314,7 @@ body {
 
 .member-dec {
   /*background: #333;*/
-  /*color: #ccc;*/
+  /*color: #fff;*/
   padding: 80px 40px;
 }
 
@@ -5434,7 +5453,7 @@ body {
 .modTestimonials p.quote {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #ccc;
+  color: #fff;
 }
 .modTestimonials p.author {
   font-style: italic;

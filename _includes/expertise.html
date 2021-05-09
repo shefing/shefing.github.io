@@ -1,10 +1,10 @@
 <div data-delay='0' data-equalizer-watch="service">
-  <div style="padding:60px 20px 0px 20px;">
+  <div style="padding:20px 20px 20px 20px;">
     <div class='wrapper'>
       <div class='content'>
  <table style="background-color: transparent;border-width: 0ch;">
           <tr>
-            <td style="height: 100px;width: 85px" rowspan="5"> <img class="service-icon"
+            <td style="height: 100px;width: 120px" rowspan="5"> <img class="service-icon"
                 src='{{ include.expertise.icon }}' alt=""></img>
             </td>
             <td>
@@ -13,12 +13,12 @@
           </tr>
           <tr>
             <td>
-              <p style="margin-bottom: 0px;color: #fff;">{{ include.expertise.desc | escape }}</p>
+              <p style="margin-bottom: 0px;color: #fff;max-width: 400px;">{{ include.expertise.desc | escape }}</p>
             </td>
           </tr>
           <tr>
             <td>
-              <p id='readMore{{include.expertise.id}}' style="display: none;color: #fff;"> {{ include.expertise.more | escape }}</p>
+              <p id='readMore{{include.expertise.id}}' style="display: none;color: #fff;max-width: 400px;"> {{ include.expertise.more | escape }}</p>
             </td>
           </tr>
           <tr>
@@ -45,7 +45,7 @@
       window.calcMainExpertiseHeight();
     } else {
       moreText.style.display = "none";
-      btnText.innerHTML = "RAED MORE";
+      btnText.innerHTML = "READ MORE";
       window.resetMainExpertiseHeight();
       window.calcMainExpertiseHeight();
 

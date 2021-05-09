@@ -6761,7 +6761,7 @@ p {
   font-family: inherit;
   font-weight: normal;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.2;
   margin-bottom: 1.42857rem;
   text-rendering: optimizeLegibility;
 }
@@ -6876,7 +6876,7 @@ ul,
 ol,
 dl {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.2;
   margin-bottom: 1.42857rem;
   list-style-position: outside;
   font-family: inherit;

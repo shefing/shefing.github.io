@@ -40,37 +40,37 @@ services:
     id: 6
 expertise:
   - title: ReactJS & React-Native
-    icon: assets/images/expertise/reactIcon.png
+    icon: assets/images/expertise/expertises_1.png
     desc: React, the most popular front-end framework, with a vibrant community that we use for both Web and Mobile development
     bg: assets/images/expertise/react.jpg
     more: No compromise on UX, no hybrid apps on Mobile but still a cost effective cross-platform strategy
     id: 1  
   - title: WebRTC
-    icon:  /assets/images/expertise/webIcon.png
+    icon:  /assets/images/expertise/expertises_2.png
     desc: The right way to share video, audio and data in real time over the Web
     bg: assets/images/expertise/webRTC.jpg
     more: No matter if one-on-one or many-to-many, fits in peer-to-peer or server centric architectures, no more plugins on the browsers
     id: 2
   - title: Server architecture, NodeJS
-    icon:  /assets/images/expertise/jsIcon.png
+    icon:  /assets/images/expertise/expertises_3.png
     desc: One of the most performant services development frameworks, best suited for full stack development.
     bg: 
     more: Used together with Express, and Postgres for structured data model or Mango for dynamic data
     id: 3 
   - title: CI/CD and DevOps
-    icon:  /assets/images/expertise/DevOpsIcon.png
+    icon:  /assets/images/expertise/expertises_4.png
     desc: Github actions, Jenkins, Fastlane to fluidify the pipeline, Docker for deployment, Kubernetes for containers orchestration
     bg: 
     more: Monitoring production and alerting via Slack, Teams or Jira
     id: 4
   - title: Adobe Animate & CreateJS
-    icon:  /assets/images/expertise/animateIcon.png
+    icon:  /assets/images/expertise/expertises_5.png
     desc: Design creative and interactive user animations all running on html5 Canvas user CreateJS
     bg:
     more: No proprietary runtime dependency, Performance optimized, All logic encoded in JavaScript
     id: 5
   - title: Serverless
-    icon: /assets/images/expertise/serverlessIcon.png
+    icon: /assets/images/expertise/expertises_6.png
     desc: Reduce development effort, using Google Firebase or AWS Lambda to create a backend in no time
     bg:
     more: Shorten development time and costs while building a sustainable and cost-effective architecture
@@ -240,10 +240,6 @@ clients:
     <li><span class="light">Delivering through Agile process, with full transparency </span></li>
     <div class="littlespacing"></div>
   </ul>
-    <div class="spacing"></div>
-    <!-- <a href="#" class="button small">Meat the team</a> -->
-    <!-- <div class="meatbtn"><p class="innertext">Project Calculator</p> </div> -->
-    <div class="three spacing"></div>
   </div>
 </div>
 
@@ -253,7 +249,7 @@ clients:
   <div class='row'>
     <div class='large-8 columns large-centered'>
       <div class="section-title">
-        <h2><span class="color">Our </span>Services</h2>
+        <h2 class="bold"><span class="color">Our </span>Services</h2>
       </div>
     </div>
   </div>
@@ -269,11 +265,11 @@ clients:
 </div>
 <a id='expertise'></a>
 <div class="testing">
-  <div class='services'>
+  <div class='expertise'>
     <div class='row'>
       <div class='large-8 columns large-centered'>
         <div class="section-title">
-          <h2 style="color:#fff;"><span class="color">Our </span>expertise</h2>
+          <h2 class="bold" style="color:#fff;"><span class="color">Our </span>expertise</h2>
         </div>
       </div>
     </div>
@@ -284,6 +280,7 @@ clients:
       <div class='medium-6 large-6 columns'>
         {% include expertise.html expertise=item %}
       </div>
+ 
       {% endfor %}
     </div>
   </div>
