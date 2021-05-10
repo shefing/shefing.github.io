@@ -5748,13 +5748,14 @@ body {
 
 .question {
   color: #000;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   font-family: "poppins";
   letter-spacing: 0px;
   text-align: center;
   margin-top: 25px;
-  margin-bottom: 25px
+  margin-bottom: 25px;
+  font-weight: 600;
 }
 
 .calc-second-header {
@@ -5767,9 +5768,14 @@ body {
   margin-top: 90px;
   margin-bottom: 90px;
 }
+.calc-second-header .sec{
+font-family: 'Times New Roman';
+font-style: italic;
+font-size: 60px;
+}
 
 hr {
-  border-top: dashed;
+  border-top: thin dashed;
   font-weight: 100;
 }
 
@@ -5868,6 +5874,7 @@ span .sec{
   margin-top: 100px;
   /* right: 30%; */
   left: 50%;
+  font-weight: bold;
 }
 .center{
   position: relative;
@@ -5877,7 +5884,7 @@ span .sec{
   font-size: 97px;
   font-family: 'Times New Roman';
   font-style: italic;
-  font-weight: bold;
+
 }
 .calc-img{
   height:400px;
@@ -6353,9 +6360,9 @@ span .sec{
   }
 
   .calc-second-header {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1;
-    margin: 40px 10px 40px 10px;
+    margin: 20px 0px 40px 0px;
   }
   span.sec{
     font-size: 38px;
@@ -6375,15 +6382,24 @@ span .sec{
     margin-top: 0px;
   }
   .calc-header{
-    font-size: 54px;
+    font-size: 35px;
     /* right: 12%; */
-    margin-top: 50px;
+    margin-top: 16%;
     }
+    .d-calc-header{
+      font-size: 35px;
+      /* right: 12%; */
+      margin-top: 16%;
+      }
     .calc-header span{
-      font-size: 40px;
+      font-size: 60px;
+    }
+    .d-calc-header span{
+      font-size: 50px;
+      line-height: 0.9;
     }
     .calc-img{
-      height:200px;
+      height:auto;
     }
     td label{
       font-size: 12px;

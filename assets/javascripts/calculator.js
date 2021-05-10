@@ -84,7 +84,8 @@ document.getElementById("detailedSimulator").style.display="block";
 document.getElementById("alert").style.display="none";
 document.getElementById("dinamic-alert").style.display="none";
   document.getElementById("cost").style.display="block";
-document.getElementById("header").textContent="Project detailed";
+document.getElementById("calc-header").style.display="none";
+document.getElementById("d-calc-header").style.display="block";
 document.getElementById("contact").style.display="block";
 window.scrollTo(0, 0);
 }
