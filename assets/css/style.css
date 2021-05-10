@@ -68,6 +68,9 @@
   margin-right: 0px;
   padding-top: 20px;
 }
+.for-mobile{
+  display: none;
+}
 .fa-bars:before {
   color: #fff;
 }
@@ -5938,7 +5941,9 @@ span .sec{
   }
 }
 @media only screen and (max-width: 60em) {
-
+  .for-mobile{
+    display: block;
+  }
   .expertise-icon{
     width: 90px;
     height: auto;
