@@ -105,6 +105,7 @@ h1 {
 .expertise-icon{
   width: 120px;
   height: 100px;
+  vertical-align: top;
 }
 .expertise-wrap{
   padding: 20px;
@@ -184,9 +185,13 @@ h1 {
 }
 
 .meatbtn {
-  height: 78px;
-  width: 366px;
+  margin-top: 50px;
+  height: 65px;
+  width: 340px;
   border: 3px solid #feac29;
+}
+.meatbtn .innertext {
+  margin-top: 16px;
 }
 .max-width {
   max-width: 1000px;
@@ -360,9 +365,10 @@ hr {
   height: 80px;
 }
 .projectBtn {
+  margin-top: 10px;
   background-color: #feac29;
   width: 366px;
-  height: 78px;
+  height: 65px;
 }
 .innertext {
   text-transform: uppercase !important;
@@ -370,7 +376,7 @@ hr {
   font-size: 24px  !important;
   font-family: poppins;
   font-weight: 500;
-  margin-top: 25px;
+  margin-top: 20px;
   text-align: center;
   letter-spacing: 0px !important;
 }
@@ -1067,7 +1073,7 @@ ul.shortcode-list span {
   background: #000;
 }
 .f-topbar-fixed.shrink .top-bar .title-area a img {
-  content: url("/assets/images/blackLogo.png");
+  content: url("/assets/images/blacklogo.png");
 }
 
 /* .contain-to-grid.transparent.white
@@ -5774,6 +5780,7 @@ input[type='radio'] {
   border-radius: 50%;
   outline: none;
   margin-right: 0px;
+  cursor: pointer;
   /* box-shadow: 0 0 5px 0px black inset; */
 }
 
@@ -5797,6 +5804,7 @@ input[type='checkbox'] {
   border-radius: 10%;
   outline: none;
   margin-bottom: 0px;
+  cursor: pointer;
 }
 
 
