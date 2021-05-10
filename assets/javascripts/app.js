@@ -1,3 +1,5 @@
+
+
 jQuery(document).ready(function() {
   // module connectors configuration
   jQuery('.mod').each(function() {
@@ -157,6 +159,7 @@ jQuery(document).foundation();
       var scroll = $(window).scrollTop();
 
       if ( scroll >= 1 ) {
+        if(screen.width>600)
         $('body').addClass('shrink');
       } else {
         $('body').removeClass('shrink');
