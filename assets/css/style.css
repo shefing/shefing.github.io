@@ -92,7 +92,7 @@ td span{
   color: #fff;
 }
 .top-bar .title-area a img {
-  content: url("/assets/images/logo.png");
+  content: url("/assets/images/logo_white.png");
 }
 h1 {
   display: block;
@@ -214,7 +214,7 @@ ul.list {
   /* padding-top: 300px; */
 }
 .toplogo {
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 /* Border animation */
@@ -922,9 +922,9 @@ ul.shortcode-list span {
 .contain-to-grid .title-area img,
 .contain-to-grid .title-area li img,
 .contain-to-grid .title-area a img {
-  width: 80%;
-  padding-top: 20px;
-  padding-left: 30px;
+  width: 20%;
+  padding-top: 12px;
+  padding-left: 10px;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   transition-property: all;
@@ -993,7 +993,7 @@ ul.shortcode-list span {
 .f-topbar-fixed.shrink .top-bar .title-area img,
 .f-topbar-fixed.shrink .top-bar .title-area li img,
 .f-topbar-fixed.shrink .top-bar .title-area a img {
-  width: 70%;
+  width: 14%;
   padding-top: 0px;
   padding-left: 10px;
 }
@@ -1076,7 +1076,7 @@ ul.shortcode-list span {
   background: #000;
 }
 .f-topbar-fixed.shrink .top-bar .title-area a img {
-  content: url("/assets/images/blacklogo.png");
+  content: url("/assets/images/logo_black.png");
 }
 
 /* .contain-to-grid.transparent.white
@@ -6384,12 +6384,12 @@ span .sec{
   .calc-header{
     font-size: 35px;
     /* right: 12%; */
-    margin-top: 16%;
+    margin-top: 25%;
     }
     .d-calc-header{
       font-size: 35px;
       /* right: 12%; */
-      margin-top: 16%;
+      margin-top: 22%;
       }
     .calc-header span{
       font-size: 60px;

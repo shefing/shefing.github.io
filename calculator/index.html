@@ -455,14 +455,22 @@ layout: default
 
 </div>
 <style>
+  @media only screen and (min-width: 60.063em) {
 .top-bar .title-area a img {
-  content: url("/assets/images/blackLogo.png");
+  content: url("/assets/images/logo_black.png");
 }
 .fa-bars:before {
   color: #000;
 }
 .contain-to-grid.transparent .top-bar-section li:not(.has-form) a:not(.button) {
   color: #000;
+}
+  }
+  @media only screen and (max-width:60em) {
+.contain-to-grid.transparent {
+    position:absolute;
+    /* position: fixed;*/
+  }
 }
 </style>
 
