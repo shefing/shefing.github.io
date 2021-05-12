@@ -3,11 +3,28 @@ var max=0;
 var requierd=true;
 var isDetailedSimulator=false;
 var list = new Object();
+function color(el,num){
+  var name=el.name;
+  var radios=document.getElementsByName(name);
+  radios.forEach(r=>{
+    var id=r.id;
+    document.getElementById("icon_"+id).style.filter="brightness(0%)";
+  })
+  document.getElementById("icon_"+num).style.filter="brightness(100%)";
+}
+function checkboxColor(id){
+  var iconStyle= document.getElementById("icon_"+id).style.filter;
+  if(iconStyle=="brightness(100%)")
+  document.getElementById("icon_"+id).style.filter="brightness(0%)";
+  else{
+    document.getElementById("icon_"+id).style.filter="brightness(100%)";
+  }
+}
 function calcSimulator(){
 requierd=true;
 document.getElementById("error").style.display="none";
 if (isDetailedSimulator){
-  calcDetailedSimulator();
+  calcDcetailedSimulator();
   if(!requierd){
   document.getElementById("error").style.display="block"; 
   return;

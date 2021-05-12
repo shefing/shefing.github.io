@@ -82,6 +82,7 @@ td label{
   width: fit-content;
 
 }
+
 td span{
   margin-left: 20px;
   padding-left: 10px;
@@ -133,8 +134,13 @@ h1 {
   clear: both;
 }
 .service-icon {
-  width: 230px;
+  width: 80px;
 }
+.calc-icon {
+  width: 230px;
+  filter: brightness(0%);
+}
+
 .message{
   font-size: 18px;
   padding-bottom: 20px;
@@ -6381,6 +6387,9 @@ span .sec{
     height: 80px;
   }
   .service-icon {
+    width: 70px;
+  }
+  .calc-icon {
     width: auto;
   }
   .email{

@@ -24,29 +24,28 @@ layout: default
   <table class="calc-table" style="display: table;">
     <tr class="calc-tr">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/1_B.png" | relative_url }}'  no-repeat center center></img>
+i        <img id="icon_1" class="calc-icon" src='{{ "/assets/images/calculator_icons/1_y.png" | relative_url }}'></img></td>
+      <td class="calc-td icon">
+        <img id="icon_2" class="calc-icon" src='{{ "/assets/images/calculator_icons/2_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/2_B.png" | relative_url }}'></img>
-      </td>
-      <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/3_B.png" | relative_url }}'></img>
+        <img id="icon_3" class="calc-icon" src='{{ "/assets/images/calculator_icons/3_y.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <label for="platforms_1" style="-webkit-tap-highlight-color: transparent;">
-        <input type="checkbox" value="1" class="platforms"  id="platforms_1" name="platforms"><span style="display: inline;margin-left: 0px;"> iOS</span></input>
+        <label for="1" style="-webkit-tap-highlight-color: transparent;">
+        <input onchange="checkboxColor(1)" type="checkbox" value="1" class="platforms"  id="1" name="platforms"><span style="display: inline;margin-left: 0px;"> iOS</span></input>
       </label>
       </td>
       <td class="calc-td">
-        <label for="platforms_2">
-        <input type="checkbox" value="2" class="platforms" id="platforms_2" name="platforms" type="checkbox"><span style="display: inline;margin-left: 0px;"> Android</span></input>
+        <label for="2">
+        <input onchange="checkboxColor(2)" type="checkbox" value="2" class="platforms" id="2" name="platforms" type="checkbox"><span style="display: inline;margin-left: 0px;"> Android</span></input>
       </label>
       </td>
       <td class="calc-td">
-          <label for="platforms_3">
-          <input type="checkbox" value="3" class="platforms"  id="platforms_3"  name="platforms"><span style="display: inline;margin-left: 0px;">Web</span> </input>
+          <label for="3">
+          <input onchange="checkboxColor(3)" type="checkbox" value="3" class="platforms"  id="3"  name="platforms"><span style="display: inline;margin-left: 0px;">Web</span> </input>
           </label>
       </td>
     </tr>
@@ -58,22 +57,22 @@ layout: default
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/4_B.png" | relative_url }}'></img>
+        <img id="icon_4" class="calc-icon" src='{{ "/assets/images/calculator_icons/4_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/5_B.png" | relative_url }}'></img>
+        <img id="icon_5" class="calc-icon" src='{{ "/assets/images/calculator_icons/5_y.png" | relative_url }}'></img>
       </td>
 
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <label for="design_1">
-        <input type="radio" value="1" name="design" id="design_1"><span>No, I’ll take care of the UI and UX myself</span> </input></span>
+        <label for="4">
+        <input onchange="color(this,4)" type="radio" value="1" name="design" id="4"><span>No, I’ll take care of the UI and UX myself</span> </input></span>
       </label>
       </td>
       <td class="calc-td">
-        <label for="design_2">
-        <input type="radio" value="2" name="design" type="checkbox" id="design_2"><span> Yes, you take care of the UI and UX</span> </input>
+        <label for="5">
+        <input onchange="color(this,5)" type="radio" value="2" name="design" type="checkbox" id="5"><span> Yes, you take care of the UI and UX</span> </input>
       </label>
     </td>
     </tr>
@@ -86,31 +85,31 @@ layout: default
     <tr class="calc-tr">
       <p  style="display: table;">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/6_B.png" | relative_url }}'></img>
+        <img id="icon_6" class="calc-icon" src='{{ "/assets/images/calculator_icons/6_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/7_B.png" | relative_url }}'></img>
+        <img id="icon_7" class="calc-icon" src='{{ "/assets/images/calculator_icons/7_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/8_B.png" | relative_url }}'></img>
+        <img id="icon_8" class="calc-icon" src='{{ "/assets/images/calculator_icons/8_y.png" | relative_url }}'></img>
       </td>
     </p>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <label for="server_1">
-        <input type="radio" value="1" name="server" id="server_1"><span> No</span></input>
+        <label for="6">
+        <input onchange="color(this,6)" type="radio" value="1" name="server" id="6"><span> No</span></input>
       </label>
     </td>
       <td class="calc-td">
-        <label for="server_2">
-        <input type="radio" value="2" name="server" type="checkbox" id="server_2"><span> Yes, the server exists
+        <label for="7">
+        <input onchange="color(this,7)" type="radio" value="2" name="server" type="checkbox" id="7"><span> Yes, the server exists
         already</span> </input>
         </label>
       </td>
       <td class="calc-td">
-        <label for="server_3">
-          <input type="radio" value="3" name="server"id="server_3"><span>Yes, you need to develop the server as well</span> </input>
+        <label for="8">
+          <input onchange="color(this,8)" type="radio" value="3" name="server"id="8"><span>Yes, you need to develop the server as well</span> </input>
       </label>
     </td>
     </tr>
@@ -122,21 +121,21 @@ layout: default
     <table class="calc-table" >
       <tr class="calc-tr">
         <td class="calc-td icon">
-          <img class="service-icon" src='{{ "/assets/images/calculator_icons/9_B.png" | relative_url }}'></img>
+          <img id="icon_9" class="calc-icon" src='{{ "/assets/images/calculator_icons/9_y.png" | relative_url }}'></img>
         </td>
         <td class="calc-td icon">
-          <img class="service-icon" src='{{ "/assets/images/calculator_icons/10_B.png" | relative_url }}'></img>
+          <img id="icon_10" class="calc-icon" src='{{ "/assets/images/calculator_icons/10_y.png" | relative_url }}'></img>
         </td>
       </tr>
       <tr class="calc-tr">
         <td class="calc-td">
-          <label for="manage_1">
-          <input type="radio" value="1" name="manage" id="manage_1"><span>No</span> </input>
+          <label for="9">
+          <input onchange="color(this,9)" type="radio" value="1" name="manage" id="9"><span>No</span> </input>
         </label>
       </td>
         <td class="calc-td">
-          <label for="manage_2">
-          <input type="radio" value="2" name="manage"  id="manage_2"><span>Yes</span></input>
+          <label for="10">
+          <input onchange="color(this,10)" type="radio" value="2" name="manage"  id="10"><span>Yes</span></input>
          </label>
         </td>
       </tr>
@@ -150,31 +149,31 @@ layout: default
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/11_B.png" | relative_url }}'></img>
+        <img id="icon_11" class="calc-icon" src='{{ "/assets/images/calculator_icons/11_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/12_B.png" | relative_url }}'></img>
+        <img id="icon_12" class="calc-icon" src='{{ "/assets/images/calculator_icons/12_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/13_B.png" | relative_url }}'></img>
+        <img id="icon_13" class="calc-icon" src='{{ "/assets/images/calculator_icons/13_y.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <label for="geo-tracking_1">
-        <input type="radio" value="1" name="geo-tracking" id="geo-tracking_1"><span> No</span></input>
+        <label for="11">
+        <input onchange="color(this,11)" type="radio" value="1" name="geo-tracking" id="11"><span> No</span></input>
       </label>
     </td>
       <td class="calc-td">
-        <label for="geo-tracking_2">
-        <input type="radio" value="2" name="geo-tracking" id="geo-tracking_2"><span> Yes, when the app is running
+        <label for="12">
+        <input onchange="color(this,12)" type="radio" value="2" name="geo-tracking" id="12"><span> Yes, when the app is running
         already </span>
       </input>
       </label>
       </td>
       <td class="calc-td">
-        <label for="geo-tracking_3">
-         <input type="radio" value="3" name="geo-tracking" id="geo-tracking_3"><span> Yes, also in background</span></input>
+        <label for="13">
+         <input onchange="color(this,13)"  type="radio" value="3" name="geo-tracking" id="13"><span> Yes, also in background</span></input>
       </label>
     </td>
     </tr>
@@ -186,30 +185,30 @@ layout: default
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/14_B.png" | relative_url }}'></img>
+        <img id="icon_14" class="calc-icon" src='{{ "/assets/images/calculator_icons/14_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/15_B.png" | relative_url }}'></img>
+        <img id="icon_15" class="calc-icon" src='{{ "/assets/images/calculator_icons/15_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/16_B.png" | relative_url }}'></img>
+        <img id="icon_16" class="calc-icon" src='{{ "/assets/images/calculator_icons/16_y.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <label for="chat_1">
-        <input type="radio" value="1" name="chat" id="chat_1"><span>No</span> </input>
+        <label for="14">
+        <input onchange="color(this,14)" type="radio" value="1" name="chat" id="14"><span>No</span> </input>
       </label>
     </td>
       <td class="calc-td">
-        <label for="chat_2">
-        <input type="radio" value="2" name="chat" type="checkbox" id="chat_2"><span>  Yes, Text only
+        <label for="15">
+        <input onchange="color(this,15)" type="radio" value="2" name="chat" type="checkbox" id="15"><span>  Yes, Text only
         already </span></input>
         </label>
       </td>
       <td class="calc-td">
-        <label for="chat_3">
-        <input type="radio" value="3" name="chat" id="chat_3"><span> Yes, you need to develop the server as well</span></input>
+        <label for="16">
+        <input onchange="color(this,16)" type="radio" value="3" name="chat" id="16"><span> Yes, you need to develop the server as well</span></input>
         </label>
       </td>
     </tr>
@@ -221,21 +220,21 @@ layout: default
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/17_B.png" | relative_url }}'></img>
+        <img id="icon_17" class="calc-icon" src='{{ "/assets/images/calculator_icons/17_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/18_B.png" | relative_url }}'></img>
+        <img id="icon_18" class="calc-icon" src='{{ "/assets/images/calculator_icons/18_y.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <label for="upload_1">
-        <input type="radio" value="1" name="upload" id="upload_1"><span> No</span></input></span>
+        <label for="17">
+        <input onchange="color(this,17)" type="radio" value="1" name="upload" id="17"><span> No</span></input></span>
       </label>
       </td>
       <td class="calc-td">
-        <label for="upload_2">
-        <input type="radio" value="2" name="upload" id="upload_2"><span> Yes</span></input>
+        <label for="18">
+        <input onchange="color(this,18)" type="radio" value="2" name="upload" id="18"><span> Yes</span></input>
       </label>
     </td>
     </tr>
@@ -247,21 +246,21 @@ layout: default
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/19_B.png" | relative_url }}'></img>
+        <img id="icon_19" class="calc-icon" src='{{ "/assets/images/calculator_icons/19_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/20_B.png" | relative_url }}'></img>
+        <img id="icon_20" class="calc-icon" src='{{ "/assets/images/calculator_icons/20_y.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <label for="payment_1">
-        <input type="radio" value="1" name="payment" id="payment_1"><span> No</span></input>
+        <label for="19">
+        <input onchange="color(this,19)" type="radio" value="1" name="payment" id="19"><span> No</span></input>
       </label>
       </td>
       <td class="calc-td">
-        <label for="payment_2">
-        <input type="radio" value="2" name="payment" id="payment_2"><span> Yes</span></input>
+        <label for="20">
+        <input onchange="color(this,20)" type="radio" value="2" name="payment" id="20"><span> Yes</span></input>
       </label>
     </td>
     </tr>
@@ -273,29 +272,29 @@ layout: default
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/21_B.png" | relative_url }}'></img>
+        <img id="icon_21" class="calc-icon" src='{{ "/assets/images/calculator_icons/21_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/22_B.png" | relative_url }}'></img>
+        <img id="icon_22" class="calc-icon" src='{{ "/assets/images/calculator_icons/22_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/23_B.png" | relative_url }}'></img>
+        <img id="icon_23" class="calc-icon" src='{{ "/assets/images/calculator_icons/23_y.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <label for="wearable-devices_1">
-        <input type="radio" value="1" name="wearable-devices" id="wearable-devices_1"><span> No</span> </input>
+        <label for="21">
+        <input onchange="color(this,21)" type="radio" value="1" name="wearable-devices" id="21"><span> No</span> </input>
       </label>
     </td>
       <td class="calc-td">
-        <label for="wearable-devices_2">
-        <input type="radio" value="2" name="wearable-devices" type="checkbox" id="wearable-devices_2"><span> Yes, Smartwatches</span></input>
+        <label for="22">
+        <input onchange="color(this,22)" type="radio" value="2" name="wearable-devices" type="checkbox" id="22"><span> Yes, Smartwatches</span></input>
       </label>
     </td>
       <td class="calc-td">
-        <label for="wearable-devices_3">
-        <input type="radio" value="3" name="wearable-devices" type="checkbox" id="wearable-devices_3"><span> Yes, many types</span></input>
+        <label for="23">
+        <input onchange="color(this,23)" type="radio" value="3" name="wearable-devices" type="checkbox" id="23"><span> Yes, many types</span></input>
       </label>
     </td>
     </tr>
@@ -307,29 +306,29 @@ layout: default
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/24_B.png" | relative_url }}'></img>
+        <img id="icon_24" class="calc-icon" src='{{ "/assets/images/calculator_icons/24_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/25_B.png" | relative_url }}'></img>
+        <img id="icon_25" class="calc-icon" src='{{ "/assets/images/calculator_icons/25_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/26_B.png" | relative_url }}'></img>
+        <img id="icon_26" class="calc-icon" src='{{ "/assets/images/calculator_icons/26_y.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <label for="notifications_1">
-        <input type="radio" value="1" name="notifications" id="notifications_1"><span> No</span></input>
+        <label for="24">
+        <input onchange="color(this,24)" type="radio" value="1" name="notifications" id="24"><span> No</span></input>
       </label>
     </td>
       <td class="calc-td">
-        <label for="notifications_2">
-        <input type="radio" value="2" name="notifications" type="checkbox" id="notifications_2"><span> Yes, only visible notifications</span></input>
+        <label for="25">
+        <input onchange="color(this,25)" type="radio" value="2" name="notifications" type="checkbox" id="25"><span> Yes, only visible notifications</span></input>
         </label>
       </td>
       <td class="calc-td">
-        <label for="notifications_3">
-        <input type="radio" value="3" name="notifications" type="checkbox" id="notifications_3"><span> Yes, both visible and silent notifications (data push)</span></input>
+        <label for="26">
+        <input onchange="color(this,26)" type="radio" value="3" name="notifications" type="checkbox" id="26"><span> Yes, both visible and silent notifications (data push)</span></input>
      </label> </td>
     </tr>
   </table>
@@ -340,21 +339,21 @@ layout: default
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/27_B.png" | relative_url }}'></img>
+        <img id="icon_27" class="calc-icon" src='{{ "/assets/images/calculator_icons/27_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/28_B.png" | relative_url }}'></img>
+        <img id="icon_28" class="calc-icon" src='{{ "/assets/images/calculator_icons/28_y.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-        <label for="offline_1">
-        <input type="radio" value="1" name="offline" id="offline_1"><span> No</span></input>
+        <label for="27">
+        <input onchange="color(this,27)" type="radio" value="1" name="offline" id="27"><span> No</span></input>
       </label>
     </td>
       <td class="calc-td">
-        <label for="offline_2">
-        <input type="radio" value="2" name="offline" type="checkbox" id="offline_2"><span>Yes</span> </input>
+        <label for="28">
+        <input onchange="color(this,28)" type="radio" value="2" name="offline" type="checkbox" id="28"><span>Yes</span> </input>
       </label>
     </td>
     </tr>
@@ -366,37 +365,37 @@ layout: default
   <table class="calc-table">
     <tr class="calc-tr">
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/29_B.png" | relative_url }}'></img>
+        <img id="icon_29" class="calc-icon" src='{{ "/assets/images/calculator_icons/29_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/30_B.png" | relative_url }}'></img>
+        <img id="icon_30" class="calc-icon" src='{{ "/assets/images/calculator_icons/30_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/31_B.png" | relative_url }}'></img>
+        <img id="icon_31" class="calc-icon" src='{{ "/assets/images/calculator_icons/31_y.png" | relative_url }}'></img>
       </td>
       <td class="calc-td icon">
-        <img class="service-icon" src='{{ "/assets/images/calculator_icons/32_B.png" | relative_url }}'></img>
+        <img id="icon_32" class="calc-icon" src='{{ "/assets/images/calculator_icons/32_y.png" | relative_url }}'></img>
       </td>
     </tr>
     <tr class="calc-tr">
       <td class="calc-td">
-       <label for="real-time_1">
-        <input type="radio" value="1" name="real-time" id="real-time_1"><span> No</span></input></span>
+       <label for="29">
+        <input onchange="color(this,29)" type="radio" value="1" name="real-time" id="29"><span> No</span></input></span>
       </label>
     </td>
       <td class="calc-td">
-        <label for="real-time_2">
-        <input type="radio" value="2" name="real-time" type="checkbox" id="real-time_2"><span> Yes, but only audio</span></input>
+        <label for="30">
+        <input onchange="color(this,30)" type="radio" value="2" name="real-time" type="checkbox" id="30"><span> Yes, but only audio</span></input>
       </label>
     </td>
       <td class="calc-td">
-        <label for="real-time_3">
-        <input type="radio" value="3" name="real-time" id="real-time_3"><span> Yes, but only simple data</span> </input>
+        <label for="31">
+        <input onchange="color(this,31)" type="radio" value="3" name="real-time" id="31"><span> Yes, but only simple data</span> </input>
       </label>
     </td>
       <td class="calc-td">
-        <label for="real-time_4">
-        <input type="radio" value="4" name="real-time" type="checkbox" id="real-time_4"><span> Yes, video</span></input>
+        <label for="32">
+        <input onchange="color(this,32)" type="radio" value="4" name="real-time" type="checkbox" id="32"><span> Yes, video</span></input>
       </label>
       </td>
     </tr>
