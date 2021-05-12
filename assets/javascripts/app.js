@@ -157,6 +157,7 @@ jQuery(document).foundation();
       var scroll = $(window).scrollTop();
 
       if ( scroll >= 1 ) {
+        if(screen.width>600)
         $('body').addClass('shrink');
       } else {
         $('body').removeClass('shrink');
