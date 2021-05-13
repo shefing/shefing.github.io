@@ -111,6 +111,13 @@ h1 {
   height: 100px;
   vertical-align: top;
 }
+.expertise-table{
+background-color: transparent;
+border-width: 0ch;
+}
+.expertise-top-icon{
+ display: none;
+}
 .expertise-wrap{
   padding: 20px;
 }
@@ -188,7 +195,7 @@ h1 {
   font-weight: 500;
   bottom: 0;
   width: 100%;
-  text-align: left;
+  /* text-align: left; */
   margin-top: 30px;
   font-weight: 20px;
 }
@@ -5963,8 +5970,15 @@ span .sec{
     display: block;
   }
   .expertise-icon{
+    display: none;
     width: 90px;
     height: auto;
+  }
+  .expertise-table{
+  text-align: center;
+    }
+  .expertise-top-icon{
+    display: block;
   }
   .expertise-title{
     font-size: 30px !important;
@@ -5998,8 +6012,7 @@ span .sec{
     /* margin-bottom: 15px; */
   }
   /* .read-more-expertise {
-    margin: 0 0 40px;
-    /* margin-bottom: 15px; 
+text-align: center;
   } */
   .contactTitle {
     font-size: 15px;
