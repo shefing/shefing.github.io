@@ -61,6 +61,10 @@
 /* #logoImg {
   content: url("/assets/images/logo.png");
 } */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .email-form{
   width: 100%;
   padding-left: 30%;
@@ -6375,7 +6379,7 @@ text-align: center;
     background: #fff;
     padding-top: 30px;
     text-align: center;
-    max-width: 300px;
+    /* max-width: 300px; */
     vertical-align: bottom;
     width: auto;
     height: 16px;
@@ -6396,11 +6400,11 @@ text-align: center;
     font-size: 38px;
   }
  .calc-td {
-    width: 120px;
-    height: 80px;
+    width: auto;
+    height: auto;
   }
   .service-icon {
-    width: 70px;
+    width: auto;
   }
   .calc-icon {
     width: auto;
