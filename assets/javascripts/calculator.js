@@ -24,7 +24,7 @@ function calcSimulator(){
 requierd=true;
 document.getElementById("error").style.display="none";
 if (isDetailedSimulator){
-  calcDcetailedSimulator();
+  calcDetailedSimulator();
   if(!requierd){
   document.getElementById("error").style.display="block"; 
   return;

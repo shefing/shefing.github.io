@@ -61,10 +61,10 @@
 /* #logoImg {
   content: url("/assets/images/logo.png");
 } */
-html, body {
+/* html, body {
   max-width: 100%;
   overflow-x: hidden;
-}
+} */
 .email-form{
   width: 100%;
   padding-left: 30%;
@@ -5863,7 +5863,7 @@ input[type='checkbox']:checked:before {
   height: 55px;
   display: inline-block;
   margin-top: 80px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .calc p {
@@ -5966,7 +5966,9 @@ span .sec{
   }
 }
 @media only screen and (max-width: 60em) {
-
+  .center-mobile {
+    text-align: -webkit-center;
+  }
   .top-bar .title-area .name h1 a {
     width: 150px;
   }
@@ -6403,9 +6405,9 @@ text-align: center;
     width: auto;
     height: auto;
   }
-  .service-icon {
+  /* .service-icon {
     width: auto;
-  }
+  } */
   .calc-icon {
     width: auto;
   }
