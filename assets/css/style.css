@@ -75,6 +75,7 @@
 .for-mobile{
   display: none;
 }
+.fa-times:before,
 .fa-bars:before {
   color: #fff;
 }
@@ -1019,7 +1020,7 @@ ul.shortcode-list span {
   /* !!!!!!!!!!!! */
   color: #000;
 }
-
+.f-topbar-fixed.shrink .top-bar .fa-times:before,
 .f-topbar-fixed.shrink .top-bar .fa-bars:before {
   color: #000;
 }
@@ -1258,7 +1259,7 @@ font-size: 24px;
   font-weight: 600;
   font-family: Poppins;
   font-size: 45px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 
 /* .section-title p.small-title::after {
@@ -6007,7 +6008,7 @@ span .sec{
   }
   .section-title p.big-size {
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .second-page {
@@ -6718,11 +6719,11 @@ input[type='radio'] {
   }
   .innertext {
     font-size: 14px !important;
-    margin-top: 8px;
+    margin-top: 10px;
   }
   .meatbtn .innertext {
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 6px;
   }
   span.light {
     font-size: 12px;

@@ -19,7 +19,8 @@
 
     <div id="menu-toggler" class="right">
       <a href='#'>
-        <i class="fa fa-bars" style="color: black;"></i>
+        <i onclick="changeIcon()" id="menu-icon" class="fa fa-bars" style="color: black;"></i>
+        <!-- <i  style="color: black;"></i> -->
       </a>
     </div>
     <section class='top-bar-section closed'>
@@ -37,18 +38,36 @@
               {% assign href = 'index.html' | append:item.path | relative_url %}              
             {% endif %}
             
-            <a href="{{ href }}" onclick="visible()">{{ item.name }}</a>
+            <a href="{{ href }}">{{ item.name }}</a>
           </li>
         {% endfor %}
       </ul>
     </section>
   </nav>
 </div>
-<!-- <script>
-  function visible() {
-    // var page = document.getElementById("calculator");
-    // page.style.display = "none";
-    var page = document.getElementById("hide");
-    page.style.display = "block";
+<!-- <style>
+  /* *, *::before, *::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+} */
+  .mobile-toggle span {
+    display: block;
+    /* position: absolute; */
+    width: 16px;
+    height: 1px;
+    background: #090909;
+    content: " ";
+    left: 0;
+}
+</style> -->
+<script>
+  function changeIcon() {
+  
+  var icon=  document.getElementById("menu-icon")
+  if(icon.className=="fa fa-bars"){
+    icon.className="fa fa-times"
+  }else{
+    icon.className="fa fa-bars"
   }
-</script> -->
+  }
+</script>
