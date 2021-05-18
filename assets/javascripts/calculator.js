@@ -29,7 +29,6 @@ if (isDetailedSimulator){
   document.getElementById("error").style.display="block"; 
   return;
   }
-
   document.getElementById("second-alert").style.display="block"; 
   document.getElementById("cost").style.display="none"; 
   document.getElementById("second-alert").scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -79,13 +78,14 @@ list["question 4"]=manage.value;
 console.log(JSON.stringify(list));
 document.getElementById("data").value = JSON.stringify(list);
 
-// if(!requierd){
-//   document.getElementById("error").style.display="block"; 
-//   }
-//   else{
-       document.getElementById("alert").style.display="block"; 
+if(!requierd){
+  document.getElementById("error").style.display="block"; 
+  }
+  else{
+      //  document.getElementById("alert").style.display="block"; change it!!!!!!!!!!!!
+       document.getElementById("alert").style.display="block";
        document.getElementById("cost").style.display="none";
-  // }
+  }
 document.getElementById("alert").scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 function add(a,b){

@@ -410,47 +410,64 @@ i        <img id="icon_1" class="calc-icon" src='{{ "/assets/images/calculator_i
   €<span id="min">0</span>K&nbspand&nbsp
   €<span id=max>0</span>K
 </div>
-<div style="font-size: 18px;">Need a narrower range?</div>
-<div onclick="detailedSimulator()" class="btn detailed-btn"><p class="innertext">Detailed calculator</p></div>
-</div>
-<!-- <hr class="alert-hr"> -->
-<form id='contact_form' class='email-form' method='POST'>
-  <input class='required email' name='email' placeholder='EMAIL' type='text'>
-  <input type="hidden" class='required' name='data' type='text' id="data">
-  <input name="recipient" type="hidden" value="{{ site.email }}" />
-  <div class='spacing'></div>
-  <input class='btn submit-btn' value="CONTACT US" type='submit'>
-</form>
-</div>
+<table class="alert-table">
 
-<div id="second-alert" class="alert" style="display: none;">
+  <td>
+    <div class="question">Need a narrower range?</div>
+    <div onclick="detailedSimulator()" class="btn projectBtn"><p class="innertext">Detailed calculator</p></div>
+    <div id="mobile-qoutation">
+      <div class="question">Need a quotation?</div>
+      <div onclick="detailedSimulator()" class="btn quotationBtn"><p class="innertext">quotation</p></div>
+    </div>
+</td>
+<td>
+  <div id="qoutation">
+<div class="question">Need a quotation?</div>
+<div onclick="detailedSimulator()" class="btn quotationBtn"><p class="innertext">quotation</p></div>
+</div>
+</td>
+</table>
+  </div>
+<!-- <div style="font-size: 18px;">Need a narrower range?</div>
+<div onclick="detailedSimulator()" class="btn detailed-btn"><p class="innertext">Detailed calculator</p></div>
+</div> -->
+
+<!-- <form id='contact_form' class='email-form' method='POST'> -->
+  <!-- <input class='required email' name='email' placeholder='EMAIL' type='text'> -->
+  <input type="hidden" class='required' name='data' type='text' id="data">
+  <!-- <input name="recipient" type="hidden" value="{{ site.email }}" /> -->
+  <!-- <div class='spacing'></div> -->
+  <!-- <input class='btn submit-btn' value="CONTACT US" type='submit'> -->
+<!-- </form> -->
+
+</div>
+<div id="second-alert" class="alert">
 <div class="email" id="contact">
   <div class="message">Thanks for this information, we will send you a project quotation</div>
-
   <form id='contact_form' class='email-form' method='POST'>
-      <input class='required email' name='email' placeholder='EMAIL' type='text'>
+     <input class='required email' name='email' placeholder='EMAIL' type='text'>
       <input name="recipient" type="hidden" value="{{ site.email }}" />
-      <div class='spacing'></div>
-      <input class='button white' type='submit' value="SEND ME">
-  </form>
-</div>
-</div>
-</div>
-<div class="email">
-    <div id="cost" onclick="calcSimulator()" class="btn calc">
-      <p  class="innertext">Project cost range</p>
-    </div>
-    <div id="error" class="error" style="display: none;">please answers all the questions</div>
-</div>
-<div class="email" style="display: none;" id="contact">
-  <input placeholder="EMAIL ADRESS" class="required no-margin" type="text">
-    <div onclick="calcSimulator()" class="btn calc">
-      <p class="innertext">I want to receive a quotation for my project</p>
-    </div>
-  <div class="four spacing"></div>
-</div>
-
-</div>
+        <div class='spacing'></div>
+        <input class='button white' type='submit' value="SEND ME">
+    </form>
+  </div>
+  </div>
+  </div>
+  <div class="email">
+      <div id="cost" onclick="calcSimulator()" class="btn calc">
+        <p  class="innertext">Project cost range</p>
+      </div>
+      <div id="error" class="error" style="display: none;">please answers all the questions</div>
+  </div>
+  <div class="email" style="display: none;" id="contact">
+    <input placeholder="EMAIL ADRESS" class="required no-margin" type="text">
+      <div onclick="calcSimulator()" class="btn calc">
+        <p class="innertext">I want to receive a quotation for my project</p>
+      </div>
+    <div class="four spacing"></div>
+  </div>
+  
+  </div>
 <style>
   @media only screen and (min-width: 60.063em) {
 .top-bar .title-area a img {
