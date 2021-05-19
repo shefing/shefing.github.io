@@ -3768,6 +3768,7 @@ input[type="submit"] {
   -webkit-appearance: none;
   border-radius: 0;
   content: "try";
+  
 }
 
 /* Respect enforced amount of rows for textarea */
@@ -6762,7 +6763,7 @@ p {
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.2;
-  margin-bottom: 1.42857rem;
+  /* margin-bottom: 1.42857rem; */
   text-rendering: optimizeLegibility;
 }
 p.lead {

@@ -72,12 +72,18 @@
   margin-right: 0px;
   padding-top: 20px;
 }
+.float-left {
+float: left;
+}
 .for-mobile{
   display: none;
 }
 .fa-times:before,
 .fa-bars:before {
   color: #fff;
+}
+.center-contact {
+  text-align: -webkit-center;
 }
 td label{
   -webkit-tap-highlight-color: transparent;
@@ -193,7 +199,7 @@ border-width: 0ch;
   /* margin: 0 0 80px -100px; */
   font-weight: 20px;
   text-align: center;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 .read-more-expertise {
   color: #feac29;
@@ -208,7 +214,7 @@ border-width: 0ch;
 .meatbtn {
   margin-top: 50px;
   height: 65px;
-  width: 340px;
+  width: 320px;
   border: 3px solid #feac29;
 }
 .meatbtn .innertext {
@@ -292,9 +298,8 @@ h3 {
 }
 
 .subtitle {
-  font-size: 18px;
-  letter-spacing: 2px;
-  font-weight: normal;
+  font-size: 18px !important;
+  /* font-weight: normal; */
 }
 
 body {
@@ -388,7 +393,7 @@ hr {
 .projectBtn {
   margin-top: 10px;
   background-color: #feac29;
-  width: 366px;
+  width: 320px;
   height: 65px;
 }
 .innertext {
@@ -942,7 +947,7 @@ ul.shortcode-list span {
 .contain-to-grid .title-area li img,
 .contain-to-grid .title-area a img {
   width: 100%;
-  padding-top: 12px;
+  padding-top: 35px;
   padding-left: 10px;
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -957,11 +962,11 @@ ul.shortcode-list span {
 
 
 .f-topbar-fixed.shrink .contain-to-grid {
-  height: 50px;
+  height: 70px;
 }
 .f-topbar-fixed.shrink .top-bar {
   height: auto;
-  line-height: 60px;
+  line-height: 70px;
   /* background: #fff !important; */
   /* border-bottom: yellow; */
   /* border-width: 6em; */
@@ -999,7 +1004,7 @@ ul.shortcode-list span {
   .dropdown
   li:not(.has-form)
   a:not(.button) {
-  height: 60px;
+  height: 70px;
   line-height: 60px;
   color: #000;
 }
@@ -1012,8 +1017,8 @@ ul.shortcode-list span {
 .f-topbar-fixed.shrink .top-bar .title-area img,
 .f-topbar-fixed.shrink .top-bar .title-area li img,
 .f-topbar-fixed.shrink .top-bar .title-area a img {
-  width: 70%;
-  padding-top: 0px;
+  width: 50%;
+  padding-top: 8px;
   padding-left: 10px;
 }
 .f-topbar-fixed.shrink .top-bar .right a {
@@ -1505,8 +1510,11 @@ form textarea.error {
   text-align: center;
   color: #fff;
 }
+.contact-details a p{
+ font-size: 16px;
+}
 .contact-details h4 {
-  font-size: 0.9rem;
+  font-size: 18px;
   color: #fff;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -4515,7 +4523,7 @@ body {
   margin-left: 73px;
 }
 .modIconText .icon-text-advanced {
-  padding: 20px;
+  padding: 37px 20px;
   color: #777;
   text-align: center;
   background: none;
@@ -5986,8 +5994,8 @@ span .sec{
   }
 }
 @media only screen and (max-width: 60em) {
-  .center-mobile {
-    text-align: -webkit-center;
+  .float-left{
+    float: none;
   }
   .top-bar .title-area .name h1 a {
     width: 150px;
@@ -6034,7 +6042,7 @@ span .sec{
     padding: 20px;
   }
   .read-more-servises {
-    margin: 0 0 40px;
+    /* margin-bottom: 37px; */
     /* margin-bottom: 15px; */
   }
   /* .read-more-expertise {
