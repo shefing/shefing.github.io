@@ -65,6 +65,7 @@
   max-width: 100%;
   overflow-x: hidden;
 } */
+
 .email-form{
   width: 100%;
   padding-left: 30%;
@@ -962,11 +963,11 @@ ul.shortcode-list span {
 
 
 .f-topbar-fixed.shrink .contain-to-grid {
-  height: 70px;
+  height: 60px;
 }
 .f-topbar-fixed.shrink .top-bar {
   height: auto;
-  line-height: 70px;
+  line-height: 60px;
   /* background: #fff !important; */
   /* border-bottom: yellow; */
   /* border-width: 6em; */

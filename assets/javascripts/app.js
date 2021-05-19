@@ -286,10 +286,10 @@ jQuery(document).foundation();
     }
 
     $('#menu-toggler').click(function() {
-      $('.top-bar-section').toggle();
-      return false;
-      // $('.top-bar-section').slideToggle('slow');
-      // $('.top-bar-section').toggle('slide');
+      // $('.top-bar-section').toggle();
+      $('.top-bar-section').toggle('slow' );
+      // $('.top-bar-section').slideToggle('slow' );
+     return false;
     });
 
     $('.scroll-down').click(function() {
