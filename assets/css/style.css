@@ -100,6 +100,7 @@ td span{
   padding-left: 10px;
  display: block;
  text-align: left;
+ max-width: 250px;
 }
 .right a {
   color: #fff;
@@ -400,10 +401,10 @@ hr {
 .innertext {
   text-transform: uppercase !important;
   color: #fff !important;
-  font-size: 24px  !important;
+  font-size: 20px  !important;
   font-family: poppins;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 21px;
   text-align: center;
   letter-spacing: 0px !important;
 }
@@ -1019,7 +1020,7 @@ ul.shortcode-list span {
 .f-topbar-fixed.shrink .top-bar .title-area li img,
 .f-topbar-fixed.shrink .top-bar .title-area a img {
   width: 50%;
-  padding-top: 8px;
+  padding-top: 13px;
   padding-left: 10px;
 }
 .f-topbar-fixed.shrink .top-bar .right a {
@@ -1118,7 +1119,7 @@ ul.shortcode-list span {
 }
 
 .f-topbar-fixed.shrink .contain-to-grid.transparent {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255);
 }
 /* .f-topbar-fixed.shrink .contain-to-grid.transparent.white {
   background-color: #fff;
@@ -1173,7 +1174,7 @@ ul.shortcode-list span {
 
 #menu-toggler {
   float: left;
-  margin-right: 30px;
+  margin-right: 60px;
   font-family: poppins;
 }
 #menu-toggler a {
@@ -5750,7 +5751,7 @@ body {
 .submit-btn{
   color: #fff;
   font-family: poppins;
-  font-size: 24px;
+  font-size: 20px;
   background-color: #feac29;
   border: none;
   height: 50px;
@@ -5867,9 +5868,9 @@ input[type='checkbox'] {
 input[type='checkbox']:before {
   content: '';
   display: block;
-  width: 100%;
-  height: 100%;
-  /* margin: 20% auto; */
+  width: 70%;
+  height: 70%;
+  margin: 15% auto;
   border-radius: 10%;
 }
 
@@ -5888,7 +5889,7 @@ input[type='checkbox']:checked:before {
 
 .calc {
   background-color: #feac29;
-  width: 100%;
+  width: 320px;
   height: 55px;
   display: inline-block;
   margin-top: 80px;

@@ -249,6 +249,7 @@ body.posts .modBlogPost.big p {
 
 .top-bar .title-area .name h1 a {
   color: #efefef;
+  margin-left: 30px;
 }
 
 .modBlogPost img {
