@@ -68,10 +68,7 @@
 
 .email-form{
   width: 100%;
-  padding-left: 30%;
-  padding-right: 30%;
-  margin-right: 0px;
-  padding-top: 20px;
+  padding: 20px;
 }
 .float-left {
 float: left;
@@ -162,8 +159,8 @@ border-width: 0ch;
 }
 
 .message{
-  font-size: 18px;
-  padding-bottom: 20px;
+  font-size: 28px;
+  /* padding-bottom: 20px; */
   /* padding-top: 40px; */
 }
 .contactTitle {
@@ -393,7 +390,7 @@ hr {
   height: 80px;
 }
 .projectBtn {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   background-color: #feac29;
   width: 320px;
   height: 65px;
@@ -420,7 +417,7 @@ hr {
   clear: both;
 }
 .second-page {
-  padding: 102px 0 102px;
+  padding: 102px 70px 102px;
   background-size: cover;
   background-position: 50% 50%;
   clear: both;
@@ -5728,19 +5725,33 @@ body {
 }
 .alert-table{
   margin: auto;
+  width: 100%;
 }
 .quotationBtn{
-  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
   width: 366px;
   height: 65px;
   border: 3px solid #000;
+  width: 250px;
+  outline: none;
+  padding-left: 8px;
 }
 .quotationBtn .innertext{
  color: #000 !important;
  margin-top: 17px !important;
 }
+.quotation-submit{
+  width: 100px !important;
+  background-color: #feac29;
+  /* margin-top: 15px; */
+}
+.quotation-submit:hover{
+  background-color: #e6a534;
+}
 .alert-table td{
-  padding: 30px 30px 60px 30px;
+  width: 50%;
+  padding: 30px 0px 60px 0px;
 }
 .choose {
   text-align: center;
@@ -5761,6 +5772,7 @@ body {
   letter-spacing: 0px;
   font-weight: 500;
 }
+
 
 .calc-table {
   margin: auto;
@@ -6411,11 +6423,13 @@ text-align: center;
     display: none;
   }
   .alert-table td{
-    padding: 0;
+    padding: 0 !important;
+    width: 100%;
   }
   .quotationBtn {
-    width: 200px;
+    width: 250px;
     height: 35px;
+    font-size: 14px;
   }
   td 
 .quotationBtn .innertext {

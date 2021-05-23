@@ -77,12 +77,11 @@ list["question 4"]=manage.value;
 }
 console.log(JSON.stringify(list));
 document.getElementById("data").value = JSON.stringify(list);
-
+document.getElementById("more-data").value = JSON.stringify(list);
 if(!requierd){
   document.getElementById("error").style.display="block"; 
   }
   else{
-      //  document.getElementById("alert").style.display="block"; change it!!!!!!!!!!!!
        document.getElementById("alert").style.display="block";
        document.getElementById("cost").style.display="none";
   }
@@ -99,8 +98,7 @@ function detailedSimulator(){
 isDetailedSimulator=true;
 document.getElementById("detailedSimulator").style.display="block";
 document.getElementById("alert").style.display="none";
-document.getElementById("dinamic-alert").style.display="none";
-  document.getElementById("cost").style.display="block";
+document.getElementById("cost").style.display="block";
 document.getElementById("calc-header").style.display="none";
 document.getElementById("d-calc-header").style.display="block";
 document.getElementById("contact").style.display="block";
@@ -149,4 +147,5 @@ else{
 }
 console.log(list);
 document.getElementById("data").value = JSON.stringify(list);
+document.getElementById("more-data").value = JSON.stringify(list);
 }
