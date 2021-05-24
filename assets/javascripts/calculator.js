@@ -1,5 +1,6 @@
 var min=0;
 var max=0;
+var valid=false;
 var requierd=true;
 var isDetailedSimulator=false;
 var list = new Object();
@@ -148,4 +149,22 @@ else{
 console.log(list);
 document.getElementById("data").value = JSON.stringify(list);
 document.getElementById("more-data").value = JSON.stringify(list);
+}
+function isValid(emailId,alertId){
+  var email=document.getElementById(emailId).value;
+  var alert=document.getElementById(alertId);
+  if(!email){
+    alert.innerHTML="please enter an email address"
+    return
+  }
+  var re =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ if(!re.test(String(email).toLowerCase())){
+    alert.innerHTML="please enter valid email address"
+    alert.style.color='red'
+  }
+else{
+  valid=true;
+alert.innerHTML="sent successfully"
+alert.style.color='#feac29'
+}
 }

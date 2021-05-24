@@ -159,7 +159,11 @@ border-width: 0ch;
 }
 
 .message{
-  font-size: 28px;
+  font-size: 20px;
+  color: #000;
+  letter-spacing: 0px;
+  margin-top: 15px;
+  margin-bottom: 10px;
   /* padding-bottom: 20px; */
   /* padding-top: 40px; */
 }
@@ -5730,15 +5734,21 @@ body {
 .quotationBtn{
   font-size: 20px;
   font-weight: bold;
-  width: 366px;
+  width: 300px;
   height: 65px;
-  border: 3px solid #000;
+  border: none;
   width: 250px;
   outline: none;
   padding-left: 8px;
+  color: #fff;
 }
+.quotation-email{
+ width: 360px !important;
+ height: 65px !important; 
+}
+
 .quotationBtn .innertext{
- color: #000 !important;
+ color: #fff !important;
  margin-top: 17px !important;
 }
 .quotation-submit{
@@ -5750,7 +5760,7 @@ body {
   background-color: #e6a534;
 }
 .alert-table td{
-  width: 50%;
+  /* width: 50%; */
   padding: 30px 0px 60px 0px;
 }
 .choose {
@@ -5904,8 +5914,7 @@ input[type='checkbox']:checked:before {
   width: 320px;
   height: 55px;
   display: inline-block;
-  margin-top: 80px;
-  margin-bottom: 10px;
+  margin: 80px auto 10px auto;
 }
 
 .calc p {
@@ -6008,6 +6017,10 @@ span .sec{
   }
 }
 @media only screen and (max-width: 60em) {
+  /* .message{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  } */
   .float-left{
     float: none;
   }
@@ -6435,6 +6448,10 @@ text-align: center;
 .quotationBtn .innertext {
   margin-top: 7px !important;
 }
+.quotation-email{
+  width: 200px!important; 
+  height: 30px!important; 
+ }
   .calc-table{
     table-layout: fixed;
     width: 100%;

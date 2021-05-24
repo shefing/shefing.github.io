@@ -3767,8 +3767,6 @@ form .row .postfix-round.row.collapse .postfix {
 input[type="submit"] {
   -webkit-appearance: none;
   border-radius: 0;
-  content: "try";
-  
 }
 
 /* Respect enforced amount of rows for textarea */

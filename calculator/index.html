@@ -405,29 +405,31 @@ layout: default
 <div id="alert" class="alert">
   <img class="alert-icon" src='{{ "/assets/images/calculator/sum.png" | relative_url }}'></img>
    <div  class="message">
-    Your project will cost between 
-  €<span id="min">0</span>K&nbspand&nbsp
-  €<span id=max>0</span>K
+    Your project will cost between
+    <span class="color">
+  €<span id="min">0</span>K</span> &nbspand&nbsp
+  <span class="color">
+  €<span id=max>0</span>K</span>
 </div>
 <table class="alert-table">
-  <td style="padding-left: 80px;">
-    <div class="question">Need a narrower range?</div>
+  <td style="padding-left: 20px;">
+    <div class="message">Need a narrower range?</div>
     <div onclick="detailedSimulator()" class="btn projectBtn"><p class="innertext">Detailed calculator</p></div>
     <div id="mobile-qoutation">
       <form id='contact_form' method='POST'>
-        <div class="question">Need a quotation?</div>
-        <input id="email_1"  name='email' class="btn quotationBtn" placeholder="EMAIL" autocomplete="off"  type=""> 
+        <div class="message">Need a quotation?</div>
+        <input style="width: 200px;margin: 0 auto;" type="text" id="email_1"  name='email' class="quotationBtn" placeholder="EMAIL" autocomplete="off"  type=""> 
         <input type="hidden" class='required' name='data' type='text' id="data">
         <div style="color: red;" id="send-alert_1"></div>
-        <input onclick="isValid('email_1','send-alert_1')"  style="margin-top: 15px;" class="btn quotationBtn quotation-submit" type="submit" readonly value="SEND">
+        <input onclick="isValid('email_1','send-alert_1')" style="margin-top: 15px;" class="btn quotationBtn quotation-submit" type="submit" readonly value="SEND">
         </form>
     </div>
 </td>
-<td  style="padding-right: 80px;">
+<td  style="padding-right: 20px;">
   <div id="qoutation">
     <form id='contact_form' method='POST'>
-<div class="question">Need a quotation?</div>
-<input id="email_2" name='email' class="btn quotationBtn" placeholder="EMAIL" autocomplete="off">
+<div class="message">Need a quotation?</div>
+<input style="margin: 0;display: inline-block;width: 300px;height: 65px;" type="text" id="email_2" name='email' class="quotationBtn" placeholder="EMAIL" autocomplete="off">
 <!-- <input  name='email' class="btn quotationBtn" placeholder="EMAIL" autocomplete="off"  type=""> -->
 <input type="hidden" class='required' name='data' type='text' id="data">
 <input onclick="isValid('email_2','send-alert_2')" class="btn quotationBtn quotation-submit" type="submit" value="SEND" readonly>
@@ -445,14 +447,14 @@ layout: default
   <form id='contact_form' class='email-form' method='POST'>
      <input type="hidden" class='required' name='data' type='text' id="more-data">
       <!-- <input name="recipient" type="hidden" value="{{ site.email }}" /> -->
-      <div class="message">Thanks for this information, we will send you a project quotation</div>
+      <div class="message" style="color: #999;">Thanks for this information, we will send you a project quotation</div>
       <div class="question">Need a quotation?</div>
   
-      <input id="email_3" name='email' class="btn quotationBtn" placeholder="EMAIL" autocomplete="off">
+      <input type="text" style="margin: 0;display: inline-block;" id="email_3" name='email' class="quotationBtn quotation-email" placeholder="EMAIL" autocomplete="off">
       <input  type="hidden" class='required' name='data' type='text' id="data">
       <input onclick="isValid('email_3','send-alert_3')"  class="btn quotationBtn quotation-submit"  readonly value="SEND" type="submit" style="margin-top: 15px;">
-      <span style="color: red;font-size:14px ;" id="send-alert_3"></span>
     </form>
+    <span style="font-size:14px ;" id="send-alert_3"></span>
   </div>
   </div>
   </div>
@@ -492,22 +494,3 @@ layout: default
   }
 }
 </style>
-<script>
-  function isValid(emailId,alertId){
-    var email=document.getElementById(emailId).value;
-    var alert=document.getElementById(alertId);
-    if(!email){
-      alert.innerHTML="please enter an email address"
-      return
-    }
-    var re =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-   if(!re.test(String(email).toLowerCase())){
-      alert.innerHTML="please enter valid email address"
-    }
-else{
-  alert.innerHTML="sent successfully"
-  alert.style.color='#feac29'
-}
-  }
-</script>
-

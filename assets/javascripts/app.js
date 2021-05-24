@@ -1,5 +1,4 @@
 
-
 jQuery(document).ready(function() {
   // module connectors configuration
   jQuery('.mod').each(function() {
@@ -170,6 +169,7 @@ jQuery(document).foundation();
     $('form#contact_form').validate({
       messages: { },
       submitHandler: function(form) {
+        if(valid)
         $.ajax({
           type: 'POST',
           url: "https://getform.io/f/79abd0a8-902d-444a-9ae8-ae7cd769afb2",
