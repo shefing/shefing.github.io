@@ -416,10 +416,10 @@ layout: default
     <div class="message">Need a narrower range?</div>
     <div onclick="detailedSimulator()" class="btn projectBtn"><p class="innertext">Detailed calculator</p></div>
     <div id="mobile-qoutation">
-      <form id='contact_form' method='POST'>
+      <form id='email_form_1' method='POST'>
         <div class="message">Need a quotation?</div>
         <input style="width: 200px;margin: 0 auto;" type="text" id="email_1"  name='email' class="quotationBtn" placeholder="EMAIL" autocomplete="off"  type=""> 
-        <input type="hidden" class='required' name='data' type='text' id="data">
+        <input type="hidden" class='required' name='data' type='text' id="data_1">
         <div style="color: red;" id="send-alert_1"></div>
         <input onclick="isValid('email_1','send-alert_1')" style="margin-top: 15px;" class="btn quotationBtn quotation-submit" type="submit" readonly value="SEND">
         </form>
@@ -427,13 +427,13 @@ layout: default
 </td>
 <td  style="padding-right: 20px;">
   <div id="qoutation">
-    <form id='contact_form' method='POST'>
+    <form id='email_form_2' method='POST'>
 <div class="message">Need a quotation?</div>
 <input style="margin: 0;display: inline-block;width: 300px;height: 65px;" type="text" id="email_2" name='email' class="quotationBtn" placeholder="EMAIL" autocomplete="off">
 <!-- <input  name='email' class="btn quotationBtn" placeholder="EMAIL" autocomplete="off"  type=""> -->
-<input type="hidden" class='required' name='data' type='text' id="data">
+<input type="hidden" class='required' name='data' type='text' id="data_2">
 <input onclick="isValid('email_2','send-alert_2')" class="btn quotationBtn quotation-submit" type="submit" value="SEND" readonly>
-<div style="color: red;position: absolute;padding-left: 30px;" id="send-alert_2"></div>
+<div style="color: red;position: absolute;padding-left: 50px;" id="send-alert_2"></div>
 </form>
 
 </div>
@@ -444,17 +444,18 @@ layout: default
 </div>
 <div id="second-alert" class="alert">
 <div id="contact">
-  <form id='contact_form' class='email-form' method='POST'>
-     <input type="hidden" class='required' name='data' type='text' id="more-data">
+  <form id='email_form_3' class='email-form' method='POST'>
+     <!-- <input type="hidden" class='required' name='data' type='text' id="more-data"> -->
       <!-- <input name="recipient" type="hidden" value="{{ site.email }}" /> -->
       <div class="message" style="color: #999;">Thanks for this information, we will send you a project quotation</div>
       <div class="question">Need a quotation?</div>
   
       <input type="text" style="margin: 0;display: inline-block;" id="email_3" name='email' class="quotationBtn quotation-email" placeholder="EMAIL" autocomplete="off">
-      <input  type="hidden" class='required' name='data' type='text' id="data">
+      <input  type="hidden" class='required' name='data' type='text' id="data_3">
       <input onclick="isValid('email_3','send-alert_3')"  class="btn quotationBtn quotation-submit"  readonly value="SEND" type="submit" style="margin-top: 15px;">
+      <div style="font-size:14px ;" id="send-alert_3"></div>
     </form>
-    <span style="font-size:14px ;" id="send-alert_3"></span>
+ 
   </div>
   </div>
   </div>

@@ -169,7 +169,66 @@ jQuery(document).foundation();
     $('form#contact_form').validate({
       messages: { },
       submitHandler: function(form) {
-        if(valid)
+        $.ajax({
+          type: 'POST',
+          url: "https://getform.io/f/79abd0a8-902d-444a-9ae8-ae7cd769afb2",
+          data: $(form).serialize(),
+          dataType: "json",
+          success: function(data) {
+            if(data.success) {                          
+              $(form).trigger('reset');
+              $('#thanks').show().removeClass('hide').fadeOut(5000);
+            }
+          }
+        });
+        return false;
+      }
+    });
+    $('form#email_form_1').validate({
+      messages: { },
+      submitHandler: function(form) {
+        if(!checkIsValid(email_form_1.email.value))
+        return;
+        $.ajax({
+          type: 'POST',
+          url: "https://getform.io/f/79abd0a8-902d-444a-9ae8-ae7cd769afb2",
+          data: $(form).serialize(),
+          dataType: "json",
+          success: function(data) {
+            if(data.success) {                          
+              $(form).trigger('reset');
+              $('#thanks').show().removeClass('hide').fadeOut(5000);
+            }
+          }
+        });
+        return false;
+      }
+    });
+    $('form#email_form_2').validate({
+      messages: { },
+      submitHandler: function(form) {
+        if(!checkIsValid(email_form_2.email.value))
+        return;
+        $.ajax({
+          type: 'POST',
+          url: "https://getform.io/f/79abd0a8-902d-444a-9ae8-ae7cd769afb2",
+          data: $(form).serialize(),
+          dataType: "json",
+          success: function(data) {
+            if(data.success) {                          
+              $(form).trigger('reset');
+              $('#thanks').show().removeClass('hide').fadeOut(5000);
+            }
+          }
+        });
+        return false;
+      }
+    });
+    $('form#email_form_3').validate({
+      messages: { },
+      submitHandler: function(form) {
+        if(!checkIsValid(email_form_3.email.value))
+        return;
         $.ajax({
           type: 'POST',
           url: "https://getform.io/f/79abd0a8-902d-444a-9ae8-ae7cd769afb2",
@@ -286,8 +345,11 @@ jQuery(document).foundation();
     }
 
     $('#menu-toggler').click(function() {
-      // $('.top-bar-section').toggle();
-      $('.top-bar-section').toggle('slow' );
+      $('.top-bar-section').toggle();
+      // $('.top-bar-section').toggle({
+      //   duration: 'slow',
+
+      // } );
       // $('.top-bar-section').slideToggle('slow' );
      return false;
     });
@@ -1395,6 +1457,12 @@ jQuery(document).foundation();
     }
   })
 })(Tc.$);
-
+function checkIsValid(email){
+  var re =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ if(re.test(String(email).toLowerCase())){
+   return true;
+  }
+  return false;
+}
 
 
