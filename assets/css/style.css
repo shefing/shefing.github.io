@@ -92,7 +92,7 @@ td label{
 
 }
 
-td span{
+.answer{
   margin-left: 20px;
   padding-left: 10px;
  display: block;
