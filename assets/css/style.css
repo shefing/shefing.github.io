@@ -297,7 +297,7 @@ h3 {
     /* top, transparent black, faked with gradient */
     linear-gradient(rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)),
-    url("/assets/images/expertise/expertise.png")
+    url("/assets/images/expertise/expertise-opt.jpg")
 }
 
 .subtitle {
@@ -1277,7 +1277,7 @@ font-size: 24px;
   height: 1px;
   background: #FEAC29;
   display: block;
-  /* visibility: hidden; 
+  /* visibility: hidden;
 } */
 
 .section-title.not-found {
@@ -5744,7 +5744,7 @@ body {
 }
 .quotation-email{
  width: 360px !important;
- height: 65px !important; 
+ height: 65px !important;
 }
 
 .quotationBtn .innertext{
@@ -6427,7 +6427,7 @@ text-align: center;
     height: 45px;
     width: fit-content;
     margin: 30px auto 20px auto;
-  } 
+  }
   #mobile-qoutation{
     display: block;
     margin-bottom: 30px;
@@ -6444,13 +6444,13 @@ text-align: center;
     height: 35px;
     font-size: 14px;
   }
-  td 
+  td
 .quotationBtn .innertext {
   margin-top: 7px !important;
 }
 .quotation-email{
-  width: 200px!important; 
-  height: 30px!important; 
+  width: 200px!important;
+  height: 30px!important;
  }
   .calc-table{
     table-layout: fixed;
@@ -6561,7 +6561,7 @@ input[type='radio'] {
   width: 12px;
   height: 12px;
 }
- 
+
 }
 @media only screen and (max-width: 767px) {
   .left-half {
