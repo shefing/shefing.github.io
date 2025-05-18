@@ -33,6 +33,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+google_analytics: G-NRFWCF1SBG
+
 sass:
   load_paths:
     - bower_components/
