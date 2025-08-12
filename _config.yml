@@ -41,7 +41,7 @@ sass:
 
 incremental: true
 
-exclude: ["gulpfile.js", "Gemfile", "Gemfile.lock"]
+exclude: ["gulpfile.js", "Gemfile", "Gemfile.lock", "node_modules", "vendor", "README.md", "Dockerfile", "docker-compose.yml", "*.sh"]
 
 collections:
   works:

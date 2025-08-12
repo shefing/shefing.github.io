@@ -172,6 +172,7 @@ jQuery(document).foundation();
         var formData = {
           'submission[2]': $('input[name="name"]', form).val(),
           'submission[3]': $('input[name="email"]', form).val(),
+          'submission[4]': $('input[name="phone"]', form).val(),
           'submission[5]': $('input[name="subject"]', form).val(),
           'submission[6]': $('textarea[name="message"]', form).val()
         };
@@ -182,11 +183,11 @@ jQuery(document).foundation();
           data: formData,
           success: function(data) {
             $(form).trigger('reset');
-            $('#thanks').show().removeClass('hide').fadeOut(5000);
+            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
           },
           error: function() {
             $(form).trigger('reset');
-            $('#thanks').show().removeClass('hide').fadeOut(5000);
+            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
           }
         });
         return false;
@@ -200,6 +201,7 @@ jQuery(document).foundation();
         var formData = {
           'submission[2]': $('input[name="name"]', form).val(),
           'submission[3]': $('input[name="email"]', form).val(),
+          'submission[4]': $('input[name="phone"]', form).val(),
           'submission[5]': $('input[name="subject"]', form).val(),
           'submission[6]': $('textarea[name="message"]', form).val()
         };
@@ -228,6 +230,7 @@ jQuery(document).foundation();
         var formData = {
           'submission[2]': $('input[name="name"]', form).val(),
           'submission[3]': $('input[name="email"]', form).val(),
+          'submission[4]': $('input[name="phone"]', form).val(),
           'submission[5]': $('input[name="subject"]', form).val(),
           'submission[6]': $('textarea[name="message"]', form).val()
         };
@@ -256,6 +259,7 @@ jQuery(document).foundation();
         var formData = {
           'submission[2]': $('input[name="name"]', form).val(),
           'submission[3]': $('input[name="email"]', form).val(),
+          'submission[4]': $('input[name="phone"]', form).val(),
           'submission[5]': $('input[name="subject"]', form).val(),
           'submission[6]': $('textarea[name="message"]', form).val()
         };
