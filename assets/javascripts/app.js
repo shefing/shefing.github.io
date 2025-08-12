@@ -169,16 +169,24 @@ jQuery(document).foundation();
     $('form#contact_form').validate({
       messages: { },
       submitHandler: function(form) {
+        var formData = {
+          'submission[2]': $('input[name="name"]', form).val(),
+          'submission[3]': $('input[name="email"]', form).val(),
+          'submission[5]': $('input[name="subject"]', form).val(),
+          'submission[6]': $('textarea[name="message"]', form).val()
+        };
+        
         $.ajax({
           type: 'POST',
-          url: "https://getform.io/f/79abd0a8-902d-444a-9ae8-ae7cd769afb2",
-          data: $(form).serialize(),
-          dataType: "json",
+          url: "https://api.jotform.com/form/252234186942055/submissions?apiKey=b1b24b1f78ffe41b967e3f8597084a30",
+          data: formData,
           success: function(data) {
-            if(data.success) {                          
-              $(form).trigger('reset');
-              $('#thanks').show().removeClass('hide').fadeOut(5000);
-            }
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').fadeOut(5000);
+          },
+          error: function() {
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').fadeOut(5000);
           }
         });
         return false;
@@ -189,16 +197,24 @@ jQuery(document).foundation();
       submitHandler: function(form) {
         if(!checkIsValid(email_form_1.email.value))
         return;
+        var formData = {
+          'submission[2]': $('input[name="name"]', form).val(),
+          'submission[3]': $('input[name="email"]', form).val(),
+          'submission[5]': $('input[name="subject"]', form).val(),
+          'submission[6]': $('textarea[name="message"]', form).val()
+        };
+        
         $.ajax({
           type: 'POST',
-          url: "https://getform.io/f/79abd0a8-902d-444a-9ae8-ae7cd769afb2",
-          data: $(form).serialize(),
-          dataType: "json",
+          url: "https://api.jotform.com/form/252234186942055/submissions?apiKey=b1b24b1f78ffe41b967e3f8597084a30",
+          data: formData,
           success: function(data) {
-            if(data.success) {                          
-              $(form).trigger('reset');
-              $('#thanks').show().removeClass('hide').fadeOut(5000);
-            }
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').fadeOut(5000);
+          },
+          error: function() {
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').fadeOut(5000);
           }
         });
         return false;
@@ -209,16 +225,24 @@ jQuery(document).foundation();
       submitHandler: function(form) {
         if(!checkIsValid(email_form_2.email.value))
         return;
+        var formData = {
+          'submission[2]': $('input[name="name"]', form).val(),
+          'submission[3]': $('input[name="email"]', form).val(),
+          'submission[5]': $('input[name="subject"]', form).val(),
+          'submission[6]': $('textarea[name="message"]', form).val()
+        };
+        
         $.ajax({
           type: 'POST',
-          url: "https://getform.io/f/79abd0a8-902d-444a-9ae8-ae7cd769afb2",
-          data: $(form).serialize(),
-          dataType: "json",
+          url: "https://api.jotform.com/form/252234186942055/submissions?apiKey=b1b24b1f78ffe41b967e3f8597084a30",
+          data: formData,
           success: function(data) {
-            if(data.success) {                          
-              $(form).trigger('reset');
-              $('#thanks').show().removeClass('hide').fadeOut(5000);
-            }
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').fadeOut(5000);
+          },
+          error: function() {
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').fadeOut(5000);
           }
         });
         return false;
@@ -229,16 +253,24 @@ jQuery(document).foundation();
       submitHandler: function(form) {
         if(!checkIsValid(email_form_3.email.value))
         return;
+        var formData = {
+          'submission[2]': $('input[name="name"]', form).val(),
+          'submission[3]': $('input[name="email"]', form).val(),
+          'submission[5]': $('input[name="subject"]', form).val(),
+          'submission[6]': $('textarea[name="message"]', form).val()
+        };
+        
         $.ajax({
           type: 'POST',
-          url: "https://getform.io/f/79abd0a8-902d-444a-9ae8-ae7cd769afb2",
-          data: $(form).serialize(),
-          dataType: "json",
+          url: "https://api.jotform.com/form/252234186942055/submissions?apiKey=b1b24b1f78ffe41b967e3f8597084a30",
+          data: formData,
           success: function(data) {
-            if(data.success) {                          
-              $(form).trigger('reset');
-              $('#thanks').show().removeClass('hide').fadeOut(5000);
-            }
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').fadeOut(5000);
+          },
+          error: function() {
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').fadeOut(5000);
           }
         });
         return false;
