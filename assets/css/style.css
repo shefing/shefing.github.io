@@ -524,6 +524,10 @@ form.search-form span {
 
 p#thanks {
   display: none;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 15px;
+  text-align: center;
 }
 .video-bg {
   height: 600px;
