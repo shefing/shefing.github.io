@@ -170,26 +170,32 @@ jQuery(document).foundation();
       messages: { },
       submitHandler: function(form) {
         var formData = {
-          'submission[2]': $('input[name="name"]', form).val(),
-          'submission[3]': $('input[name="email"]', form).val(),
-          'submission[4]': $('input[name="phone"]', form).val(),
-          'submission[5]': $('input[name="subject"]', form).val(),
-          'submission[6]': $('textarea[name="message"]', form).val()
+          name: $('input[name="name"]', form).val(),
+          email: $('input[name="email"]', form).val(),
+          phone: $('input[name="phone"]', form).val(),
+          subject: $('input[name="subject"]', form).val(),
+          message: $('textarea[name="message"]', form).val()
         };
         
-        $.ajax({
-          type: 'POST',
-          url: "https://api.jotform.com/form/252234186942055/submissions?apiKey=b1b24b1f78ffe41b967e3f8597084a30",
-          data: formData,
-          success: function(data) {
-            $(form).trigger('reset');
-            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
-          },
-          error: function() {
+        // Store form data in localStorage and redirect to secure submission page
+        localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
+        
+        // Open submission page in a popup or redirect
+        var submitWindow = window.open('/api/submit-form.html', 'formSubmit', 'width=500,height=400');
+        
+        // Listen for success message
+        window.addEventListener('message', function(event) {
+          if (event.data.type === 'form-success') {
             $(form).trigger('reset');
             $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
           }
         });
+        
+        // Fallback if popup is blocked
+        if (!submitWindow) {
+          window.location.href = '/api/submit-form.html';
+        }
+        
         return false;
       }
     });
@@ -199,26 +205,25 @@ jQuery(document).foundation();
         if(!checkIsValid(email_form_1.email.value))
         return;
         var formData = {
-          'submission[2]': $('input[name="name"]', form).val(),
-          'submission[3]': $('input[name="email"]', form).val(),
-          'submission[4]': $('input[name="phone"]', form).val(),
-          'submission[5]': $('input[name="subject"]', form).val(),
-          'submission[6]': $('textarea[name="message"]', form).val()
+          email: $('input[name="email"]', form).val(),
+          data: $('input[name="data"]', form).val()
         };
         
-        $.ajax({
-          type: 'POST',
-          url: "https://api.jotform.com/form/252234186942055/submissions?apiKey=b1b24b1f78ffe41b967e3f8597084a30",
-          data: formData,
-          success: function(data) {
-            $(form).trigger('reset');
-            $('#thanks').show().removeClass('hide').fadeOut(5000);
-          },
-          error: function() {
+        // Store form data and redirect to secure submission
+        localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
+        var submitWindow = window.open('/api/submit-form.html', 'formSubmit', 'width=500,height=400');
+        
+        window.addEventListener('message', function(event) {
+          if (event.data.type === 'form-success') {
             $(form).trigger('reset');
             $('#thanks').show().removeClass('hide').fadeOut(5000);
           }
         });
+        
+        if (!submitWindow) {
+          window.location.href = '/api/submit-form.html';
+        }
+        
         return false;
       }
     });
@@ -228,26 +233,24 @@ jQuery(document).foundation();
         if(!checkIsValid(email_form_2.email.value))
         return;
         var formData = {
-          'submission[2]': $('input[name="name"]', form).val(),
-          'submission[3]': $('input[name="email"]', form).val(),
-          'submission[4]': $('input[name="phone"]', form).val(),
-          'submission[5]': $('input[name="subject"]', form).val(),
-          'submission[6]': $('textarea[name="message"]', form).val()
+          email: $('input[name="email"]', form).val(),
+          data: $('input[name="data"]', form).val()
         };
         
-        $.ajax({
-          type: 'POST',
-          url: "https://api.jotform.com/form/252234186942055/submissions?apiKey=b1b24b1f78ffe41b967e3f8597084a30",
-          data: formData,
-          success: function(data) {
-            $(form).trigger('reset');
-            $('#thanks').show().removeClass('hide').fadeOut(5000);
-          },
-          error: function() {
+        localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
+        var submitWindow = window.open('/api/submit-form.html', 'formSubmit', 'width=500,height=400');
+        
+        window.addEventListener('message', function(event) {
+          if (event.data.type === 'form-success') {
             $(form).trigger('reset');
             $('#thanks').show().removeClass('hide').fadeOut(5000);
           }
         });
+        
+        if (!submitWindow) {
+          window.location.href = '/api/submit-form.html';
+        }
+        
         return false;
       }
     });
@@ -257,26 +260,24 @@ jQuery(document).foundation();
         if(!checkIsValid(email_form_3.email.value))
         return;
         var formData = {
-          'submission[2]': $('input[name="name"]', form).val(),
-          'submission[3]': $('input[name="email"]', form).val(),
-          'submission[4]': $('input[name="phone"]', form).val(),
-          'submission[5]': $('input[name="subject"]', form).val(),
-          'submission[6]': $('textarea[name="message"]', form).val()
+          email: $('input[name="email"]', form).val(),
+          data: $('input[name="data"]', form).val()
         };
         
-        $.ajax({
-          type: 'POST',
-          url: "https://api.jotform.com/form/252234186942055/submissions?apiKey=b1b24b1f78ffe41b967e3f8597084a30",
-          data: formData,
-          success: function(data) {
-            $(form).trigger('reset');
-            $('#thanks').show().removeClass('hide').fadeOut(5000);
-          },
-          error: function() {
+        localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
+        var submitWindow = window.open('/api/submit-form.html', 'formSubmit', 'width=500,height=400');
+        
+        window.addEventListener('message', function(event) {
+          if (event.data.type === 'form-success') {
             $(form).trigger('reset');
             $('#thanks').show().removeClass('hide').fadeOut(5000);
           }
         });
+        
+        if (!submitWindow) {
+          window.location.href = '/api/submit-form.html';
+        }
+        
         return false;
       }
     });
