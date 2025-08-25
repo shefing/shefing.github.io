@@ -177,24 +177,15 @@ jQuery(document).foundation();
           message: $('textarea[name="message"]', form).val()
         };
         
-        // Store form data in localStorage and redirect to secure submission page
+        // Submit directly without popup - show loading state
+        $('#thanks').hide();
+        var submitBtn = $('input[type="submit"]', form);
+        var originalText = submitBtn.val();
+        submitBtn.val('Sending...').prop('disabled', true);
+        
+        // Store form data and redirect to submission page
         localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
-        
-        // Open submission page in a popup or redirect
-        var submitWindow = window.open('/api/submit-form.html', 'formSubmit', 'width=500,height=400');
-        
-        // Listen for success message
-        window.addEventListener('message', function(event) {
-          if (event.data.type === 'form-success') {
-            $(form).trigger('reset');
-            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
-          }
-        });
-        
-        // Fallback if popup is blocked
-        if (!submitWindow) {
-          window.location.href = '/api/submit-form.html';
-        }
+        window.location.href = '/api/submit-form.html';
         
         return false;
       }
@@ -210,19 +201,9 @@ jQuery(document).foundation();
         };
         
         // Store form data and redirect to secure submission
+        // Store form data and redirect to submission page
         localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
-        var submitWindow = window.open('/api/submit-form.html', 'formSubmit', 'width=500,height=400');
-        
-        window.addEventListener('message', function(event) {
-          if (event.data.type === 'form-success') {
-            $(form).trigger('reset');
-            $('#thanks').show().removeClass('hide').fadeOut(5000);
-          }
-        });
-        
-        if (!submitWindow) {
-          window.location.href = '/api/submit-form.html';
-        }
+        window.location.href = '/api/submit-form.html';
         
         return false;
       }
@@ -237,19 +218,9 @@ jQuery(document).foundation();
           data: $('input[name="data"]', form).val()
         };
         
+        // Store form data and redirect to submission page
         localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
-        var submitWindow = window.open('/api/submit-form.html', 'formSubmit', 'width=500,height=400');
-        
-        window.addEventListener('message', function(event) {
-          if (event.data.type === 'form-success') {
-            $(form).trigger('reset');
-            $('#thanks').show().removeClass('hide').fadeOut(5000);
-          }
-        });
-        
-        if (!submitWindow) {
-          window.location.href = '/api/submit-form.html';
-        }
+        window.location.href = '/api/submit-form.html';
         
         return false;
       }
@@ -264,19 +235,9 @@ jQuery(document).foundation();
           data: $('input[name="data"]', form).val()
         };
         
+        // Store form data and redirect to submission page
         localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
-        var submitWindow = window.open('/api/submit-form.html', 'formSubmit', 'width=500,height=400');
-        
-        window.addEventListener('message', function(event) {
-          if (event.data.type === 'form-success') {
-            $(form).trigger('reset');
-            $('#thanks').show().removeClass('hide').fadeOut(5000);
-          }
-        });
-        
-        if (!submitWindow) {
-          window.location.href = '/api/submit-form.html';
-        }
+        window.location.href = '/api/submit-form.html';
         
         return false;
       }
