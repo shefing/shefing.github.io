@@ -45,9 +45,16 @@ jobs:
           JOTFORM_API_KEY: ${{ secrets.JOTFORM_API_KEY }}
       - name: Create secure form submission page
         run: |
+          # Debug: show what's in _site
+          echo "Contents of _site directory:"
+          ls -la _site/ || echo "_site directory not found"
+          
           # Remove any existing form submission page and create fresh
           rm -f _site/api/submit-form.html
           mkdir -p _site/api
+          
+          echo "Created _site/api directory. Contents:"
+          ls -la _site/
           
           # Generate form submission page using JotForm's direct submission (no API key needed)
           cat > _site/api/submit-form.html << 'FORM_EOF'
@@ -179,6 +186,17 @@ jobs:
           FORM_EOF
           
           echo "✅ Secure form submission page created (no API key required)"
+          
+          # Verify file was created
+          if [ -f "_site/api/submit-form.html" ]; then
+            echo "✅ File exists: _site/api/submit-form.html"
+            echo "File size: $(wc -c < _site/api/submit-form.html) bytes"
+            echo "First few lines:"
+            head -5 _site/api/submit-form.html
+          else
+            echo "❌ ERROR: submit-form.html was not created!"
+            exit 1
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
