@@ -73,13 +73,13 @@ Jekyll::Hooks.register :site, :post_write do |site|
                 // Decode the API key (basic obfuscation)
                 var apiKey = atob('#{encoded_key}');
                 
-                // Prepare JotForm submission with correct field IDs
+                // Prepare JotForm submission with correct field IDs based on API
                 var jotformData = {
-                    'submission[2][first]': formData.name || '',  // Full name field
-                    'submission[3]': formData.email || '',        // Email field
-                    'submission[4][full]': formData.phone || '',  // Phone field  
-                    'submission[5]': formData.subject || '',      // Subject field
-                    'submission[6]': formData.message || formData.data || '' // Message field
+                    'submission[2_first]': formData.name || '',   // Full name field (q2_fullname0)
+                    'submission[3]': formData.email || '',        // Email field (q3_email1)
+                    'submission[4_full]': formData.phone || '',   // Phone field (q4_phone2)
+                    'submission[5]': formData.subject || '',      // Subject field (q5_textbox3)
+                    'submission[6]': formData.message || formData.data || '' // Message field (q6_textarea4)
                 };
                 
                 // Submit to JotForm
