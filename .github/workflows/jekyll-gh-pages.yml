@@ -45,7 +45,8 @@ jobs:
           JOTFORM_API_KEY: ${{ secrets.JOTFORM_API_KEY }}
       - name: Create secure form submission page
         run: |
-          # Create the API directory
+          # Remove any existing form submission page and create fresh
+          rm -f _site/api/submit-form.html
           mkdir -p _site/api
           
           # Generate form submission page using JotForm's direct submission (no API key needed)
