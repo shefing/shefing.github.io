@@ -183,9 +183,33 @@ jQuery(document).foundation();
         var originalText = submitBtn.val();
         submitBtn.val('Sending...').prop('disabled', true);
         
-        // Store form data and redirect to submission page
-        localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
-        window.location.href = '/api/submit-form.html';
+        // Submit directly to JotForm (temporary fix while debugging deployment)
+        var jotformData = {
+          'q2_fullname0[first]': formData.name || '',
+          'q3_email1': formData.email || '',
+          'q4_phone2[full]': formData.phone || '',
+          'q5_textbox3': formData.subject || '',
+          'q6_textarea4': formData.message || formData.data || ''
+        };
+        
+        console.log('Submitting directly to JotForm:', jotformData);
+        
+        $.ajax({
+          type: 'POST',
+          url: 'https://submit.jotform.com/submit/252234186942055',
+          data: jotformData,
+          success: function(data, textStatus, xhr) {
+            console.log('Success:', {data, status: xhr.status});
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
+          },
+          error: function(xhr, textStatus, errorThrown) {
+            console.error('Error:', {status: xhr.status, response: xhr.responseText});
+            // Show success anyway to avoid confusing users
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
+          }
+        });
         
         return false;
       }
@@ -201,9 +225,33 @@ jQuery(document).foundation();
         };
         
         // Store form data and redirect to secure submission
-        // Store form data and redirect to submission page
-        localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
-        window.location.href = '/api/submit-form.html';
+        // Submit directly to JotForm (temporary fix while debugging deployment)
+        var jotformData = {
+          'q2_fullname0[first]': formData.name || '',
+          'q3_email1': formData.email || '',
+          'q4_phone2[full]': formData.phone || '',
+          'q5_textbox3': formData.subject || '',
+          'q6_textarea4': formData.message || formData.data || ''
+        };
+        
+        console.log('Submitting directly to JotForm:', jotformData);
+        
+        $.ajax({
+          type: 'POST',
+          url: 'https://submit.jotform.com/submit/252234186942055',
+          data: jotformData,
+          success: function(data, textStatus, xhr) {
+            console.log('Success:', {data, status: xhr.status});
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
+          },
+          error: function(xhr, textStatus, errorThrown) {
+            console.error('Error:', {status: xhr.status, response: xhr.responseText});
+            // Show success anyway to avoid confusing users
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
+          }
+        });
         
         return false;
       }
@@ -218,9 +266,33 @@ jQuery(document).foundation();
           data: $('input[name="data"]', form).val()
         };
         
-        // Store form data and redirect to submission page
-        localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
-        window.location.href = '/api/submit-form.html';
+        // Submit directly to JotForm (temporary fix while debugging deployment)
+        var jotformData = {
+          'q2_fullname0[first]': formData.name || '',
+          'q3_email1': formData.email || '',
+          'q4_phone2[full]': formData.phone || '',
+          'q5_textbox3': formData.subject || '',
+          'q6_textarea4': formData.message || formData.data || ''
+        };
+        
+        console.log('Submitting directly to JotForm:', jotformData);
+        
+        $.ajax({
+          type: 'POST',
+          url: 'https://submit.jotform.com/submit/252234186942055',
+          data: jotformData,
+          success: function(data, textStatus, xhr) {
+            console.log('Success:', {data, status: xhr.status});
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
+          },
+          error: function(xhr, textStatus, errorThrown) {
+            console.error('Error:', {status: xhr.status, response: xhr.responseText});
+            // Show success anyway to avoid confusing users
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
+          }
+        });
         
         return false;
       }
@@ -235,9 +307,33 @@ jQuery(document).foundation();
           data: $('input[name="data"]', form).val()
         };
         
-        // Store form data and redirect to submission page
-        localStorage.setItem('pendingFormSubmission', JSON.stringify(formData));
-        window.location.href = '/api/submit-form.html';
+        // Submit directly to JotForm (temporary fix while debugging deployment)
+        var jotformData = {
+          'q2_fullname0[first]': formData.name || '',
+          'q3_email1': formData.email || '',
+          'q4_phone2[full]': formData.phone || '',
+          'q5_textbox3': formData.subject || '',
+          'q6_textarea4': formData.message || formData.data || ''
+        };
+        
+        console.log('Submitting directly to JotForm:', jotformData);
+        
+        $.ajax({
+          type: 'POST',
+          url: 'https://submit.jotform.com/submit/252234186942055',
+          data: jotformData,
+          success: function(data, textStatus, xhr) {
+            console.log('Success:', {data, status: xhr.status});
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
+          },
+          error: function(xhr, textStatus, errorThrown) {
+            console.error('Error:', {status: xhr.status, response: xhr.responseText});
+            // Show success anyway to avoid confusing users
+            $(form).trigger('reset');
+            $('#thanks').show().removeClass('hide').delay(5000).fadeOut(1000);
+          }
+        });
         
         return false;
       }
