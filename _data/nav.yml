@@ -4,6 +4,9 @@
 - name: About
   path: "#about"
   section_id: about
+- name: AI
+  path: "#ai"
+  section_id: ai
 - name: Services
   path: "#services"
   section_id: services

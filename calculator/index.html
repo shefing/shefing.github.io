@@ -19,7 +19,7 @@ layout: default
 </div>
 <div class="calc-second-header">Quick estimation of your<span class="color sec"> application</span></div>
 <hr>
-<div class="question"><span class="color">1.</span> Which platforms you’re targeting?</div>
+<div class="question"><span class="color">1.</span> Which devices will your users use to access your system?</div>
 <div>
   <table class="calc-table" style="display: table;">
     <tr class="calc-tr">
@@ -141,10 +141,227 @@ layout: default
       </tr>
     </table>
   </div>
+
+<div class="calc-second-header calc-ai-header">Reach, security and<span class="color sec"> sovereignty</span></div>
+<hr>
+<div class="question"><span class="color">5.</span> Audience: where are your users?</div>
+<div>
+  <table class="calc-table">
+    <tr class="calc-tr">
+      <td class="calc-td icon">
+        <i id="icon_45" class="fa fa-map-marker calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_46" class="fa fa-globe calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+    </tr>
+    <tr class="calc-tr">
+      <td class="calc-td">
+        <label for="45">
+        <input onchange="color(this,45)" type="radio" value="1" name="audience" id="45"><span> Localized: one country or region</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="46">
+        <input onchange="color(this,46)" type="radio" value="2" name="audience" id="46"><span> Global: edge serving and computing worldwide</span></input>
+      </label>
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div class="question"><span class="color">6.</span> Security: do you need hardened security and disaster recovery, or a lean setup?</div>
+<div>
+  <table class="calc-table">
+    <tr class="calc-tr">
+      <td class="calc-td icon">
+        <i id="icon_47" class="fa fa-rocket calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_48" class="fa fa-lock calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+    </tr>
+    <tr class="calc-tr">
+      <td class="calc-td">
+        <label for="47">
+        <input onchange="color(this,47)" type="radio" value="1" name="security" id="47"><span> Lean: standard cloud security, fast to ship</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="48">
+        <input onchange="color(this,48)" type="radio" value="2" name="security" id="48"><span> Hardened security and disaster recovery</span></input>
+      </label>
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div class="question"><span class="color">7.</span> Sovereignty: must all data be stored and processed only in your country?</div>
+<div>
+  <table class="calc-table">
+    <tr class="calc-tr">
+      <td class="calc-td icon">
+        <i id="icon_49" class="fa fa-plane calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_50" class="fa fa-flag calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+    </tr>
+    <tr class="calc-tr">
+      <td class="calc-td">
+        <label for="49">
+        <input onchange="color(this,49)" type="radio" value="1" name="sovereignty" id="49"><span> No, any region is fine</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="50">
+        <input onchange="color(this,50)" type="radio" value="2" name="sovereignty" id="50"><span> Yes, data stays and is processed in my country</span></input>
+      </label>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="calc-second-header calc-ai-header">AI capabilities of your<span class="color sec"> application</span></div>
+<hr>
+<div class="question"><span class="color">8.</span> Will your app use a large language model (LLM)?</div>
+<div>
+  <table class="calc-table">
+    <tr class="calc-tr">
+      <td class="calc-td icon">
+        <i id="icon_33" class="fa fa-ban calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_34" class="fa fa-cloud calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_35" class="fa fa-cogs calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+    </tr>
+    <tr class="calc-tr">
+      <td class="calc-td">
+        <label for="33">
+        <input onchange="color(this,33)" type="radio" value="1" name="llm" id="33"><span> No</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="34">
+        <input onchange="color(this,34)" type="radio" value="2" name="llm" id="34"><span> Yes, through a public LLM API (OpenAI, Anthropic, Gemini)</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="35">
+        <input onchange="color(this,35)" type="radio" value="3" name="llm" id="35"><span> Yes, a self-hosted open-source LLM (Llama, Mistral, Qwen)</span></input>
+      </label>
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div class="question"><span class="color">9.</span> Should the AI know your own documents and data?</div>
+<div>
+  <table class="calc-table">
+    <tr class="calc-tr">
+      <td class="calc-td icon">
+        <i id="icon_36" class="fa fa-comments calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_37" class="fa fa-database calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_38" class="fa fa-graduation-cap calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+    </tr>
+    <tr class="calc-tr">
+      <td class="calc-td">
+        <label for="36">
+        <input onchange="color(this,36)" type="radio" value="1" name="knowledge" id="36"><span> No, general knowledge is enough</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="37">
+        <input onchange="color(this,37)" type="radio" value="2" name="knowledge" id="37"><span> Yes, answer from our documents and data (RAG, MCP resources)</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="38">
+        <input onchange="color(this,38)" type="radio" value="3" name="knowledge" id="38"><span> Yes, and fine-tune or train a model on our data</span></input>
+      </label>
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div class="question"><span class="color">10.</span> Should the AI act, not only answer?</div>
+<div>
+  <table class="calc-table">
+    <tr class="calc-tr">
+      <td class="calc-td icon">
+        <i id="icon_39" class="fa fa-comment calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_40" class="fa fa-plug calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_41" class="fa fa-share-alt calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+    </tr>
+    <tr class="calc-tr">
+      <td class="calc-td">
+        <label for="39">
+        <input onchange="color(this,39)" type="radio" value="1" name="agents" id="39"><span> No, conversation and content only</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="40">
+        <input onchange="color(this,40)" type="radio" value="2" name="agents" id="40"><span> Yes, call our internal tools and APIs (agentic workflows, MCP tools)</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="41">
+        <input onchange="color(this,41)" type="radio" value="3" name="agents" id="41"><span> Yes, and expose our product as an MCP server to other AI assistants</span></input>
+      </label>
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div class="question"><span class="color">11.</span> How much control do you need over the AI in production?</div>
+<div>
+  <table class="calc-table">
+    <tr class="calc-tr">
+      <td class="calc-td icon">
+        <i id="icon_42" class="fa fa-file-text calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_43" class="fa fa-check-square calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+      <td class="calc-td icon">
+        <i id="icon_44" class="fa fa-shield calc-icon calc-icon-fa" aria-hidden="true"></i>
+      </td>
+    </tr>
+    <tr class="calc-tr">
+      <td class="calc-td">
+        <label for="42">
+        <input onchange="color(this,42)" type="radio" value="1" name="governance" id="42"><span> Basic: prompt and response logging</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="43">
+        <input onchange="color(this,43)" type="radio" value="2" name="governance" id="43"><span> Human-in-the-loop approvals and an audit trail</span></input>
+      </label>
+      </td>
+      <td class="calc-td">
+        <label for="44">
+        <input onchange="color(this,44)" type="radio" value="3" name="governance" id="44"><span> Full governance: evals, guardrails, monitoring and cost control</span></input>
+      </label>
+      </td>
+    </tr>
+  </table>
+</div>
   
-  <div id="detailedSimulator" style="display: none;">
+<div id="detailedSimulator" style="display: none;">
     <hr>
-  <div class="question"><span class="color">5.</span> Does your app require a geo-tracking system?</div>
+  <div class="question"><span class="color">12.</span> Does your app require a geo-tracking system?</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
@@ -180,7 +397,7 @@ layout: default
   </table>
 </div>
 <hr>
-<div class="question"><span class="color">6. </span>Will your app contain a chat system?</div>
+<div class="question"><span class="color">13. </span>Will your app contain a chat system?</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
@@ -215,7 +432,7 @@ layout: default
   </table>
 </div>
 <hr>
-<div class="question"><span class="color">7. </span>Will users upload photos and videos via the app</div>
+<div class="question"><span class="color">14. </span>Will users upload photos and videos via the app</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
@@ -241,7 +458,7 @@ layout: default
   </table>
 </div>
 <hr>
-<div class="question"><span class="color">8.</span> Will your app include a payment system ?</div>
+<div class="question"><span class="color">15.</span> Will your app include a payment system ?</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
@@ -267,7 +484,7 @@ layout: default
   </table>
 </div>
 <hr>
-<div class="question"><span class="color">9.</span> Will your app connect to wearable devices/IoTs</div>
+<div class="question"><span class="color">16.</span> Will your app connect to wearable devices/IoTs</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
@@ -301,7 +518,7 @@ layout: default
   </table>
 </div>
 <hr>
-<div class="question"><span class="color">10.</span> Will your app receive notifications?</div>
+<div class="question"><span class="color">17.</span> Will your app receive notifications?</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
@@ -334,7 +551,7 @@ layout: default
   </table>
 </div>
 <hr>
-<div class="question"><span class="color">11.</span> Shall your app works also offline?</div>
+<div class="question"><span class="color">18.</span> Shall your app works also offline?</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">
@@ -360,7 +577,7 @@ layout: default
   </table>
 </div>
 <hr>
-<div class="question"><span class="color">12.</span> Is your app required to convey real time information?</div>
+<div class="question"><span class="color">19.</span> Is your app required to convey real time information?</div>
 <div>
   <table class="calc-table">
     <tr class="calc-tr">

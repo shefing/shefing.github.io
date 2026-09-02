@@ -1,0 +1,127 @@
+---
+layout: default
+permalink: /aitruism/
+title: "AITruism — Shefing's AI Governance Infrastructure"
+excerpt: "AITruism is the internal infrastructure Shefing uses to build production AI control planes for clients: policy, observability, and human-in-the-loop guardrails."
+---
+
+<style>
+  .atr-wrap { font-family: Raleway, sans-serif; color: #191919; }
+  .atr-wrap h1, .atr-wrap h2, .atr-wrap h3, .atr-wrap .eyebrow { font-family: Poppins, sans-serif; }
+
+  .atr-hero { background: #191919; color: #fff; padding: 190px 24px 90px; text-align: center; }
+  .atr-hero .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 13px; font-weight: 600; color: #feac29; margin: 0 0 18px; }
+  .atr-hero h1 { font-size: 84px; font-weight: 700; line-height: 1; margin: 0 0 14px; color: #fff; letter-spacing: -1px; }
+  .atr-hero .lede { font-size: 23px; font-weight: 300; max-width: 760px; margin: 0 auto; line-height: 1.5; color: #eaeaea; }
+  .atr-hero .lede b { color: #feac29; font-weight: 600; }
+
+  .atr-section { max-width: 1040px; margin: 0 auto; padding: 78px 24px; }
+  .atr-section h2 { font-size: 36px; font-weight: 300; margin: 0 0 14px; color: #191919; }
+  .atr-section .sub { font-size: 20px; font-weight: 300; color: #555; max-width: 780px; margin: 0 0 44px; line-height: 1.55; }
+
+  /* Stat band */
+  .atr-stat { background: #f06451; color: #fff; text-align: center; padding: 56px 24px; }
+  .atr-stat .big { font-family: Poppins, sans-serif; font-size: 72px; font-weight: 700; line-height: 1; margin: 0; }
+  .atr-stat p { font-size: 19px; font-weight: 300; max-width: 620px; margin: 14px auto 0; line-height: 1.5; }
+
+  /* Control plane — four layers, signature element */
+  .atr-plane { background: #f9f9f9; }
+  .layers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 8px; }
+  .layer-card { background: #fff; border-bottom: 3px solid #feac29; padding: 26px 22px; }
+  .layer-card .n { font-family: Poppins, sans-serif; font-size: 13px; font-weight: 700; color: #feac29; letter-spacing: 1px; }
+  .layer-card h3 { font-size: 18px; font-weight: 600; margin: 8px 0 8px; }
+  .layer-card p { font-size: 14px; color: #555; line-height: 1.5; margin: 0; }
+  .atr-human { text-align: center; margin-top: 34px; font-family: Poppins, sans-serif; font-weight: 600; font-size: 20px; color: #191919; }
+  .atr-human span { color: #f06451; }
+
+  /* Proof */
+  .proof { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+  .proof-card { border-left: 3px solid #feac29; padding: 6px 0 6px 22px; }
+  .proof-card h3 { font-size: 19px; font-weight: 600; margin: 0 0 8px; }
+  .proof-card p { font-size: 16px; color: #555; line-height: 1.55; margin: 0; }
+
+  .atr-cta { background: #191919; color: #fff; text-align: center; padding: 76px 24px; }
+  .atr-cta h2 { color: #fff; font-size: 34px; font-weight: 300; margin: 0 0 10px; }
+  .atr-cta p { color: #bbb; font-size: 18px; margin: 0 0 30px; }
+  .atr-cta a.primary { display: inline-block; background: #feac29; color: #191919; font-family: Poppins, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 15px; padding: 18px 44px; border-radius: 53px; }
+  .atr-back { display: inline-block; margin-top: 22px; color: #feac29; font-size: 14px; }
+
+  @media (max-width: 720px) {
+    .atr-hero h1 { font-size: 56px; }
+    .atr-hero { padding-top: 150px; }
+    .atr-stat .big { font-size: 52px; }
+    .layers, .proof { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="atr-wrap">
+
+  <section class="atr-hero">
+    <p class="eyebrow">Governance Infrastructure</p>
+    <h1>AITruism</h1>
+    <p class="lede">The infrastructure Shefing uses to build <b>production AI control planes</b> — so your AI systems stay observable, governed, and answerable to a human.</p>
+  </section>
+
+  <section class="atr-section">
+    <h2>Not a product you buy. The way we build governance.</h2>
+    <p class="sub">AITruism is our internal framework for standing up trust, risk and security management around live AI systems. When we deliver an AI transformation, AITruism is how we make it safe: a control plane that sits between your AI and the world, enforcing policy and keeping a human in the loop where it matters.</p>
+  </section>
+
+  <div class="atr-stat">
+    <p class="big">40%</p>
+    <p>of agentic AI projects will be scrapped by 2027 over inadequate risk controls and unclear business value (Gartner). AITruism exists for exactly that gap.</p>
+  </div>
+
+  <div class="atr-plane">
+    <section class="atr-section">
+      <h2>A four-layer defence model</h2>
+      <p class="sub">Each layer answers a different question about what your AI is doing — and every one reports to a person, not just a dashboard.</p>
+      <div class="layers">
+        <div class="layer-card">
+          <p class="n">LAYER 1</p>
+          <h3>Discovery &amp; Policy</h3>
+          <p>Declarative, dynamic policy enforcement — what the AI is allowed to do, decided in the open.</p>
+        </div>
+        <div class="layer-card">
+          <p class="n">LAYER 2</p>
+          <h3>Observability</h3>
+          <p>Real-time usage monitoring and anomaly alerts, streaming to your SIEM or XDR.</p>
+        </div>
+        <div class="layer-card">
+          <p class="n">LAYER 3</p>
+          <h3>Behavioral Monitoring</h3>
+          <p>Adaptive analysis for bias, drift and prompt-injection — catching what static rules miss.</p>
+        </div>
+        <div class="layer-card">
+          <p class="n">LAYER 4</p>
+          <h3>Grounding Validation</h3>
+          <p>Checks AI output against its retrieved sources to prevent hallucination and contradiction.</p>
+        </div>
+      </div>
+      <p class="atr-human">Above every layer sits the one control that can't be automated: <span>a human who is accountable.</span></p>
+    </section>
+  </div>
+
+  <section class="atr-section">
+    <h2>Proven in production</h2>
+    <p class="sub">The governance thinking behind AITruism is drawn from real delivery, not slideware.</p>
+    <div class="proof">
+      <div class="proof-card">
+        <h3>Checkmarx</h3>
+        <p>Partner since 2016. GenAI and MCP servers embedded in SCA/SAST developer workflows for a global application-security leader — where getting AI wrong is not an option.</p>
+      </div>
+      <div class="proof-card">
+        <h3>Riverbed Aternity</h3>
+        <p>A RAG architecture on AWS Bedrock powering an enterprise AI help desk, with guardrails that stop hallucinations from reaching Level-1 support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="atr-cta">
+    <h2>Put a control plane around your AI</h2>
+    <p>Governance is the difference between an AI pilot and an AI system you can trust in production.</p>
+    <a class="primary" href="{{ '/index.html#contact' | relative_url }}">Talk to us</a>
+    <br><a class="atr-back" href="{{ '/index.html#ai' | relative_url }}">← Back to our AI assets</a>
+  </section>
+
+</div>

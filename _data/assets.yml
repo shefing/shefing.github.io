@@ -6,6 +6,7 @@ css:
   - /assets/css/font-awesome.css
   - https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700
   - https://fonts.googleapis.com/css?family=Raleway:400,700,300
+  - https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,300..600,0..100,0..1&family=IBM+Plex+Mono:wght@500&display=swap
 js:
   - /bower_components/jquery/dist/jquery.js
   - /bower_components/imagesloaded/imagesloaded.pkgd.js

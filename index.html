@@ -94,16 +94,18 @@ expertise:
 <!-- </div> -->
     <div class='overlay'></div>
     <div class='layer'>
-      <h1 class='thin' id="to-be-update">
-         <span class="fir">we shape</span><br/>
-         <span class="sec">ideas</span>
-         <span class="fir">to</span><br/>
-         <span class="thir">life</span>
+      <h1 class='thin hero-tagline' id="to-be-update">
+        <span class="hero-w fir">We</span> <span class="hero-w fir">shape</span> <span class="hero-w sec">ideas</span><br/>
+        <span class="hero-w fir">to</span> <span class="hero-w thir">life.</span>
       </h1>
+      <p class="hero-claim">
+        <span class="tag-ai"><span class="tag-ai-text">Powered by AI.</span></span>
+        <span class="tag-human">Driven by <em class="tag-creative">human creativity</em> and <strong class="tag-account">accountability</strong><span class="tag-dot" aria-hidden="true">.</span></span>
+      </p>
       <h2 class='thin'>
        <div class="max-width">
        <span>Shefing is an <span class="strong">innovative AI transformation agency</span>
-       that combines the soul of an Israeli startup with the the professionalism of a leading global enterprise vendor</span></div>
+       that combines the soul of an Israeli startup with the professionalism of a leading global enterprise vendor</span></div>
       </h2>
     </div>
   </div>
@@ -111,17 +113,34 @@ expertise:
 
 
 <a id='about'></a>
-<div  class="second-page" >
-  <div class='row'>
-    <div class='large-8 columns large-centered' style="width: 100%;">
-      <div class="section-title" >
-        <p class="small-title">Entrepreneur, ISV&nbspexecutive, Industry&nbspleader</p><br>
-        <h2>Accelerate your Intelligent Digital Transformation, hiring Shefing as your AI Co-Pilot</h2>
-        <p class="big-size">The Shefing team loves creating disruptive and engaging intelligent products. Combining conceptual talent with tech expertise, we act as your co-pilot, helping you thrive in the AI era and harness its power for tangible business results.</p>
-        <a href='{{ 'calculator' | relative_url }}'>    <div  class="btn projectBtn" ><p class="innertext" >Project Calculator</p> </div> </a></div>
-
+<div class="second-page home-serve">
+  <div class="row">
+    <div class="large-10 columns large-centered serve-head">
+      <p class="eyebrow">We serve</p>
+      <h2 class="serve-title">Enterprises, ISVs and <em>Visionary Founders</em></h2>
+      <p class="serve-intro">AI transformation takes an agile, creative approach. The stakes depend on who you are.</p>
     </div>
-    <!-- <div class="four spacing"></div> -->
+  </div>
+  <div class="serve-grid">
+    <div class="serve-item">
+      <h3>Enterprise &amp; public institutions</h3>
+      <p>Modernizing a complex organization, where legacy systems, regulation and public trust are all on the line.</p>
+    </div>
+    <div class="serve-item">
+      <h3>Independent software vendors</h3>
+      <p>Scaling a product your customers already depend on, adding AI without breaking what already works.</p>
+    </div>
+    <div class="serve-item">
+      <h3>Visionary founders</h3>
+      <p>Launching a disruptive startup, where speed decides and the first version has to convince.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-10 columns large-centered serve-body">
+      <p class="serve-bridge">you need a partner who understands the stakes</p>
+      <p class="serve-copy">We act as your <strong>AI co-pilot</strong>: we analyze your workflows, listen to your vision, engineer engaging, disruptive AI-empowered products and operate your production environment. Combining conceptual talent, real AI expertise, technical brio and production savoir-faire, we help you thrive in the AI era, in absolute control.</p>
+      <a href='{{ 'calculator' | relative_url }}'><div class="btn projectBtn"><p class="innertext">Project Calculator</p></div></a>
+    </div>
   </div>
 </div>
 <div class="full no-overflow no-padding parallax" style="background-image: url({{ "/assets/images/@stock/computer.png" | relative_url }})">
@@ -150,6 +169,45 @@ expertise:
   </div>
 </div>
 
+
+<a id='ai'></a>
+<style>
+  .home-ai { background: #f4f4f4; padding: 90px 0 100px; }
+  .home-ai .eyebrow { font-family: Poppins, sans-serif; text-transform: uppercase; letter-spacing: 3px; font-size: 14px; font-weight: 600; color: #f06451; margin: 0 0 14px; }
+  .home-ai h2.ai-title { font-family: Poppins, sans-serif; font-size: 39px; font-weight: 300; color: #191919; margin: 0 0 18px; }
+  .home-ai .ai-intro { font-size: 20px; font-weight: 300; color: #555; max-width: 720px; margin: 0 auto; line-height: 1.55; }
+  .home-ai .ai-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 940px; margin: 56px auto 0; padding: 0 24px; }
+  .home-ai .ai-card { background: #fff; padding: 40px 36px; box-shadow: 0 3px 24px rgba(0,0,0,0.06); border-left: 4px solid #feac29; display: flex; flex-direction: column; text-align: left; }
+  .home-ai .ai-card .tag { font-family: Poppins, sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #feac29; margin: 0 0 12px; }
+  .home-ai .ai-card h3 { font-family: Poppins, sans-serif; font-size: 30px; font-weight: 700; color: #191919; margin: 0 0 12px; }
+  .home-ai .ai-card p { font-size: 16px; color: #555; line-height: 1.6; margin: 0 0 26px; flex-grow: 1; }
+  .home-ai .ai-card a.more { font-family: Poppins, sans-serif; font-weight: 600; font-size: 15px; color: #191919; letter-spacing: 0.3px; }
+  .home-ai .ai-card a.more:hover { color: #feac29; }
+  @media (max-width: 720px) { .home-ai .ai-grid { grid-template-columns: 1fr; } .home-ai h2.ai-title { font-size: 30px; } }
+</style>
+<div class="home-ai">
+  <div class="row">
+    <div class="large-8 columns large-centered" style="text-align:center;">
+      <p class="eyebrow">AI executes. Humans stay accountable.</p>
+      <h2 class="ai-title">Our proprietary AI assets</h2>
+      <p class="ai-intro">Two systems we built to make AI transformation safe: a delivery methodology that keeps a human in control, and the governance infrastructure that proves it in production.</p>
+    </div>
+  </div>
+  <div class="ai-grid">
+    <div class="ai-card">
+      <p class="tag">Asset 01 · Delivery methodology</p>
+      <h3>iSDLC</h3>
+      <p>The Intelligent SDLC for the agentic era. Autonomous agents do the work; a named human stays accountable for every outcome, recorded on an auditable trail.</p>
+      <a class="more" href="{{ '/isdlc/' | relative_url }}">Explore iSDLC &rarr;</a>
+    </div>
+    <div class="ai-card">
+      <p class="tag">Governance infrastructure</p>
+      <h3>AITruism</h3>
+      <p>The infrastructure we use to build production AI control planes — policy, observability and human-in-the-loop guardrails that keep your AI answerable to a person.</p>
+      <a class="more" href="{{ '/aitruism/' | relative_url }}">See how it works &rarr;</a>
+    </div>
+  </div>
+</div>
 
 <a id='services'></a>
 <div class='services'>

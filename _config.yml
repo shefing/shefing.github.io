@@ -19,8 +19,8 @@ title: Shefing
 email: contact@shefing.com
 
 description: > # this means to ignore newlines until "baseurl:"
- Shefing, is a innovative and boutique agency for the digital transformation, 
- helping you creative creating disruptive and engaging Web and Mobile applications
+ Shefing is an innovative AI transformation agency, delivering production-grade
+ AI systems with the governance and human accountability that keep them safe.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb

@@ -75,6 +75,35 @@ add(3,9)
 }
 list["question 4"]=manage.value;
 }
+
+// Reach, security and sovereignty (questions 5-7)
+var infraQuestions=[
+  {name:"audience",    key:"question 5", cost:{2:[5,12]}},
+  {name:"security",    key:"question 6", cost:{2:[6,15]}},
+  {name:"sovereignty", key:"question 7", cost:{2:[4,12]}}
+];
+infraQuestions.forEach(function(qn){
+  var picked=document.querySelector('input[name="'+qn.name+'"]:checked');
+  if(!picked){requierd=false;return;}
+  list[qn.key]=picked.value;
+  var c=qn.cost[picked.value];
+  if(c)add(c[0],c[1]);
+});
+
+// AI capabilities (questions 8-11)
+var aiQuestions=[
+  {name:"llm",        key:"question 8", cost:{2:[4,10],  3:[8,20]}},
+  {name:"knowledge",  key:"question 9", cost:{2:[5,12],  3:[10,25]}},
+  {name:"agents",     key:"question 10", cost:{2:[6,15],  3:[8,20]}},
+  {name:"governance", key:"question 11", cost:{2:[4,10],  3:[8,18]}}
+];
+aiQuestions.forEach(function(qn){
+  var picked=document.querySelector('input[name="'+qn.name+'"]:checked');
+  if(!picked){requierd=false;return;}
+  list[qn.key]=picked.value;
+  var c=qn.cost[picked.value];
+  if(c)add(c[0],c[1]);
+});
 document.getElementById("data_1").value = JSON.stringify(list);
 document.getElementById("data_2").value = JSON.stringify(list);
 if(!requierd){
@@ -107,42 +136,42 @@ function calcDetailedSimulator(){
 var tracking=document.querySelector('input[name="geo-tracking"]:checked');
   if(!tracking)requierd=false;
   else{
-    list["question 5"]=tracking.value;
+    list["question 12"]=tracking.value;
   }
 var chat=document.querySelector('input[name="chat"]:checked');
 if(!chat)requierd=false;
 else{
-  list["question 6"]=chat.value;
+  list["question 13"]=chat.value;
 }
 var upload=document.querySelector('input[name="upload"]:checked');
 if(!upload)requierd=false
 else{
-  list["question 7"]=upload.value;
+  list["question 14"]=upload.value;
 }  
 var payment=document.querySelector('input[name="payment"]:checked');
 if(!payment)requierd=false
 else{
-  list["question 8"]=payment.value;
+  list["question 15"]=payment.value;
 }
 var wearable=document.querySelector('input[name="wearable-devices"]:checked');
 if(!wearable)requierd=false
 else{
-  list["question 9"]=wearable.value;
+  list["question 16"]=wearable.value;
 }
 var notifications=document.querySelector('input[name="notifications"]:checked');
 if(!notifications)requierd=false
 else{
-  list["question 10"]=notifications.value;
+  list["question 17"]=notifications.value;
 }
 var offline=document.querySelector('input[name="offline"]:checked');
 if(!offline)requierd=false
 else{
-  list["question 11"]=offline.value;
+  list["question 18"]=offline.value;
 }
 var real_time=document.querySelector('input[name="real-time"]:checked');
 if(!real_time)requierd=false
 else{
-  list["question 12"]=real_time.value;
+  list["question 19"]=real_time.value;
 }
 document.getElementById("data_3").value = JSON.stringify(list);
 // document.getElementById("more-data").value = JSON.stringify(list);
