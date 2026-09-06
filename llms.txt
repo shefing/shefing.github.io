@@ -1,0 +1,27 @@
+# Shefing
+
+> Shefing is an AI transformation agency based in Jerusalem, Israel. We help enterprises, independent software vendors (ISVs) and startup founders move from AI strategy to production: AI consulting, rapid AI MVP development (RAG, MCP, agentic workflows), continuous agile delivery and 360° project audits. Our tagline: "We shape ideas to life. Powered by AI. Driven by human creativity and accountability."
+
+Key facts:
+- Company: Shefing. Website: https://shefing.com. Email: contact@shefing.com. Phone: +972 52 345 4100. Office: WeWork Jerusalem, King George 20, Jerusalem, Israel.
+- Positioning: Human-led, agent-driven. AI agents execute; a named human stays accountable for every outcome.
+- Audiences: enterprises and public institutions, independent software vendors, visionary founders.
+- Proprietary assets: Shefing iSDLC™ (an AI-native software development lifecycle) and AiTruism™ (an enterprise Agentic AI Control Plane).
+- Technology: React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, Payload CMS, Medusa, RAG pipelines, MCP servers, agentic workflows, LLM gateways, evals and guardrails, MLOps, AWS, GCP, Terraform, Docker, Kubernetes, GitHub Actions.
+
+## Services
+
+- [Enterprise AI Transformation Strategy](https://shefing.com/#services): workflow audit to pinpoint high-impact automation use cases, architecture and governance design for secure agentic systems, and an execution blueprint with KPIs, product specs and a roadmap delivered in weeks.
+- [Rapid AI MVP Delivery](https://shefing.com/#services): fixed-time, fixed-cost execution in 2-week agile sprints. Custom RAG pipelines, MCP servers, agentic workflows and full-stack secured AI platforms.
+- [Continuous Agile Development](https://shefing.com/#services): retainer-based sprints from MVP to enterprise production, with AiTruism governance (policy enforcement, agent guardrails, control-plane monitoring) and proactive MLOps and DevOps.
+- [360° Projects Audit](https://shefing.com/#services): end-to-end review of goals, requirements, UX, architecture, tech stack, security posture, CI/CD and code quality, then migration into the iSDLC lifecycle.
+- [AI Project Cost Calculator](https://shefing.com/calculator/): a quick estimate of an AI project's cost range based on LLM usage, RAG, MCP, governance, platforms, security and data sovereignty.
+
+## Proprietary AI assets
+
+- [Shefing iSDLC™](https://shefing.com/isdlc/): Agile reworked for the agent era. A 7-stage lifecycle (Goals → Requirements → Design → Architecture → Coding/CI/Testing → IaC/CD → Observability) in which humans own intent, risk and accountability while AI agents execute against versioned, machine-readable context. Includes an amended Agile manifesto, a Plan → Build → Review inner loop, a 15-skill executable workflow shipped as a Claude Code plugin, a hash-chained accountability trail, and an agent-ready context substrate. A core foundation for addressing the EU AI Act (human oversight, record-keeping, risk management, technical documentation) in software development.
+- [AiTruism™](https://shefing.com/aitruism/): An enterprise Agentic AI Control Plane with a three-layer locus of control: an LLM Gateway for real-time perimeter enforcement (PII, prompt injection, cost, moderation), an OTEL sidecar for deep asynchronous introspection (hallucination, topic drift, cross-session leakage), and an unbypassable MCP tool layer with synchronous policy checks (OPA) before any damaging action, all governed by a central policy and observability platform. Built on the open-source guardrail ecosystem (LlamaFirewall, Presidio, Guardrails Hub, NeMo, Semgrep) and adopted in four phases.
+
+## Optional
+
+- [Full site summary for language models](https://shefing.com/llms-full.txt)

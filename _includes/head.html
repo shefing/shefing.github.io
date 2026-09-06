@@ -2,12 +2,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="icon" href="/assets/images/sublogo.png">
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   {% assign page_desc = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
   {% assign page_title = page.title | default: site.title | escape %}
   <meta name="description" content="{{ page_desc }}">
+  <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
+  {% if page.noindex %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website">
@@ -20,6 +23,8 @@
   <meta name="twitter:title" content="{{ page_title }}">
   <meta name="twitter:description" content="{{ page_desc }}">
   <meta name="twitter:image" content="{{ '/assets/images/sublogo.png' | absolute_url }}">
+
+  {% include seo.html %}
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 

@@ -1,0 +1,85 @@
+# Shefing: full site summary for language models
+
+Shefing (https://shefing.com) is an AI transformation agency based in Jerusalem, Israel, founded and led by Philippe Cohen. It combines the soul of an Israeli startup with the professionalism of a global enterprise vendor. Contact: contact@shefing.com, +972 52 345 4100, WeWork Jerusalem, King George 20, Jerusalem, Israel.
+
+Tagline: We shape ideas to life. Powered by AI. Driven by human creativity and accountability.
+
+Positioning: Human-led, agent-driven. AI agents are powerful only when driven clearly. Shefing keeps humans at the helm and activates autonomous AI workflows only after establishing clarity on business goals, product requirements and strategy. Method in four lines: we listen to human intent before we deploy AI agents; we design the architecture before we run models; we build to prove value before we scale automation; and we launch and learn together.
+
+## Who Shefing serves
+
+- Enterprises and public institutions: modernizing a complex organization where legacy systems, regulation and public trust are on the line.
+- Independent software vendors (ISVs): scaling a product customers already depend on, adding AI without breaking what works.
+- Visionary founders: launching a disruptive startup where speed decides and the first version has to convince.
+
+Shefing acts as an AI co-pilot: analyzing workflows, listening to the client's vision, engineering engaging AI-empowered products and operating the production environment.
+
+## Services
+
+### Enterprise AI Transformation Strategy (AI transformation consultancy)
+Transforming executive vision into risk-mitigated, high-ROI AI deployment.
+- Workflow audit: pinpoint high-impact automation use cases across the enterprise.
+- Architecture and governance: design secure, agentic systems backed by built-in risk mitigation.
+- Execution blueprint: clear KPIs, product specs and an actionable roadmap in weeks.
+
+### Rapid AI MVP Delivery (MVP development)
+De-risk innovation with fixed-time, fixed-cost execution.
+- Fast iterations: from concept to working prototype in 2-week agile sprints.
+- Core technologies: custom RAG pipelines, MCP servers, agentic workflows and full-stack secured AI platforms.
+- Budget certainty: predictable scope and timeline designed to fit the client's budget.
+
+### Continuous Agile Development (continuous delivery)
+Scale from MVP to enterprise production with flexible, governed delivery.
+- Iterative growth: retainer-based sprints driven by user feedback, real-world data and evolving roadmaps.
+- AiTruism governance: embedded policy enforcement, agent guardrails and real-time control plane monitoring.
+- Proactive MLOps and DevOps: deep observability and automated error tracking across cloud infrastructure and end-user devices.
+
+### 360° Projects Audit (project audit)
+End-to-end evaluation to optimize existing projects and onboard them into Shefing iSDLC.
+- Upstream and architecture review: goals, requirements, UX/UI, architecture and tech stack.
+- Security and delivery assessment: security posture, CI/CD pipelines, team dynamics and code quality.
+- iSDLC modernization: transition legacy projects into the agent-driven, 7-stage development lifecycle.
+
+### AI Project Cost Calculator
+https://shefing.com/calculator/ gives a quick cost range for an AI project. It asks about AI capabilities (public LLM API vs self-hosted open-source LLM, RAG and MCP resources, agentic workflows and MCP tools, level of governance), the application (devices, design, server, back-office), and reach, security and data sovereignty. A detailed calculator refines the range and a quotation can be requested.
+
+## Proprietary AI assets
+
+### Shefing iSDLC™ (https://shefing.com/isdlc/)
+Agile reworked for the agent era. A 7-stage lifecycle in which humans own intent, risk and accountability, while agents execute against versioned, machine-readable context.
+
+Stages: 1 Goals, 2 Requirements, 3 Design, 4 Architecture, 5 Coding / CI / Testing, 6 IaC / CD, 7 Observability. Humans set intent and sign off at Goals, Requirements, Architecture and the data and security gates of delivery. Agents lead Design, Coding and Observability under human review and accountability.
+
+Core claim: AI shifts the bottleneck from writing code to steering and verifying it. The method makes intent explicit, makes every deliverable verifiable, and leaves a tamper-evident record of who decided what.
+
+Main features:
+- Amended manifesto and 12 principles: human accountability and managed context over individuals and interactions; verifiable software and agent-ready context over working software; explicit intent over collaboration; architectural fluidity over responding to change.
+- Plan → Build → Review inner loop: human-authored plans (objective, Gherkin acceptance criteria, DO-NOT list, context references), agent execution inside those boundaries, and a mandatory cross-model review where FAIL blocks and every WARN needs a scribed human approval.
+- A 15-skill executable workflow shipped as a Claude Code plugin: audit, goals, requirements, spec, wireframe, architecture, plan, build, tdd, review, qa, security, redteam, ship, observe.
+- Accountability spine: an append-only, hash-chained trail recording adoption, decisions, review verdicts and deploys, with drift detection when commits arrive without justifying evidence. Agents may propose; only humans attest.
+- Agent-ready context substrate: STATE.md, SPEC.md, AGENTS.md, QUIRKS.md, ADRs, TECH_DEBT.md and llms.txt kept current by rule so a fresh agent onboards in 60 seconds, verified by a doctor command.
+- Two entry doors: greenfield init, or an audit that pays down context debt first (SBOM, CVE baseline, secret scan, license and EOL audit) before agents get repository access.
+- Deliberation-preserving guardrails: nothing auto-writes a plan, auto-approves a PR or bypasses a red gate without an explicit human override plus an ADR. Tiered gating scales ceremony to risk.
+
+EU AI Act: iSDLC is a core foundation for addressing the EU AI Act in software development. Human oversight (Article 14) maps to humans owning intent, risk and every gate. Record-keeping and traceability (Article 12) map to the hash-chained accountability trail. Risk management (Article 9) maps to tiered gating, security and red-team stages and drift detection. Technical documentation (Article 11) maps to versioned, machine-readable context. Obligations depend on a system's risk class; qualifying a specific system remains a legal assessment.
+
+### AiTruism™ (https://shefing.com/aitruism/)
+An enterprise Agentic AI Control Plane: an LLM Gateway for real-time perimeter enforcement, an OTEL sidecar for deep asynchronous introspection, and an MCP tool layer as the final, unbypassable enforcement point, all governed by a central policy and observability platform.
+
+Three-layer locus of control:
+- Layer 1, LLM Gateway, the front-door guard: PII detection and redaction, prompt-injection screening, cost control and caching, content moderation.
+- Layer 2, OTEL sidecar, the surveillance: hallucination detection, topic drift and goal hijacking, cross-session leakage, stateful asynchronous analysis.
+- Layer 3, MCP tool layer, the vault door: synchronous Open Policy Agent check before any damaging action; cannot be bypassed by the model or the agent.
+Every capability is scored 0 to 100 per layer with a written rationale; that matrix tells you where a control belongs and why.
+
+Coverage:
+- Scanner catalog: about thirteen gateway scanners ranked into four priorities (alignment, unnecessary data disclosure, unreasonable behavior, trivial correctness), classed algorithmic or model-based, built on LlamaFirewall, Presidio, Guardrails Hub, NeMo and Semgrep.
+- Custom business scanners three ways: regex, semantic embedding search, Judge LLM. Placement rule: fast and stateless at the gateway, context-heavy in the sidecar.
+- Sidecar internals: a seven-step pipeline (gRPC ingest, batching, Go processor orchestration, async RPC, Python analysis, span enrichment with a validation score, export to SigNoz or Jaeger), plus eBPF for kernel-level visibility into uninstrumented code.
+- Analytics: automatic business-metric identification from OTEL traces, temporal deviation detection (monotonic trends, period changes, spikes) and bias detection (protected attributes, disparity ratios, Cohen's d, intersectional effects). Runs interactively or as a CI batch scanner.
+
+Adoption in four phases: Gateway and OTEL baseline (1 to 2 months); sidecar with hallucination detection (2 to 3 months); dynamic policy enforcement (ongoing); enterprise hardening (OPA or Cedar policies, Vault PII tokenization, Kafka to SIEM, service-mesh enforcement, embedded Judge LLMs).
+
+## Expertise
+
+Front-end: React, Next.js, TypeScript, Svelte. Back-end and data: Node.js, Express, PostgreSQL, MongoDB, Payload CMS, Medusa. AI engineering: RAG pipelines, MCP servers, agentic workflows, LLM gateways, evals and guardrails, MLOps. Cloud and DevOps: AWS, GCP, infrastructure as code, Terraform, Docker, Kubernetes, GitHub Actions, CI/CD.

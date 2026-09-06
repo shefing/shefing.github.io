@@ -1117,3 +1117,6 @@ body.posts .modBlogPost {
   .xp-row { grid-template-columns: 1fr; gap: 10px; padding: 16px 0; }
   .xp-stack li { font-size: 14px; padding: 6px 11px; }
 }
+
+/* Hero: the video is 108% wide on phones by an old rule; never let it scroll the page sideways */
+.home-video-wrapper { overflow-x: hidden; }

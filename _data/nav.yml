@@ -1,7 +1,7 @@
 - name: Home
   path: "#top"
   section_id: home
-- name: About
+- name: Who we serve
   path: "#about"
   section_id: about
 - name: AI

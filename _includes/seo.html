@@ -1,0 +1,72 @@
+{%- assign org_url = site.url -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "{{ org_url }}/#organization",
+      "name": "Shefing",
+      "alternateName": "Shefing AI transformation agency",
+      "url": "{{ org_url }}/",
+      "logo": "{{ '/assets/images/sublogo.png' | absolute_url }}",
+      "email": "contact@shefing.com",
+      "telephone": "+972-52-345-4100",
+      "slogan": "We shape ideas to life. Powered by AI. Driven by human creativity and accountability.",
+      "description": "{{ site.description | strip_html | normalize_whitespace | escape }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "WeWork Jerusalem, King George 20",
+        "addressLocality": "Jerusalem",
+        "addressCountry": "IL"
+      },
+      "areaServed": ["IL", "EU", "US"],
+      "knowsAbout": ["AI transformation", "AI strategy consulting", "AI software development", "Retrieval-augmented generation", "Model Context Protocol", "Agentic workflows", "AI governance", "LLM gateways", "EU AI Act", "MLOps", "DevOps"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Shefing services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise AI Transformation Strategy", "description": "Workflow audit, architecture and governance design, and an execution blueprint with KPIs, product specs and a roadmap in weeks." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rapid AI MVP Delivery", "description": "Fixed-time, fixed-cost AI MVP development in 2-week sprints: RAG pipelines, MCP servers, agentic workflows and full-stack secured AI platforms." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Continuous Agile Development", "description": "Retainer-based sprints from MVP to enterprise production with AiTruism governance and proactive MLOps and DevOps." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "360° Projects Audit", "description": "End-to-end review of goals, requirements, UX, architecture, security, CI/CD and code quality, then migration into the iSDLC lifecycle." } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ org_url }}/#website",
+      "url": "{{ org_url }}/",
+      "name": "Shefing",
+      "publisher": { "@id": "{{ org_url }}/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page.url | replace:'index.html','' | absolute_url }}#webpage",
+      "url": "{{ page.url | replace:'index.html','' | absolute_url }}",
+      "name": "{{ page.title | default: site.title | escape }}",
+      "description": "{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 300 | escape }}",
+      "isPartOf": { "@id": "{{ org_url }}/#website" },
+      "about": { "@id": "{{ org_url }}/#organization" },
+      "inLanguage": "en"
+    }{% if page.url == '/isdlc/' %},
+    {
+      "@type": "Product",
+      "name": "Shefing iSDLC",
+      "url": "{{ org_url }}/isdlc/",
+      "brand": { "@id": "{{ org_url }}/#organization" },
+      "category": "Software development methodology",
+      "description": "Agile reworked for the agent era: a 7-stage AI-native software development lifecycle in which humans own intent, risk and accountability while AI agents execute against versioned, machine-readable context. A core foundation for addressing the EU AI Act in software development."
+    }{% elsif page.url == '/aitruism/' %},
+    {
+      "@type": "Product",
+      "name": "AiTruism",
+      "url": "{{ org_url }}/aitruism/",
+      "brand": { "@id": "{{ org_url }}/#organization" },
+      "category": "AI governance platform",
+      "description": "An enterprise Agentic AI Control Plane: an LLM Gateway for perimeter enforcement, an OTEL sidecar for deep introspection, and an unbypassable MCP tool layer, governed by central policy and observability."
+    }{% endif %}
+  ]
+}
+</script>
