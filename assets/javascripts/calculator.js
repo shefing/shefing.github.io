@@ -37,10 +37,10 @@ if (isDetailedSimulator){
 min=0;
 max=0;
 var platforms= document.getElementsByName("platforms");
-list["question 1"]="";
+list["question 5"]="";
 platforms.forEach(p=>{
  if(p.checked){
-  list["question 1"]+=p.value+",";
+  list["question 5"]+=p.value+",";
    if(p.value==3){
      add(7,15)
    }
@@ -54,7 +54,7 @@ if(!design)requierd=false;
 else{
    if(design.value==2)
   add(4,10)
-  list["question 2"]=design.value;
+  list["question 6"]=design.value;
 }
 
 var server=document.querySelector('input[name="server"]:checked');
@@ -65,7 +65,7 @@ if(server.value==2){
 }else if(server.value==3){
   add(6,15);
 }
-list["question 3"]=server.value;
+list["question 7"]=server.value;
 }
 var manage=document.querySelector('input[name="manage"]:checked');
 if(!manage)requierd=false;
@@ -73,14 +73,14 @@ else{
 if(manage.value==2){
 add(3,9)
 }
-list["question 4"]=manage.value;
+list["question 8"]=manage.value;
 }
 
-// Reach, security and sovereignty (questions 5-7)
+// Reach, security and sovereignty (questions 9-11)
 var infraQuestions=[
-  {name:"audience",    key:"question 5", cost:{2:[5,12]}},
-  {name:"security",    key:"question 6", cost:{2:[6,15]}},
-  {name:"sovereignty", key:"question 7", cost:{2:[4,12]}}
+  {name:"audience",    key:"question 9", cost:{2:[5,12]}},
+  {name:"security",    key:"question 10", cost:{2:[6,15]}},
+  {name:"sovereignty", key:"question 11", cost:{2:[4,12]}}
 ];
 infraQuestions.forEach(function(qn){
   var picked=document.querySelector('input[name="'+qn.name+'"]:checked');
@@ -90,14 +90,16 @@ infraQuestions.forEach(function(qn){
   if(c)add(c[0],c[1]);
 });
 
-// AI capabilities (questions 8-11)
+// AI capabilities (questions 1-4)
 var aiQuestions=[
-  {name:"llm",        key:"question 8", cost:{2:[4,10],  3:[8,20]}},
-  {name:"knowledge",  key:"question 9", cost:{2:[5,12],  3:[10,25]}},
-  {name:"agents",     key:"question 10", cost:{2:[6,15],  3:[8,20]}},
-  {name:"governance", key:"question 11", cost:{2:[4,10],  3:[8,18]}}
+  {name:"llm",        key:"question 1", cost:{2:[4,10],  3:[8,20]}},
+  {name:"knowledge",  key:"question 2", cost:{2:[5,12],  3:[10,25]}},
+  {name:"agents",     key:"question 3", cost:{2:[6,15],  3:[8,20]}},
+  {name:"governance", key:"question 4", cost:{2:[4,10],  3:[8,18]}}
 ];
+var noAi=usesAi()===false;
 aiQuestions.forEach(function(qn){
+  if(noAi && qn.name!=="llm"){list[qn.key]="skipped";return;}
   var picked=document.querySelector('input[name="'+qn.name+'"]:checked');
   if(!picked){requierd=false;return;}
   list[qn.key]=picked.value;
@@ -194,3 +196,25 @@ alert.innerHTML="sent successfully";
 alert.style.color='#feac29';
 }
 }
+
+// Conditional AI follow-ups: questions 2-4 only apply when question 1 is not "No".
+function usesAi(){
+  var llm=document.querySelector('input[name="llm"]:checked');
+  if(!llm)return null;
+  return llm.value!=="1";
+}
+function toggleAiFollowups(){
+  var hide=usesAi()===false;
+  document.getElementById("ai-followups").style.display=hide?"none":"block";
+  document.getElementById("ai-skipped").style.display=hide?"block":"none";
+}
+
+// Icons select their answer, same as clicking the radio or checkbox.
+document.addEventListener("click",function(e){
+  var icon=e.target.closest(".calc-icon");
+  if(!icon||!icon.id)return;
+  var input=document.getElementById(icon.id.replace("icon_",""));
+  if(!input)return;
+  if(input.type==="radio"&&input.checked)return;
+  input.click();
+});
