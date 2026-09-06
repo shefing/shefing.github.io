@@ -1,172 +1,268 @@
 ---
 layout: default
 permalink: /isdlc/
-title: "iSDLC — Shefing's AI-Native Delivery Methodology"
-excerpt: "The Intelligent SDLC for the agentic era. Autonomous agents do the work; a named human stays accountable for every outcome, recorded on an auditable trail."
+title: "Shefing iSDLC — Agile reworked for the agent era"
+excerpt: "A 7-stage lifecycle in which humans own intent, risk and accountability while agents execute against versioned, machine-readable context. A core foundation for the EU AI Act in software development."
 ---
 
 <style>
-  .isdlc-wrap { font-family: Raleway, sans-serif; color: #191919; }
-  .isdlc-wrap .amber { color: #feac29; }
-  .isdlc-wrap h1, .isdlc-wrap h2, .isdlc-wrap h3, .isdlc-wrap .eyebrow { font-family: Poppins, sans-serif; }
+  body { padding-top: 0 !important; }
+  @media only screen and (max-width: 60em) { .contain-to-grid.transparent { position: absolute; } }
+  .isdlc { font-family: Raleway, sans-serif; color: #191919; }
+  .isdlc h1, .isdlc h2, .isdlc h3 { font-family: Poppins, sans-serif; letter-spacing: 0; text-transform: none; }
+  .isdlc .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace; }
+  .isdlc em.hu {
+    font-family: Fraunces, "Times New Roman", Georgia, serif;
+    font-style: italic; font-weight: 400; color: #feac29;
+    font-variation-settings: "opsz" 72, "SOFT" 40, "WONK" 1;
+  }
+  .isdlc .eyebrow {
+    font-family: Poppins, sans-serif; text-transform: uppercase; letter-spacing: 3px;
+    font-size: 13px; font-weight: 600; color: #f06451; margin: 0 0 14px;
+  }
+  .isdlc .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .isdlc section { padding: 90px 0; }
+  .isdlc section h2 { font-size: 42px; font-weight: 700; line-height: 1.1; margin: 0 0 16px; color: #191919; }
+  .isdlc section .sub { font-family: Poppins, sans-serif; font-size: 22px; font-weight: 300; line-height: 1.45; color: #191919; max-width: 760px; margin: 0 0 44px; }
 
   /* Hero */
-  .isdlc-hero { background: #191919; color: #fff; padding: 190px 24px 90px; text-align: center; }
-  .isdlc-hero .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 13px; font-weight: 600; color: #feac29; margin: 0 0 18px; }
-  .isdlc-hero h1 { font-size: 88px; font-weight: 700; line-height: 1; margin: 0 0 14px; color: #fff; letter-spacing: -1px; }
-  .isdlc-hero .lede { font-size: 24px; font-weight: 300; max-width: 720px; margin: 0 auto; line-height: 1.5; color: #eaeaea; }
-  .isdlc-hero .lede b { color: #feac29; font-weight: 600; }
+  .isdlc .isdlc-hero { background: #191919; color: #fff; padding: 210px 0 80px; }
+  .isdlc-hero .tag { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin: 0 0 16px; }
+  .isdlc-hero h1 { font-size: 84px; font-weight: 700; line-height: 1; margin: 0 0 12px; color: #fff; letter-spacing: -0.01em; }
+  .isdlc-hero h1 sup { font-size: 0.32em; font-weight: 500; color: rgba(255,255,255,0.6); }
+  .isdlc-hero .promise { font-family: Fraunces, "Times New Roman", Georgia, serif; font-style: italic; font-weight: 400; font-size: 36px; line-height: 1.2; color: #feac29; font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 1; margin: 0 0 28px; }
+  .isdlc-hero .summary { font-family: Poppins, sans-serif; font-size: 22px; font-weight: 300; line-height: 1.5; color: rgba(255,255,255,0.88); max-width: 780px; margin: 0 0 44px; }
+  .isdlc-hero .summary strong { color: #fff; font-weight: 600; }
+  .isdlc-hero .summary .mono { font-size: 0.9em; color: rgba(255,255,255,0.75); }
 
-  /* Principle strip */
-  .isdlc-principle { background: #feac29; color: #191919; text-align: center; padding: 42px 24px; }
-  .isdlc-principle p { font-family: Poppins, sans-serif; font-size: 30px; font-weight: 600; margin: 0; line-height: 1.25; }
-  .isdlc-principle span { font-weight: 300; }
+  /* Stage chain, same device as the home card */
+  .stages { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 0; margin: 0; padding: 0; font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace; font-size: 12.5px; line-height: 1; }
+  .stages li { position: relative; display: inline-flex; align-items: center; border: 1px solid rgba(255,255,255,0.28); padding: 9px 9px 9px 8px; color: #fff; white-space: nowrap; margin-right: 18px; }
+  .stages li .n { color: #feac29; font-weight: 500; margin-right: 7px; }
+  .stages li::after { content: "\2192"; color: rgba(255,255,255,0.45); position: absolute; right: -15px; }
+  .stages li:last-child { margin-right: 0; }
+  .stages li:last-child::after { content: none; }
 
-  /* Section shell */
-  .isdlc-section { max-width: 1040px; margin: 0 auto; padding: 80px 24px; }
-  .isdlc-section h2 { font-size: 38px; font-weight: 300; margin: 0 0 14px; color: #191919; }
-  .isdlc-section .sub { font-size: 20px; font-weight: 300; color: #555; max-width: 760px; margin: 0 0 48px; line-height: 1.55; }
+  /* Lifecycle: who owns each stage */
+  .owners { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
+  .owner { background: #f6f6f6; border-top: 3px solid #e4e4e4; padding: 18px 14px 20px; }
+  .owner.human { border-top-color: #feac29; }
+  .owner .n { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; color: #feac29; font-weight: 500; margin: 0 0 8px; }
+  .owner h3 { font-size: 15px; font-weight: 600; line-height: 1.25; margin: 0 0 10px; }
+  .owner .who { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #777; margin: 0; }
+  .owner.human .who { color: #191919; }
+  .owners-legend { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; color: #777; margin: 22px 0 0; }
+  .owners-legend i { display: inline-block; width: 22px; height: 3px; vertical-align: middle; margin: 0 8px 0 0; background: #e4e4e4; }
+  .owners-legend i.human { background: #feac29; margin-left: 22px; }
 
-  /* The spine — signature element */
-  .spine { position: relative; margin: 0 auto; max-width: 820px; }
-  .spine::before { content: ""; position: absolute; left: 27px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(#feac29, #f06451); }
-  .spine-stage { position: relative; padding: 0 0 34px 78px; }
-  .spine-stage:last-child { padding-bottom: 0; }
-  .spine-node { position: absolute; left: 0; top: -4px; width: 56px; height: 56px; border-radius: 50%; background: #191919; color: #feac29; font-family: Poppins, sans-serif; font-weight: 700; font-size: 19px; display: flex; align-items: center; justify-content: center; border: 2px solid #feac29; }
-  .spine-stage h3 { font-size: 21px; font-weight: 600; margin: 4px 0 4px; color: #191919; }
-  .spine-stage p { font-size: 16px; color: #555; margin: 0; line-height: 1.5; }
-  .spine-gate { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #f06451; border: 1px solid #f06451; border-radius: 40px; padding: 3px 12px; }
-  .spine-gate.auto { color: #478547; border-color: #478547; }
+  /* Thesis band */
+  .isdlc-thesis { background: #feac29; color: #191919; text-align: center; padding: 56px 0; }
+  .isdlc-thesis p { font-family: Poppins, sans-serif; margin: 0 auto; max-width: 900px; }
+  .isdlc-thesis .claim { font-size: 34px; font-weight: 700; line-height: 1.2; margin-bottom: 22px; }
+  .isdlc-thesis .claim span { font-weight: 300; }
+  .isdlc-thesis .so { font-size: 17px; font-weight: 500; }
+  .isdlc-thesis .so span { display: inline-block; }
+  .isdlc-thesis .so span + span::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #191919; margin: 0 14px; vertical-align: middle; }
 
-  /* Pillars */
-  .isdlc-dark { background: #f9f9f9; }
-  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-  .pillar { background: #fff; border-top: 3px solid #feac29; padding: 30px 26px; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
-  .pillar h3 { font-size: 20px; font-weight: 600; margin: 0 0 10px; }
-  .pillar p { font-size: 15px; color: #555; line-height: 1.55; margin: 0; }
+  /* Features */
+  .isdlc-features { background: #f4f4f4; }
+  .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .feature { background: #fff; border-top: 3px solid #feac29; padding: 30px 30px 32px; }
+  .feature .tag { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #777; margin: 0 0 10px; }
+  .feature h3 { font-size: 22px; font-weight: 600; line-height: 1.25; margin: 0 0 12px; }
+  .feature p { font-size: 16px; line-height: 1.6; color: #555; margin: 0; }
+  .feature p strong { color: #191919; font-weight: 600; }
+  .feature .over { list-style: none; margin: 0; padding: 0; font-size: 15px; line-height: 1.5; color: #555; }
+  .feature .over li { padding: 7px 0; border-top: 1px solid #eee; }
+  .feature .over li:first-child { border-top: 0; }
+  .feature .over b { color: #191919; font-weight: 600; }
+  .feature .over i { font-family: Fraunces, "Times New Roman", Georgia, serif; font-style: italic; color: #feac29; font-variation-settings: "opsz" 20, "SOFT" 40, "WONK" 1; padding: 0 3px; }
+  .feature .skills { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 0; padding: 0; list-style: none; }
+  .feature .skills li { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; color: #191919; border: 1px solid #ddd; padding: 5px 8px; }
+  .feature .skills li::before { content: "/"; color: #feac29; margin-right: 1px; }
+  .feature .files { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 13px; color: #191919; }
 
-  /* Done checklist */
-  .dod { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 40px; max-width: 820px; }
-  .dod li { list-style: none; font-size: 17px; color: #333; padding-left: 34px; position: relative; line-height: 1.5; }
-  .dod li::before { content: "✓"; position: absolute; left: 0; top: 0; color: #feac29; font-weight: 700; font-size: 20px; }
-  .dod li b { font-weight: 600; color: #191919; }
+  /* EU AI Act */
+  .isdlc-act .actmap { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #191919; }
+  .isdlc-act .actmap > div { padding: 22px 0; border-bottom: 1px solid #e4e4e4; }
+  .isdlc-act .actmap .req { padding-right: 32px; }
+  .isdlc-act .actmap .req .art { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #777; margin: 0 0 6px; }
+  .isdlc-act .actmap .req h3 { font-size: 20px; font-weight: 600; margin: 0; line-height: 1.3; }
+  .isdlc-act .actmap .ans { padding-left: 32px; border-left: 2px solid #feac29; font-size: 16px; line-height: 1.6; color: #555; }
+  .isdlc-act .actmap .ans strong { color: #191919; font-weight: 600; }
+  .isdlc-act .actmap .head { padding: 12px 0; font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #777; border-bottom: 1px solid #191919; }
+  .isdlc-act .note { font-size: 14px; color: #777; margin: 26px 0 0; max-width: 760px; line-height: 1.5; }
 
   /* CTA */
-  .isdlc-cta { background: #191919; color: #fff; text-align: center; padding: 76px 24px; }
-  .isdlc-cta h2 { color: #fff; font-size: 34px; font-weight: 300; margin: 0 0 10px; }
-  .isdlc-cta p { color: #bbb; font-size: 18px; margin: 0 0 30px; }
-  .isdlc-cta a { display: inline-block; background: #feac29; color: #191919; font-family: Poppins, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 15px; padding: 18px 44px; border-radius: 53px; }
-  .isdlc-back { display: inline-block; margin-top: 22px; color: #feac29; font-size: 14px; }
+  .isdlc-cta { background: #191919; color: #fff; text-align: center; }
+  .isdlc .isdlc-cta h2 { color: #fff; font-size: 38px; font-weight: 700; margin: 0 0 12px; }
+  .isdlc-cta p { font-family: Poppins, sans-serif; font-size: 20px; font-weight: 300; color: rgba(255,255,255,0.8); margin: 0 auto 32px; max-width: 640px; }
+  .isdlc-cta a.btn-amber { display: inline-block; background: #feac29; color: #191919; font-family: Poppins, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 15px; padding: 18px 44px; border-radius: 53px; }
+  .isdlc-cta a.btn-amber:hover { background: #fff; color: #191919; }
+  .isdlc-cta a.back { display: inline-block; margin-top: 24px; color: #feac29; font-size: 14px; }
 
+  @media (max-width: 1000px) {
+    .owners { grid-template-columns: repeat(4, 1fr); }
+  }
   @media (max-width: 720px) {
-    .isdlc-hero h1 { font-size: 58px; }
-    .isdlc-hero { padding-top: 150px; }
-    .isdlc-principle p { font-size: 22px; }
-    .pillars, .dod { grid-template-columns: 1fr; }
+    .isdlc section { padding: 60px 0; }
+    .isdlc section h2 { font-size: 32px; }
+    .isdlc section .sub { font-size: 19px; }
+    .isdlc .isdlc-hero { padding: 150px 0 60px; }
+    .isdlc-hero h1 { font-size: 56px; }
+    .isdlc-hero .promise { font-size: 27px; }
+    .isdlc-hero .summary { font-size: 18px; }
+    .owners { grid-template-columns: repeat(2, 1fr); }
+    .isdlc-thesis .claim { font-size: 25px; }
+    .isdlc-thesis .so span { display: block; }
+    .isdlc-thesis .so span + span::before { display: none; }
+    .features { grid-template-columns: 1fr; }
+    .isdlc-act .actmap { grid-template-columns: 1fr; border-top: 0; }
+    .isdlc-act .actmap .head { display: none; }
+    .isdlc-act .actmap .req { padding: 22px 0 6px; border-bottom: 0; }
+    .isdlc-act .actmap .ans { padding: 0 0 22px 16px; }
+    .isdlc .isdlc-cta h2 { font-size: 30px; }
   }
 </style>
 
-<div class="isdlc-wrap">
+<div class="isdlc">
 
   <section class="isdlc-hero">
-    <p class="eyebrow">Shefing AI Asset · 01</p>
-    <h1>iSDLC</h1>
-    <p class="lede">The <b>Intelligent SDLC</b> for the agentic era. Autonomous agents do the work — a named human stays accountable for every outcome.</p>
+    <div class="wrap">
+      <p class="tag mono">Shefing AI asset · Software engineering</p>
+      <h1>Shefing iSDLC<sup>™</sup></h1>
+      <p class="promise">Agile reworked for the agent era.</p>
+      <p class="summary">A 7-stage lifecycle in which <strong>humans own intent, risk and accountability</strong>, while agents execute against <span class="mono">versioned, machine-readable context</span>.</p>
+      <ol class="stages" aria-label="The seven stages of the iSDLC">
+        <li><span class="n">1</span>Goals</li>
+        <li><span class="n">2</span>Requirements</li>
+        <li><span class="n">3</span>Design</li>
+        <li><span class="n">4</span>Architecture</li>
+        <li><span class="n">5</span>Coding / CI / Testing</li>
+        <li><span class="n">6</span>IaC / CD</li>
+        <li><span class="n">7</span>Observability</li>
+      </ol>
+    </div>
   </section>
 
-  <div class="isdlc-principle">
-    <p>AI produces artifacts. <span>Humans own outcomes.</span></p>
+  <div class="isdlc-thesis">
+    <div class="wrap">
+      <p class="claim">AI shifts the bottleneck <span>from writing code to steering and verifying it.</span></p>
+      <p class="so"><span>Intent made explicit</span><span>Every deliverable verifiable</span><span>A tamper-evident record of who decided what</span></p>
+    </div>
   </div>
 
-  <section class="isdlc-section">
-    <h2>A methodology built for a team that includes agents</h2>
-    <p class="sub">The Agile Manifesto assumed everyone in the room was human. iSDLC amends it for a world where autonomous agents plan, code, test and monitor as first-class collaborators — and where accountability becomes the one thing that can never be delegated. Shefing runs iSDLC in-house and transfers it to client teams.</p>
+  <section class="isdlc-lifecycle">
+    <div class="wrap">
+      <p class="eyebrow">The lifecycle</p>
+      <h2>Seven stages. <em class="hu">Humans</em> hold the gates.</h2>
+      <p class="sub">Agents draft, build, test and watch production. At every stage that carries risk, a named person decides, and that decision is recorded.</p>
+      <div class="owners">
+        <div class="owner human"><p class="n">01</p><h3>Goals</h3><p class="who">Human sets intent</p></div>
+        <div class="owner human"><p class="n">02</p><h3>Requirements</h3><p class="who">Human sign-off</p></div>
+        <div class="owner"><p class="n">03</p><h3>Design</h3><p class="who">Agent-led, human review</p></div>
+        <div class="owner human"><p class="n">04</p><h3>Architecture</h3><p class="who">Human sign-off</p></div>
+        <div class="owner"><p class="n">05</p><h3>Coding / CI / Testing</h3><p class="who">Agents build, tiered gates</p></div>
+        <div class="owner human"><p class="n">06</p><h3>IaC / CD</h3><p class="who">Human gate on data &amp; security</p></div>
+        <div class="owner"><p class="n">07</p><h3>Observability</h3><p class="who">Agent-led, human accountable</p></div>
+      </div>
+      <p class="owners-legend"><i></i>agent-led <i class="human"></i>human gate</p>
+    </div>
+  </section>
 
-    <div class="spine">
-      <div class="spine-stage">
-        <div class="spine-node">01</div>
-        <h3>Goals &amp; Tenders</h3>
-        <p>Business intent and success criteria captured before a line of code — the "why" that steers everything downstream.</p>
-        <span class="spine-gate">Human sets intent</span>
-      </div>
-      <div class="spine-stage">
-        <div class="spine-node">02</div>
-        <h3>Requirements Engineering</h3>
-        <p>Evidence-grounded, testable requirements. Agents draft; the human agrees the boundaries and the "DO NOT" list.</p>
-        <span class="spine-gate">Human sign-off</span>
-      </div>
-      <div class="spine-stage">
-        <div class="spine-node">03</div>
-        <h3>Logic &amp; Visual Design</h3>
-        <p>Flows, data models and UX designed against explicit intent, not vibes.</p>
-        <span class="spine-gate auto">Agent-led, human review</span>
-      </div>
-      <div class="spine-stage">
-        <div class="spine-node">04</div>
-        <h3>Architecture &amp; Delivery Strategy</h3>
-        <p>Radical modularity so agents can refactor safely. Security posture and threat model reviewed here.</p>
-        <span class="spine-gate">Human sign-off</span>
-      </div>
-      <div class="spine-stage">
-        <div class="spine-node">05</div>
-        <h3>Coding, CI &amp; Testing</h3>
-        <p>The inner loop. Agent crews build; automated tests from unit to end-to-end verify against intent.</p>
-        <span class="spine-gate auto">Low-stakes flows autonomously</span>
-      </div>
-      <div class="spine-stage">
-        <div class="spine-node">06</div>
-        <h3>IaC &amp; Continuous Delivery</h3>
-        <p>Infrastructure as code, releases automated — with human-approved gates on anything touching data or security.</p>
-        <span class="spine-gate">Human sign-off</span>
-      </div>
-      <div class="spine-stage">
-        <div class="spine-node">07</div>
-        <h3>Autonomous Observability</h3>
-        <p>Self-healing production monitoring that traces incidents back to the decisions that caused them.</p>
-        <span class="spine-gate auto">Agent-led, human accountable</span>
+  <section class="isdlc-features">
+    <div class="wrap">
+      <p class="eyebrow">Main features</p>
+      <h2>Runnable, <em class="hu">not just</em> documented.</h2>
+      <p class="sub">Seven mechanisms turn "humans in the loop" from a slogan into something a team can run and an auditor can check.</p>
+      <div class="features">
+
+        <div class="feature">
+          <p class="tag">Manifesto · 12 principles</p>
+          <h3>Agile's values, amended</h3>
+          <ul class="over">
+            <li><b>Human accountability and managed context</b> <i>over</i> individuals and interactions</li>
+            <li><b>Verifiable software and agent-ready context</b> <i>over</i> working software</li>
+            <li><b>Explicit intent</b> <i>over</i> collaboration</li>
+            <li><b>Architectural fluidity</b> <i>over</i> responding to change</li>
+          </ul>
+        </div>
+
+        <div class="feature">
+          <p class="tag">Inner loop</p>
+          <h3>Plan → Build → Review</h3>
+          <p>Humans author the plan: <strong>objective, Gherkin acceptance criteria, a DO-NOT list, context refs</strong>. Agents execute inside those boundaries. A cross-model review closes the loop: FAIL blocks, and every WARN needs a scribed human approval.</p>
+        </div>
+
+        <div class="feature">
+          <p class="tag">Executable workflow</p>
+          <h3>15 skills, shipped as a Claude Code plugin</h3>
+          <p>The methodology runs, it isn't just documented.</p>
+          <ul class="skills">
+            <li>audit</li><li>goals</li><li>requirements</li><li>spec</li><li>wireframe</li><li>architecture</li><li>plan</li><li>build</li><li>tdd</li><li>review</li><li>qa</li><li>security</li><li>redteam</li><li>ship</li><li>observe</li>
+          </ul>
+        </div>
+
+        <div class="feature">
+          <p class="tag">Accountability spine</p>
+          <h3>An append-only, hash-chained trail</h3>
+          <p>Records adoption, decisions, review verdicts and deploys, and flags commits that arrive with no justifying evidence. <strong>Agents may propose. Only humans attest.</strong></p>
+        </div>
+
+        <div class="feature">
+          <p class="tag">Context substrate</p>
+          <h3>A fresh agent onboards in 60 seconds</h3>
+          <p><span class="files">STATE.md · SPEC.md · AGENTS.md · QUIRKS.md · ADRs · TECH_DEBT.md · llms.txt</span>, kept current by rule. A doctor command verifies presence and freshness.</p>
+        </div>
+
+        <div class="feature">
+          <p class="tag">Two entry doors</p>
+          <h3>Greenfield, or audit first</h3>
+          <p>Start clean, or onboard an existing codebase by paying down context debt first: <strong>SBOM, CVE baseline, secret scan, license and EOL audit</strong>, before any agent gets repo access.</p>
+        </div>
+
+        <div class="feature">
+          <p class="tag">Guardrails</p>
+          <h3>Deliberation is never automated away</h3>
+          <p>Nothing auto-writes a plan, auto-approves a PR or bypasses a red gate without an <strong>explicit human override plus an ADR</strong>. Tiered gating scales ceremony to risk.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <div class="isdlc-dark">
-    <section class="isdlc-section">
-      <h2>How it keeps humans in control</h2>
-      <p class="sub">Three mechanisms turn "AI in the loop" from a slogan into something you can audit.</p>
-      <div class="pillars">
-        <div class="pillar">
-          <h3>Symphonic teams</h3>
-          <p>One human orchestrator plus specialized agent crews — Architect, Security, QA, SRE. The human steers intent and risk; agents execute within defined guardrails.</p>
-        </div>
-        <div class="pillar">
-          <h3>Tiered gating</h3>
-          <p>Low-stakes changes flow autonomously to keep velocity high. Security- and data-sensitive changes stop for explicit human sign-off. No command bypasses a red gate without a recorded override.</p>
-        </div>
-        <div class="pillar">
-          <h3>Accountability trail</h3>
-          <p>Every significant decision is appended to an auditable trail — event, actor, hash. If a human can't explain the logic behind an agent's output, it's treated as debt, not done.</p>
-        </div>
-      </div>
-    </section>
-  </div>
+  <section class="isdlc-act">
+    <div class="wrap">
+      <p class="eyebrow">Regulation</p>
+      <h2>A core foundation for the <em class="hu">EU AI Act</em></h2>
+      <p class="sub">The Act asks software teams for human oversight, traceability, risk management and documentation. iSDLC produces all four by construction, as a by-product of how work gets done.</p>
+      <div class="actmap">
+        <div class="head">The Act requires</div>
+        <div class="head" style="padding-left:32px;">iSDLC provides</div>
 
-  <section class="isdlc-section">
-    <h2>The tooling structures human attention — it never replaces it</h2>
-    <p class="sub">A task is only <em>Done</em> when a human has verified the logic, not just the output. Our Definition of Done is deliberately human-anchored:</p>
-    <ul class="dod">
-      <li><b>Well defined</b> — intent-based docs, not just code comments.</li>
-      <li><b>Tested</b> — automated coverage for the changed behavior.</li>
-      <li><b>Contextualized</b> — a new agent can onboard in 60 seconds.</li>
-      <li><b>Human-validated</b> — a person audited the UX and the logic.</li>
-      <li><b>Customer-validated</b> — a real or synthetic user was involved.</li>
-      <li><b>Simple</b> — modular enough for safe, future AI-led change.</li>
-    </ul>
+        <div class="req"><p class="art">Article 14</p><h3>Human oversight</h3></div>
+        <div class="ans">Humans own intent, risk and every gate. Agents propose; <strong>only humans attest</strong>, and no red gate is bypassed without a recorded override.</div>
+
+        <div class="req"><p class="art">Article 12</p><h3>Record-keeping and traceability</h3></div>
+        <div class="ans">The <strong>hash-chained, append-only accountability trail</strong> records who decided what, review verdicts and deploys, tamper-evident by design.</div>
+
+        <div class="req"><p class="art">Article 9</p><h3>Risk management</h3></div>
+        <div class="ans"><strong>Tiered gating</strong> scales ceremony to risk, dedicated security and red-team stages, and drift detection on commits without justifying evidence.</div>
+
+        <div class="req"><p class="art">Article 11</p><h3>Technical documentation</h3></div>
+        <div class="ans"><strong>Versioned, machine-readable context</strong>: specifications, architecture decision records and state, kept current by rule and verified for freshness.</div>
+      </div>
+      <p class="note">Obligations depend on the risk class of your system. iSDLC gives you the evidence and the controls; qualifying a specific system remains a legal assessment.</p>
+    </div>
   </section>
 
   <section class="isdlc-cta">
-    <h2>Bring iSDLC to your team</h2>
-    <p>We run it on our own delivery — and stand it up inside yours.</p>
-    <a href="{{ '/index.html#contact' | relative_url }}">Talk to us</a>
-    <br><a class="isdlc-back" href="{{ '/index.html#ai' | relative_url }}">← Back to our AI assets</a>
+    <div class="wrap">
+      <h2>Bring iSDLC to your team</h2>
+      <p>We run it on our own delivery and stand it up inside yours.</p>
+      <a class="btn-amber" href="{{ '/index.html#contact' | relative_url }}">Talk to us</a>
+      <br><a class="back" href="{{ '/index.html#ai' | relative_url }}">&larr; Back to our AI assets</a>
+    </div>
   </section>
 
 </div>

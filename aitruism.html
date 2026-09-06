@@ -1,127 +1,278 @@
 ---
 layout: default
 permalink: /aitruism/
-title: "AITruism — Shefing's AI Governance Infrastructure"
-excerpt: "AITruism is the internal infrastructure Shefing uses to build production AI control planes for clients: policy, observability, and human-in-the-loop guardrails."
+title: "AiTruism — An enterprise Agentic AI Control Plane"
+excerpt: "AiTruism is Shefing's blueprint for a production Agentic AI Control Plane: an LLM Gateway at the perimeter, an OTEL sidecar for deep introspection, and an unbypassable MCP tool layer, all governed by central policy and observability."
 ---
 
 <style>
-  .atr-wrap { font-family: Raleway, sans-serif; color: #191919; }
-  .atr-wrap h1, .atr-wrap h2, .atr-wrap h3, .atr-wrap .eyebrow { font-family: Poppins, sans-serif; }
+  body { padding-top: 0 !important; }
+  @media only screen and (max-width: 60em) { .contain-to-grid.transparent { position: absolute; } }
+  .atr { font-family: Raleway, sans-serif; color: #191919; }
+  .atr h1, .atr h2, .atr h3 { font-family: Poppins, sans-serif; letter-spacing: 0; text-transform: none; }
+  .atr .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace; }
+  .atr em.hu {
+    font-family: Fraunces, "Times New Roman", Georgia, serif;
+    font-style: italic; font-weight: 400; color: #feac29;
+    font-variation-settings: "opsz" 72, "SOFT" 40, "WONK" 1;
+  }
+  .atr .eyebrow {
+    font-family: Poppins, sans-serif; text-transform: uppercase; letter-spacing: 3px;
+    font-size: 13px; font-weight: 600; color: #f06451; margin: 0 0 14px;
+  }
+  .atr .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .atr section { padding: 90px 0; }
+  .atr section h2 { font-size: 42px; font-weight: 700; line-height: 1.1; margin: 0 0 16px; color: #191919; }
+  .atr section .sub { font-family: Poppins, sans-serif; font-size: 22px; font-weight: 300; line-height: 1.45; color: #191919; max-width: 760px; margin: 0 0 44px; }
 
-  .atr-hero { background: #191919; color: #fff; padding: 190px 24px 90px; text-align: center; }
-  .atr-hero .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 13px; font-weight: 600; color: #feac29; margin: 0 0 18px; }
-  .atr-hero h1 { font-size: 84px; font-weight: 700; line-height: 1; margin: 0 0 14px; color: #fff; letter-spacing: -1px; }
-  .atr-hero .lede { font-size: 23px; font-weight: 300; max-width: 760px; margin: 0 auto; line-height: 1.5; color: #eaeaea; }
-  .atr-hero .lede b { color: #feac29; font-weight: 600; }
+  /* Hero */
+  .atr .atr-hero { background: #191919; color: #fff; padding: 210px 0 80px; }
+  .atr-hero .tag { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin: 0 0 16px; }
+  .atr-hero h1 { font-size: 84px; font-weight: 700; line-height: 1; margin: 0 0 12px; color: #fff; letter-spacing: -0.01em; }
+  .atr-hero h1 sup { font-size: 0.32em; font-weight: 500; color: rgba(255,255,255,0.6); }
+  .atr-hero .promise { font-family: Fraunces, "Times New Roman", Georgia, serif; font-style: italic; font-weight: 400; font-size: 36px; line-height: 1.2; color: #feac29; font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 1; margin: 0 0 28px; }
+  .atr-hero .summary { font-family: Poppins, sans-serif; font-size: 22px; font-weight: 300; line-height: 1.5; color: rgba(255,255,255,0.88); max-width: 780px; margin: 0 0 44px; }
+  .atr-hero .summary strong { color: #fff; font-weight: 600; }
 
-  .atr-section { max-width: 1040px; margin: 0 auto; padding: 78px 24px; }
-  .atr-section h2 { font-size: 36px; font-weight: 300; margin: 0 0 14px; color: #191919; }
-  .atr-section .sub { font-size: 20px; font-weight: 300; color: #555; max-width: 780px; margin: 0 0 44px; line-height: 1.55; }
+  /* Stack, same device as the home card */
+  .stack { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; max-width: 620px; font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace; font-size: 13px; }
+  .stack li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; background: rgba(255,255,255,0.07); border-left: 2px solid rgba(255,255,255,0.3); padding: 11px 14px; }
+  .stack li .layer { color: #fff; font-weight: 500; white-space: nowrap; }
+  .stack li .what { color: rgba(255,255,255,0.6); text-align: right; }
+  .stack li.base { border-left-color: #feac29; background: rgba(254,172,41,0.14); }
+  .stack li.base .what { color: #feac29; }
 
-  /* Stat band */
-  .atr-stat { background: #f06451; color: #fff; text-align: center; padding: 56px 24px; }
-  .atr-stat .big { font-family: Poppins, sans-serif; font-size: 72px; font-weight: 700; line-height: 1; margin: 0; }
-  .atr-stat p { font-size: 19px; font-weight: 300; max-width: 620px; margin: 14px auto 0; line-height: 1.5; }
+  /* Thesis band */
+  .atr-thesis { background: #feac29; color: #191919; text-align: center; padding: 56px 0; }
+  .atr-thesis p { font-family: Poppins, sans-serif; margin: 0 auto; max-width: 900px; }
+  .atr-thesis .claim { font-size: 34px; font-weight: 700; line-height: 1.2; margin-bottom: 22px; }
+  .atr-thesis .claim span { font-weight: 300; }
+  .atr-thesis .so { font-size: 17px; font-weight: 500; }
+  .atr-thesis .so span { display: inline-block; }
+  .atr-thesis .so span + span::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #191919; margin: 0 14px; vertical-align: middle; }
 
-  /* Control plane — four layers, signature element */
-  .atr-plane { background: #f9f9f9; }
-  .layers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 8px; }
-  .layer-card { background: #fff; border-bottom: 3px solid #feac29; padding: 26px 22px; }
-  .layer-card .n { font-family: Poppins, sans-serif; font-size: 13px; font-weight: 700; color: #feac29; letter-spacing: 1px; }
-  .layer-card h3 { font-size: 18px; font-weight: 600; margin: 8px 0 8px; }
-  .layer-card p { font-size: 14px; color: #555; line-height: 1.5; margin: 0; }
-  .atr-human { text-align: center; margin-top: 34px; font-family: Poppins, sans-serif; font-weight: 600; font-size: 20px; color: #191919; }
-  .atr-human span { color: #f06451; }
+  /* Three layers */
+  .layers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .layer-card { background: #191919; color: #fff; padding: 32px 30px 34px; border-top: 3px solid rgba(255,255,255,0.3); }
+  .layer-card.base { border-top-color: #feac29; }
+  .layer-card .role { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin: 0 0 10px; }
+  .layer-card h3 { font-size: 24px; font-weight: 700; line-height: 1.2; color: #fff; margin: 0 0 6px; }
+  .layer-card .as { font-family: Fraunces, "Times New Roman", Georgia, serif; font-style: italic; font-weight: 400; font-size: 20px; color: #feac29; font-variation-settings: "opsz" 72, "SOFT" 40, "WONK" 1; margin: 0 0 18px; }
+  .layer-card ul { list-style: none; margin: 0; padding: 0; }
+  .layer-card li { font-size: 15px; line-height: 1.5; color: rgba(255,255,255,0.82); padding: 6px 0 6px 18px; position: relative; border-top: 1px solid rgba(255,255,255,0.1); }
+  .layer-card li:first-child { border-top: 0; }
+  .layer-card li::before { content: ""; position: absolute; left: 0; top: 15px; width: 6px; height: 6px; background: #feac29; }
+  .layers-note { font-family: Poppins, sans-serif; font-size: 18px; font-weight: 300; line-height: 1.5; color: #191919; max-width: 820px; margin: 36px 0 0; }
+  .layers-note strong { font-weight: 600; }
 
-  /* Proof */
-  .proof { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
-  .proof-card { border-left: 3px solid #feac29; padding: 6px 0 6px 22px; }
-  .proof-card h3 { font-size: 19px; font-weight: 600; margin: 0 0 8px; }
-  .proof-card p { font-size: 16px; color: #555; line-height: 1.55; margin: 0; }
+  /* Capabilities */
+  .atr-caps { background: #f4f4f4; }
+  .caps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .cap { background: #fff; border-top: 3px solid #feac29; padding: 30px 30px 32px; }
+  .cap .tag { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #777; margin: 0 0 10px; }
+  .cap h3 { font-size: 22px; font-weight: 600; line-height: 1.25; margin: 0 0 12px; }
+  .cap p { font-size: 16px; line-height: 1.6; color: #555; margin: 0; }
+  .cap p strong { color: #191919; font-weight: 600; }
+  .cap .chain { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 0; margin: 14px 0 12px; padding: 0; list-style: none; font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; }
+  .cap .chain li { border: 1px solid #ddd; padding: 6px 9px; color: #191919; white-space: nowrap; margin-right: 22px; position: relative; }
+  .cap .chain li::after { content: "\2192"; color: #feac29; position: absolute; right: -17px; }
+  .cap .chain li:last-child { margin-right: 0; }
+  .cap .chain li:last-child::after { content: none; }
+  .cap .chain li .n { color: #feac29; margin-right: 6px; }
+  .cap .built { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; color: #777; margin: 12px 0 0; }
+  .cap .built b { color: #191919; font-weight: 500; }
 
-  .atr-cta { background: #191919; color: #fff; text-align: center; padding: 76px 24px; }
-  .atr-cta h2 { color: #fff; font-size: 34px; font-weight: 300; margin: 0 0 10px; }
-  .atr-cta p { color: #bbb; font-size: 18px; margin: 0 0 30px; }
-  .atr-cta a.primary { display: inline-block; background: #feac29; color: #191919; font-family: Poppins, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 15px; padding: 18px 44px; border-radius: 53px; }
-  .atr-back { display: inline-block; margin-top: 22px; color: #feac29; font-size: 14px; }
+  /* Roadmap */
+  .road { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+  .road::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 2px; background: #e4e4e4; }
+  .phase { position: relative; padding: 28px 24px 0 0; }
+  .phase::before { content: ""; position: absolute; left: 0; top: 0; width: 16px; height: 16px; border-radius: 50%; background: #feac29; }
+  .phase .n { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #777; margin: 0 0 8px; }
+  .phase .n b { color: #191919; font-weight: 500; }
+  .phase h3 { font-size: 19px; font-weight: 600; line-height: 1.3; margin: 0 0 8px; }
+  .phase p { font-size: 15px; line-height: 1.55; color: #555; margin: 0; }
 
+  /* CTA */
+  .atr-cta { background: #191919; color: #fff; text-align: center; }
+  .atr .atr-cta h2 { color: #fff; font-size: 38px; font-weight: 700; margin: 0 0 12px; }
+  .atr-cta p { font-family: Poppins, sans-serif; font-size: 20px; font-weight: 300; color: rgba(255,255,255,0.8); margin: 0 auto 32px; max-width: 640px; }
+  .atr-cta a.btn-amber { display: inline-block; background: #feac29; color: #191919; font-family: Poppins, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 15px; padding: 18px 44px; border-radius: 53px; }
+  .atr-cta a.btn-amber:hover { background: #fff; color: #191919; }
+  .atr-cta a.back { display: inline-block; margin-top: 24px; color: #feac29; font-size: 14px; }
+
+  @media (max-width: 1000px) {
+    .road { grid-template-columns: repeat(2, 1fr); gap: 32px 0; }
+    .road::before { display: none; }
+  }
   @media (max-width: 720px) {
+    .atr section { padding: 60px 0; }
+    .atr section h2 { font-size: 32px; }
+    .atr section .sub { font-size: 19px; }
+    .atr .atr-hero { padding: 150px 0 60px; }
     .atr-hero h1 { font-size: 56px; }
-    .atr-hero { padding-top: 150px; }
-    .atr-stat .big { font-size: 52px; }
-    .layers, .proof { grid-template-columns: 1fr; }
+    .atr-hero .promise { font-size: 27px; }
+    .atr-hero .summary { font-size: 18px; }
+    .stack li { flex-direction: column; gap: 2px; }
+    .stack li .what { text-align: left; }
+    .atr-thesis .claim { font-size: 25px; }
+    .atr-thesis .so span { display: block; }
+    .atr-thesis .so span + span::before { display: none; }
+    .layers, .caps, .road { grid-template-columns: 1fr; }
+    .atr .atr-cta h2 { font-size: 30px; }
   }
 </style>
 
-<div class="atr-wrap">
+<div class="atr">
 
   <section class="atr-hero">
-    <p class="eyebrow">Governance Infrastructure</p>
-    <h1>AITruism</h1>
-    <p class="lede">The infrastructure Shefing uses to build <b>production AI control planes</b> — so your AI systems stay observable, governed, and answerable to a human.</p>
+    <div class="wrap">
+      <p class="tag mono">Shefing AI asset · Workflow automation</p>
+      <h1>AiTruism<sup>™</sup></h1>
+      <p class="promise">An enterprise Agentic AI Control Plane.</p>
+      <p class="summary">Three enforcement layers under one governing platform: an <strong>LLM Gateway</strong> at the perimeter, an <strong>OTEL sidecar</strong> for deep introspection, and an <strong>unbypassable MCP tool layer</strong> as the final line, all steered by central policy and observability.</p>
+      <ul class="stack" aria-label="The four layers of the AiTruism control plane">
+        <li><span class="layer">Policy governance</span><span class="what">enforced at runtime</span></li>
+        <li><span class="layer">LLM Gateway</span><span class="what">real-time perimeter enforcement</span></li>
+        <li><span class="layer">OTEL sidecar</span><span class="what">deep async introspection</span></li>
+        <li class="base"><span class="layer">MCP tool layer</span><span class="what">unbypassable</span></li>
+      </ul>
+    </div>
   </section>
 
-  <section class="atr-section">
-    <h2>Not a product you buy. The way we build governance.</h2>
-    <p class="sub">AITruism is our internal framework for standing up trust, risk and security management around live AI systems. When we deliver an AI transformation, AITruism is how we make it safe: a control plane that sits between your AI and the world, enforcing policy and keeping a human in the loop where it matters.</p>
-  </section>
-
-  <div class="atr-stat">
-    <p class="big">40%</p>
-    <p>of agentic AI projects will be scrapped by 2027 over inadequate risk controls and unclear business value (Gartner). AITruism exists for exactly that gap.</p>
+  <div class="atr-thesis">
+    <div class="wrap">
+      <p class="claim">Every control lives <span>where it can actually be enforced.</span></p>
+      <p class="so"><span>Fast and stateless at the gateway</span><span>Context-heavy in the sidecar</span><span>Synchronous at the tool</span></p>
+    </div>
   </div>
 
-  <div class="atr-plane">
-    <section class="atr-section">
-      <h2>A four-layer defence model</h2>
-      <p class="sub">Each layer answers a different question about what your AI is doing — and every one reports to a person, not just a dashboard.</p>
+  <section class="atr-locus">
+    <div class="wrap">
+      <p class="eyebrow">Core thesis</p>
+      <h2>A three-layer <em class="hu">locus of control</em></h2>
+      <p class="sub">Each layer sees something the others cannot, and each stops something the others cannot. Together they close the gaps a single guardrail leaves open.</p>
       <div class="layers">
         <div class="layer-card">
-          <p class="n">LAYER 1</p>
-          <h3>Discovery &amp; Policy</h3>
-          <p>Declarative, dynamic policy enforcement — what the AI is allowed to do, decided in the open.</p>
+          <p class="role">Layer 1 · Perimeter</p>
+          <h3>LLM Gateway</h3>
+          <p class="as">The front-door guard</p>
+          <ul>
+            <li>PII detection and redaction</li>
+            <li>Prompt-injection screening</li>
+            <li>Cost control and caching</li>
+            <li>Content moderation</li>
+          </ul>
         </div>
         <div class="layer-card">
-          <p class="n">LAYER 2</p>
-          <h3>Observability</h3>
-          <p>Real-time usage monitoring and anomaly alerts, streaming to your SIEM or XDR.</p>
+          <p class="role">Layer 2 · Introspection</p>
+          <h3>OTEL Sidecar</h3>
+          <p class="as">The surveillance</p>
+          <ul>
+            <li>Hallucination detection</li>
+            <li>Topic drift and goal hijacking</li>
+            <li>Cross-session leakage</li>
+            <li>Stateful, asynchronous analysis</li>
+          </ul>
         </div>
-        <div class="layer-card">
-          <p class="n">LAYER 3</p>
-          <h3>Behavioral Monitoring</h3>
-          <p>Adaptive analysis for bias, drift and prompt-injection — catching what static rules miss.</p>
-        </div>
-        <div class="layer-card">
-          <p class="n">LAYER 4</p>
-          <h3>Grounding Validation</h3>
-          <p>Checks AI output against its retrieved sources to prevent hallucination and contradiction.</p>
+        <div class="layer-card base">
+          <p class="role">Layer 3 · Action</p>
+          <h3>MCP Tool Layer</h3>
+          <p class="as">The vault door</p>
+          <ul>
+            <li>Synchronous policy check before any damaging action</li>
+            <li>Open Policy Agent decision on every call</li>
+            <li>Cannot be bypassed by the model or the agent</li>
+          </ul>
         </div>
       </div>
-      <p class="atr-human">Above every layer sits the one control that can't be automated: <span>a human who is accountable.</span></p>
-    </section>
-  </div>
+      <p class="layers-note">Every capability is <strong>scored 0 to 100 per layer, with a written rationale</strong>. That matrix, not any single component, is the intellectual core of AiTruism: it tells you where a control belongs and why.</p>
+    </div>
+  </section>
 
-  <section class="atr-section">
-    <h2>Proven in production</h2>
-    <p class="sub">The governance thinking behind AITruism is drawn from real delivery, not slideware.</p>
-    <div class="proof">
-      <div class="proof-card">
-        <h3>Checkmarx</h3>
-        <p>Partner since 2016. GenAI and MCP servers embedded in SCA/SAST developer workflows for a global application-security leader — where getting AI wrong is not an option.</p>
+  <section class="atr-caps">
+    <div class="wrap">
+      <p class="eyebrow">What it covers</p>
+      <h2>Built on the <em class="hu">open-source</em> guardrail ecosystem</h2>
+      <p class="sub">AiTruism composes proven scanners and adds the placement, prioritization and analytics that make them enforceable in production.</p>
+      <div class="caps">
+
+        <div class="cap">
+          <p class="tag">Scanner catalog</p>
+          <h3>Thirteen gateway scanners, four priorities</h3>
+          <ol class="chain">
+            <li><span class="n">1</span>Alignment</li>
+            <li><span class="n">2</span>Data disclosure</li>
+            <li><span class="n">3</span>Unreasonable behavior</li>
+            <li><span class="n">4</span>Trivial correctness</li>
+          </ol>
+          <p>Each scanner is classed <strong>algorithmic or model-based</strong> and linked to its upstream project, so you know its cost, latency and failure mode before you switch it on.</p>
+          <p class="built">built on <b>LlamaFirewall</b> · <b>Presidio</b> · <b>Guardrails Hub</b> · <b>NeMo</b> · <b>Semgrep</b></p>
+        </div>
+
+        <div class="cap">
+          <p class="tag">Custom business scanners</p>
+          <h3>Your rules, three ways</h3>
+          <ol class="chain">
+            <li>Regex</li>
+            <li>Semantic embedding search</li>
+            <li>Judge LLM</li>
+          </ol>
+          <p>From cheap and exact to expensive and nuanced, with explicit trade-offs and one placement rule: <strong>fast and stateless at the gateway, context-heavy in the sidecar</strong>.</p>
+        </div>
+
+        <div class="cap">
+          <p class="tag">Sidecar internals</p>
+          <h3>A seven-step analysis pipeline</h3>
+          <p>Ingest over gRPC, batch, orchestrate in a Go processor, dispatch asynchronously to Python analysis services, enrich each span with a <span class="mono">validation.score</span>, and export to SigNoz or Jaeger. <strong>eBPF</strong> adds kernel-level visibility into code nothing else instruments.</p>
+        </div>
+
+        <div class="cap">
+          <p class="tag">Analytics</p>
+          <h3>Deviation and bias detection on real traces</h3>
+          <p>Business metrics are identified automatically from OTEL traces, then watched for <strong>temporal deviation</strong> (monotonic trends, period changes, spikes) and <strong>bias</strong> (protected attributes, disparity ratios, Cohen's d, intersectional effects). Runs interactively or as a batch scanner that emits pass and fail counts for CI.</p>
+        </div>
+
       </div>
-      <div class="proof-card">
-        <h3>Riverbed Aternity</h3>
-        <p>A RAG architecture on AWS Bedrock powering an enterprise AI help desk, with guardrails that stop hallucinations from reaching Level-1 support.</p>
+    </div>
+  </section>
+
+  <section class="atr-road">
+    <div class="wrap">
+      <p class="eyebrow">Adoption</p>
+      <h2>Four phases, <em class="hu">value from the first</em></h2>
+      <p class="sub">The control plane is adopted incrementally. Each phase is useful on its own and prepares the next.</p>
+      <div class="road">
+        <div class="phase">
+          <p class="n">Phase 1 · <b>1 to 2 months</b></p>
+          <h3>Gateway and OTEL baseline</h3>
+          <p>Perimeter enforcement and full tracing of every model call.</p>
+        </div>
+        <div class="phase">
+          <p class="n">Phase 2 · <b>2 to 3 months</b></p>
+          <h3>Sidecar with hallucination detection</h3>
+          <p>Deep asynchronous analysis on top of the traces you already collect.</p>
+        </div>
+        <div class="phase">
+          <p class="n">Phase 3 · <b>ongoing</b></p>
+          <h3>Dynamic policy enforcement</h3>
+          <p>Policies evolve with what the sidecar learns, enforced at the tool layer.</p>
+        </div>
+        <div class="phase">
+          <p class="n">Phase 4 · <b>enterprise</b></p>
+          <h3>Hardening</h3>
+          <p>OPA or Cedar policies, Vault PII tokenization, Kafka to SIEM, service-mesh enforcement, embedded Judge LLMs.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="atr-cta">
-    <h2>Put a control plane around your AI</h2>
-    <p>Governance is the difference between an AI pilot and an AI system you can trust in production.</p>
-    <a class="primary" href="{{ '/index.html#contact' | relative_url }}">Talk to us</a>
-    <br><a class="atr-back" href="{{ '/index.html#ai' | relative_url }}">← Back to our AI assets</a>
+    <div class="wrap">
+      <h2>Put your AI under control</h2>
+      <p>We design and stand up the control plane inside your environment, layer by layer.</p>
+      <a class="btn-amber" href="{{ '/index.html#contact' | relative_url }}">Talk to us</a>
+      <br><a class="back" href="{{ '/index.html#ai' | relative_url }}">&larr; Back to our AI assets</a>
+    </div>
   </section>
 
 </div>
