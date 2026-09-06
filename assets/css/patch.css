@@ -389,7 +389,7 @@ body.posts .modBlogPost {
   color: #fff;
   text-transform: none;
   max-width: 960px;
-  margin: 0 0 38px;
+  margin: 0 0 98px;
 }
 .hero-claim .tag-ai {
   display: flex;
@@ -532,14 +532,14 @@ body.posts .modBlogPost {
 
 @media only screen and (max-width: 60em) {
   .fullscreen .layer h1.hero-tagline { margin-bottom: 18px; }
-  .fullscreen .layer p.hero-claim { font-size: 24px; margin-bottom: 26px; }
+  .fullscreen .layer p.hero-claim { font-size: 24px; margin-bottom: 88px; }
 }
 @media only screen and (max-width: 50em) {
   .fullscreen .layer p.hero-claim { font-size: 20px; }
 }
 @media only screen and (max-width: 480px) {
   .fullscreen .layer h1.hero-tagline { margin-bottom: 14px; }
-  .fullscreen .layer p.hero-claim { font-size: 17px; line-height: 1.55; margin-bottom: 22px; }
+  .fullscreen .layer p.hero-claim { font-size: 17px; line-height: 1.55; margin-bottom: 70px; }
 }
 
 /* ------------------------------------------------------------------
