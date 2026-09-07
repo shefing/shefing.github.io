@@ -556,7 +556,7 @@ body.posts .modBlogPost {
   letter-spacing: 3px;
   font-size: 14px;
   font-weight: 600;
-  color: #f06451;
+  color: #555;
   margin: 0 0 14px;
 }
 .home-serve h2.serve-title {
@@ -683,7 +683,7 @@ body.posts .modBlogPost {
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #f06451;
+  color: #555;
   margin: 0 0 10px;
 }
 .calc-part h2 {
@@ -804,7 +804,7 @@ body.posts .modBlogPost {
   letter-spacing: 3px;
   font-size: 14px;
   font-weight: 600;
-  color: #f06451;
+  color: #555;
   margin: 0 0 14px;
 }
 .home-ai h2.ai-title {
@@ -1017,7 +1017,7 @@ body.posts .modBlogPost {
 .home-services .svc-head { text-align: center; }
 .home-services .eyebrow {
   font-family: Poppins, sans-serif; text-transform: uppercase; letter-spacing: 3px;
-  font-size: 14px; font-weight: 600; color: #f06451; margin: 0 0 14px;
+  font-size: 14px; font-weight: 600; color: #555; margin: 0 0 14px;
 }
 .home-services h2.svc-title {
   font-family: Poppins, sans-serif; font-size: 46px; font-weight: 700; line-height: 1.1;
@@ -1085,7 +1085,7 @@ body.posts .modBlogPost {
 .home-expertise .xp-head { text-align: center; }
 .home-expertise .eyebrow {
   font-family: Poppins, sans-serif; text-transform: uppercase; letter-spacing: 3px;
-  font-size: 14px; font-weight: 600; color: #f06451; margin: 0 0 14px;
+  font-size: 14px; font-weight: 600; color: #555; margin: 0 0 14px;
 }
 .home-expertise h2.xp-title {
   font-family: Poppins, sans-serif; font-size: 42px; font-weight: 700; line-height: 1.1;
@@ -1120,3 +1120,19 @@ body.posts .modBlogPost {
 
 /* Hero: the video is 108% wide on phones by an old rule; never let it scroll the page sideways */
 .home-video-wrapper { overflow-x: hidden; }
+
+/* Eyebrows: brand amber dash + dark grey text on light grounds, amber text on dark grounds. */
+.home-serve .eyebrow::before, .home-ai .eyebrow::before, .home-services .eyebrow::before,
+.calc-part .calc-part-label::before, .isdlc .eyebrow::before, .atr .eyebrow::before {
+  content: ""; display: inline-block; width: 22px; height: 3px; background: #feac29;
+  vertical-align: middle; margin: 0 12px 2px 0;
+}
+.home-expertise .eyebrow { color: #feac29; }
+
+/* Expertise: sub-groups inside a row (AI engineering) */
+.xp-groups { display: grid; gap: 14px; }
+.xp-group { display: grid; grid-template-columns: 210px 1fr; gap: 12px; align-items: baseline; }
+.xp-group-name { font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace; font-size: 12px; color: rgba(255,255,255,0.75); margin: 0; }
+@media only screen and (max-width: 720px) {
+  .xp-group { grid-template-columns: 1fr; gap: 6px; }
+}

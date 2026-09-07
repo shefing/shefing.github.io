@@ -57,12 +57,26 @@ services:
       - lead: iSDLC™ modernization
         text: Transition legacy projects into our agent-driven, 7-stage development lifecycle.
 expertise:
-  - area: Front-end
-    stack: [React, Next.js, TypeScript, Svelte]
-  - area: Back-end & data
-    stack: [Node.js, Express, PostgreSQL, MongoDB, Payload CMS, Medusa]
+  - area: Front-end & UI
+    stack: [React, Next.js, Vue, Nuxt, Svelte, SvelteKit, Astro]
+  - area: Back-end services
+    stack: [Node.js, Express, Java Spring Boot, Payload CMS, Medusa]
+  - area: System architecture
+    stack: [Edge computing, Event-driven, Server-Sent Events (SSE), Microservices, Modular monolith]
+  - area: Data, vector & telemetry
+    stack: [PostgreSQL, MongoDB, Redis, Apache Kafka, ELK Stack]
   - area: AI engineering
-    stack: [RAG pipelines, MCP servers, Agentic workflows, LLM gateways, Evals & guardrails, MLOps]
+    groups:
+      - name: RAG pipelines
+        stack: [pgvector, Qdrant]
+      - name: Agentic workflows & orchestration
+        stack: [LangGraph, Temporal, MCP]
+      - name: LLM gateways
+        stack: [LiteLLM]
+      - name: Guardrails
+        stack: [NeMo, Presidio, LlamaFirewall]
+      - name: Observability
+        stack: [OTEL, Langfuse]
   - area: Cloud & DevOps
     stack: [AWS, GCP, IaC, Terraform, Docker, Kubernetes, GitHub Actions, CI/CD]
 ---
@@ -242,9 +256,20 @@ expertise:
     {% for row in page.expertise %}
     <div class="xp-row">
       <p class="xp-area">{{ row.area | escape }}</p>
+      {% if row.groups %}
+      <div class="xp-groups">
+        {% for g in row.groups %}
+        <div class="xp-group">
+          <p class="xp-group-name">{{ g.name | escape }}</p>
+          <ul class="xp-stack">{% for t in g.stack %}<li>{{ t | escape }}</li>{% endfor %}</ul>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
       <ul class="xp-stack">
         {% for t in row.stack %}<li>{{ t | escape }}</li>{% endfor %}
       </ul>
+      {% endif %}
     </div>
     {% endfor %}
   </div>
