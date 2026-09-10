@@ -84,7 +84,7 @@ expertise:
 <div class='full no-padding parallax home-video-wrapper'>
   <div class='fullscreen video-style'>
     <!-- <div class="video-position"> -->
-    <video playsinline autoplay muted preload="auto" id="fullscreen-video" class="fullscreen__video is-front" aria-hidden="true" src='{{ "/assets/images/@stock/heroAgent-a.mp4" | relative_url }}'></video>
+    <video playsinline webkit-playsinline autoplay muted loop preload="auto" id="fullscreen-video" class="fullscreen__video is-front" aria-hidden="true" poster='{{ "/assets/images/@stock/heroAgent-poster.jpg" | relative_url }}' src='{{ "/assets/images/@stock/heroAgent-a.mp4" | relative_url }}'></video>
     <script>
       (function () {
         var clips = [
@@ -93,13 +93,15 @@ expertise:
           '{{ "/assets/images/@stock/heroAgent-c.mp4" | relative_url }}'
         ];
         var FADE = 1.3, idx = 0, switching = false;
+        var POSTER = '{{ "/assets/images/@stock/heroAgent-poster.jpg" | relative_url }}';
         var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (reduce) { var s0 = document.getElementById('fullscreen-video'); if (s0) { s0.removeAttribute('autoplay'); s0.pause(); } return; }
         function makeVideo(src) {
           var v = document.createElement('video');
           v.className = 'fullscreen__video';
           v.muted = true; v.defaultMuted = true; v.playsInline = true; v.preload = 'auto';
-          v.setAttribute('playsinline', ''); v.setAttribute('muted', ''); v.setAttribute('aria-hidden', 'true');
+          v.setAttribute('playsinline', ''); v.setAttribute('webkit-playsinline', ''); v.setAttribute('muted', ''); v.setAttribute('aria-hidden', 'true');
+          v.poster = POSTER;
           v.src = src;
           return v;
         }
@@ -107,9 +109,13 @@ expertise:
           idx = (idx + 1) % clips.length;
           var to = makeVideo(clips[idx]);
           from.parentNode.insertBefore(to, from.nextSibling);
-          var p = to.play(); if (p && p.catch) p.catch(function () {});
-          requestAnimationFrame(function () { requestAnimationFrame(function () { to.classList.add('is-front'); from.classList.remove('is-front'); }); });
-          setTimeout(function () { from.pause(); if (from.parentNode) from.parentNode.removeChild(from); switching = false; }, FADE * 1000 + 150);
+          var p = to.play();
+          var go = function () {
+            requestAnimationFrame(function () { requestAnimationFrame(function () { to.classList.add('is-front'); from.classList.remove('is-front'); }); });
+            setTimeout(function () { from.pause(); if (from.parentNode) from.parentNode.removeChild(from); switching = false; }, FADE * 1000 + 150);
+          };
+          var bail = function () { if (to.parentNode) to.parentNode.removeChild(to); idx = (idx + clips.length - 1) % clips.length; switching = false; };
+          if (p && p.then) { p.then(go, bail); } else { go(); }
         }
         function onTime(e) {
           var v = e.target; if (!v || v.tagName !== 'VIDEO' || switching) return;
@@ -118,6 +124,9 @@ expertise:
         }
         document.addEventListener('timeupdate', onTime, true);
         document.addEventListener('ended', onTime, true);
+        // iOS Low Power Mode and data-saver block autoplay: resume on the first touch.
+        var kick = function () { var v = document.querySelector('video.is-front'); if (v && v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); } };
+        ['touchstart', 'touchend', 'click', 'scroll'].forEach(function (ev) { window.addEventListener(ev, kick, { once: true, passive: true }); });
       })();
     </script>
 <!-- </div> -->

@@ -1153,3 +1153,9 @@ body.posts .modBlogPost {
 @media (prefers-reduced-motion: reduce) {
   .fullscreen .fullscreen__video { opacity: 1; transition: none; }
 }
+
+/* Hero video: never show WebKit's native play button; the poster carries the scene when autoplay is blocked */
+.fullscreen video::-webkit-media-controls,
+.fullscreen video::-webkit-media-controls-start-playback-button,
+.fullscreen video::-webkit-media-controls-panel { display: none !important; -webkit-appearance: none; opacity: 0; }
+.fullscreen .fullscreen__video { background: #191919 url("../images/@stock/heroAgent-poster.jpg") center / cover no-repeat; }
