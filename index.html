@@ -124,9 +124,21 @@ expertise:
         }
         document.addEventListener('timeupdate', onTime, true);
         document.addEventListener('ended', onTime, true);
-        // iOS Low Power Mode and data-saver block autoplay: resume on the first touch.
-        var kick = function () { var v = document.querySelector('video.is-front'); if (v && v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); } };
-        ['touchstart', 'touchend', 'click', 'scroll'].forEach(function (ev) { window.addEventListener(ev, kick, { once: true, passive: true }); });
+        // iOS Low Power Mode and data-saver refuse autoplay and paint a native play button over the video.
+        // When playback is refused, hide the video and show the poster on its container; retry on the first tap.
+        var v0 = document.getElementById('fullscreen-video');
+        function getWrap() { return document.querySelector('.home-video-wrapper .fullscreen') || (v0 && v0.parentNode); }
+        function markBlocked(b) { var w = getWrap(); if (w) w.classList.toggle('is-blocked', !!b); }
+        function frontVideo() { return document.querySelector('video.is-front') || document.querySelector('.home-video-wrapper video'); }
+        function tryPlay() {
+          var v = frontVideo(); if (!v) return;
+          var q = v.play();
+          if (q && q.then) { q.then(function () { markBlocked(false); }, function (e) { if (e && e.name === 'NotAllowedError') markBlocked(true); }); }
+        }
+        document.addEventListener('playing', function (e) { if (e.target && e.target.tagName === 'VIDEO') markBlocked(false); }, true);
+        setTimeout(tryPlay, 400);
+        setTimeout(function () { var v = frontVideo(); if (v && (v.error || (v.paused && v.readyState >= 2))) markBlocked(true); }, 3000);
+        ['touchend', 'click'].forEach(function (ev) { window.addEventListener(ev, function () { var w = getWrap(); if (w && w.classList.contains('is-blocked')) tryPlay(); }, { passive: true }); });
       })();
     </script>
 <!-- </div> -->

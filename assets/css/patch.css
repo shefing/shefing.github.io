@@ -1159,3 +1159,7 @@ body.posts .modBlogPost {
 .fullscreen video::-webkit-media-controls-start-playback-button,
 .fullscreen video::-webkit-media-controls-panel { display: none !important; -webkit-appearance: none; opacity: 0; }
 .fullscreen .fullscreen__video { background: #191919 url("../images/@stock/heroAgent-poster.jpg") center / cover no-repeat; }
+
+/* Hero video refused by the browser: hide the element (and iOS's play button with it), show the poster on the container */
+.fullscreen.is-blocked .fullscreen__video { display: none !important; }
+.fullscreen.is-blocked { background: #191919 url("../images/@stock/heroAgent-poster.jpg") center / cover no-repeat; }
